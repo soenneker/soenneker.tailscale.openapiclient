@@ -14,6 +14,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Opaque pagination cursor for the next page.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Cursor { get; set; }
+#nullable restore
+#else
+        public string Cursor { get; set; }
+#endif
         /// <summary>Tailnets in the organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,6 +30,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public List<global::Soenneker.Tailscale.OpenApiClient.Models.OrganizationTailnet> Tailnets { get; set; }
 #endif
+        /// <summary>Total number of tailnets in the organization.</summary>
+        public int? TotalCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ListOrganizationTailnetsResponse"/> and sets the default values.
         /// </summary>
@@ -47,7 +57,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "cursor", n => { Cursor = n.GetStringValue(); } },
                 { "tailnets", n => { Tailnets = n.GetCollectionOfObjectValues<global::Soenneker.Tailscale.OpenApiClient.Models.OrganizationTailnet>(global::Soenneker.Tailscale.OpenApiClient.Models.OrganizationTailnet.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "totalCount", n => { TotalCount = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +69,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("cursor", Cursor);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Tailscale.OpenApiClient.Models.OrganizationTailnet>("tailnets", Tailnets);
+            writer.WriteIntValue("totalCount", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

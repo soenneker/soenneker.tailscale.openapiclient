@@ -22,7 +22,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TailnetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{organization}/tailnets", pathParameters)
+        public TailnetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{organization}/tailnets{?cursor*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TailnetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{organization}/tailnets", rawUrl)
+        public TailnetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{organization}/tailnets{?cursor*,limit*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,21 +39,23 @@ namespace Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ListOrganizationTailnetsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.ListOrganizationTailnetsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.ListOrganizationTailnetsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets.TailnetsRequestBuilder.TailnetsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.ListOrganizationTailnetsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.ListOrganizationTailnetsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets.TailnetsRequestBuilder.TailnetsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
@@ -98,11 +100,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets.TailnetsRequestBuilder.TailnetsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets.TailnetsRequestBuilder.TailnetsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -140,6 +142,26 @@ namespace Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets
         public global::Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets.TailnetsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Tailscale.OpenApiClient.Organizations.Item.Tailnets.TailnetsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// List all tailnets in the organization, including the original tailnet and any[API-only tailnets](https://tailscale.com/docs/features/tailnet-creation-api) created with the tailnet creationAPI.OAuth Scope: `tailnets:read`.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class TailnetsRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Opaque pagination cursor from a previous response.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("cursor")]
+            public string? Cursor { get; set; }
+#nullable restore
+#else
+            [QueryParameter("cursor")]
+            public string Cursor { get; set; }
+#endif
+            /// <summary>Maximum number of tailnets to return per page; defaults to the maximum of 100.</summary>
+            [QueryParameter("limit")]
+            public int? Limit { get; set; }
         }
     }
 }

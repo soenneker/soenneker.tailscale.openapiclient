@@ -3923,6 +3923,27 @@
         "summary": "List tailnets",
         "description": "List all tailnets in the organization, including the original tailnet and any\n[API-only tailnets](https://tailscale.com/docs/features/tailnet-creation-api) created with the tailnet creation\nAPI.\n\nOAuth Scope: \u0060tailnets:read\u0060.\n",
         "operationId": "ListOrganizationTailnets",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum number of tailnets to return per page; defaults to the maximum of 100.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "default": 100
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Opaque pagination cursor from a previous response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -3933,6 +3954,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid limit or cursor parameter.",
+            "$ref": "#/components/responses/400"
           },
           "403": {
             "description": "User does not have sufficient access to list tailnets for this organization.",
@@ -5562,6 +5587,16 @@
               "$ref": "#/components/schemas/OrganizationTailnet"
             },
             "description": "Tailnets in the organization."
+          },
+          "cursor": {
+            "type": "string",
+            "description": "Opaque pagination cursor for the next page.",
+            "example": "eyJhZnRlciI6IlQxMjM0NTZDTlRSTCJ9"
+          },
+          "totalCount": {
+            "type": "integer",
+            "description": "Total number of tailnets in the organization.",
+            "example": 50
           }
         }
       },
