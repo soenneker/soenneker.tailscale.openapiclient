@@ -7909,6 +7909,7 @@
           "elastic",
           "panther",
           "cribl",
+          "crowdstrike",
           "datadog",
           "axiom",
           "s3"
@@ -7936,6 +7937,10 @@
             {
               "value": "cribl",
               "name": "Cribl"
+            },
+            {
+              "value": "crowdstrike",
+              "name": "Crowdstrike"
             },
             {
               "value": "datadog",

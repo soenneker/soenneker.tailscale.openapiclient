@@ -5490,6 +5490,7 @@ components:
             - elastic
             - panther
             - cribl
+            - crowdstrike
             - datadog
             - axiom
             - s3

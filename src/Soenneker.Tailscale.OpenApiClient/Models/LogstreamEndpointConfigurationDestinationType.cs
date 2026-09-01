@@ -23,6 +23,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         #pragma warning disable CS1591
         Cribl,
         #pragma warning restore CS1591
+        [EnumMember(Value = "crowdstrike")]
+        #pragma warning disable CS1591
+        Crowdstrike,
+        #pragma warning restore CS1591
         [EnumMember(Value = "datadog")]
         #pragma warning disable CS1591
         Datadog,
