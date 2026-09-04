@@ -6442,7 +6442,7 @@ components:
           example:
             - custom:myattribute
           description: |
-            The list of custom node attributes that the OAuth app is allowed to set.
+            The list of custom device attributes that the OAuth app is allowed to set.
         clientSecret:
           type: string
           format: password
@@ -6507,7 +6507,7 @@ components:
       example:
         - custom:myattribute
       description: |
-        The list of custom node attributes that the OAuth app is allowed to set.
+        The list of custom device attributes that the OAuth app is allowed to set.
     OrganizationTailnet:
       type: object
       properties:

@@ -5503,7 +5503,7 @@
             "items": {
               "type": "string"
             },
-            "description": "The list of custom node attributes that the OAuth app is allowed to set.\n"
+            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
           },
           "clientSecret": {
             "type": "string",
@@ -5550,7 +5550,7 @@
         "items": {
           "type": "string"
         },
-        "description": "The list of custom node attributes that the OAuth app is allowed to set.\n"
+        "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
       },
       "OrganizationTailnet": {
         "type": "object",
@@ -6761,7 +6761,7 @@
             "items": {
               "type": "string"
             },
-            "description": "The list of custom node attributes that the OAuth app is allowed to set.\n"
+            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
           }
         }
       },
@@ -6803,7 +6803,7 @@
             "items": {
               "type": "string"
             },
-            "description": "The list of custom node attributes that the OAuth app is allowed to set.\n"
+            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
           }
         }
       },

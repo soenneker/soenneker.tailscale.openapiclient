@@ -14,7 +14,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The list of custom node attributes that the OAuth app is allowed to set.</summary>
+        /// <summary>The list of custom device attributes that the OAuth app is allowed to set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AllowedNodeAttributes { get; set; }
