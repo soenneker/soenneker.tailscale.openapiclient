@@ -479,6 +479,12 @@ paths:
       responses:
         '200':
           description: Successful operation.
+        '400':
+          description: The `authorized` field is missing from the request body, or is not a boolean.
+          $ref: '#/components/responses/400'
+        '402':
+          description: The tailnet's plan or billing state does not allow authorizing more devices.
+          $ref: '#/components/responses/402'
         '404':
           description: Device not found.
           $ref: '#/components/responses/404'
@@ -3046,6 +3052,9 @@ paths:
           description: Successful operation.
         '400':
           $ref: '#/components/responses/400'
+        '402':
+          description: The tailnet's plan or billing state does not allow approving more users.
+          $ref: '#/components/responses/402'
         '403':
           $ref: '#/components/responses/403'
         '404':
@@ -6607,6 +6616,17 @@ components:
             $ref: '#/components/schemas/Error'
             example:
               message: bad request
+    '402':
+      description: |
+        Payment required. The tailnet's plan or billing state does not allow the
+        operation, and resolving it requires a billing change rather than a
+        different request. The `message` field says which change.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+            example:
+              message: payment required
     '403':
       description: Forbidden.
       content:

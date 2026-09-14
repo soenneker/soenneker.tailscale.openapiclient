@@ -363,6 +363,14 @@
           "200": {
             "description": "Successful operation."
           },
+          "400": {
+            "description": "The \u0060authorized\u0060 field is missing from the request body, or is not a boolean.",
+            "$ref": "#/components/responses/400"
+          },
+          "402": {
+            "description": "The tailnet\u0027s plan or billing state does not allow authorizing more devices.",
+            "$ref": "#/components/responses/402"
+          },
           "404": {
             "description": "Device not found.",
             "$ref": "#/components/responses/404"
@@ -2747,6 +2755,10 @@
           "400": {
             "description": "Bad request.",
             "$ref": "#/components/responses/400"
+          },
+          "402": {
+            "description": "The tailnet\u0027s plan or billing state does not allow approving more users.",
+            "$ref": "#/components/responses/402"
           },
           "403": {
             "description": "Forbidden.",
@@ -9892,6 +9904,19 @@
             "schema": {
               "example": {
                 "message": "bad request"
+              },
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "402": {
+        "description": "Payment required. The tailnet\u0027s plan or billing state does not allow the\noperation, and resolving it requires a billing change rather than a\ndifferent request. The \u0060message\u0060 field says which change.\n",
+        "content": {
+          "application/json": {
+            "schema": {
+              "example": {
+                "message": "payment required"
               },
               "$ref": "#/components/schemas/Error"
             }
