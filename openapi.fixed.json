@@ -94,7 +94,13 @@
             "description": "Internal server error.",
             "$ref": "#/components/responses/500"
           }
-        }
+        },
+        "x-badges": [
+          {
+            "name": "Alpha",
+            "position": "before"
+          }
+        ]
       },
       "parameters": [
         {
@@ -2141,7 +2147,14 @@
             "description": "Internal server error.",
             "$ref": "#/components/responses/500"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "label": "Shell cURL",
+            "lang": "shell",
+            "source": "curl --request POST \\\n  --url https://api.tailscale.com/api/v2/tailnet/example.com/acl \\\n  --header \u0027Authorization: Bearer YOUR_SECRET_TOKEN\u0027 \\\n  --data-binary \u0027{\n  \u0022acls\u0022: [\n    {\n      \u0022action\u0022: \u0022accept\u0022,\n      \u0022ports\u0022: [\n        \u0022*:*\u0022\n      ],\n      \u0022users\u0022: [\n        \u0022*\u0022\n      ]\n    }\n  ],\n  \u0022groups\u0022: {\n    \u0022group:example\u0022: [\n      \u0022user1@example.com\u0022,\n      \u0022user2@example.com\u0022\n    ]\n  },\n  \u0022hosts\u0022: {\n    \u0022example-host-1\u0022: \u0022100.100.100.100\u0022\n  }\n}\u0027"
+          }
+        ]
       },
       "parameters": [
         {
@@ -3983,7 +3996,13 @@
             "description": "Internal server error.",
             "$ref": "#/components/responses/500"
           }
-        }
+        },
+        "x-badges": [
+          {
+            "name": "Alpha",
+            "position": "before"
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -4029,7 +4048,13 @@
             "description": "Internal server error.",
             "$ref": "#/components/responses/500"
           }
-        }
+        },
+        "x-badges": [
+          {
+            "name": "Alpha",
+            "position": "before"
+          }
+        ]
       },
       "parameters": [
         {
