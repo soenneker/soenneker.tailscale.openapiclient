@@ -5562,11 +5562,19 @@
           }
         }
       },
-      "SetPolicyFileHujsonRequest": {
-        "type": "string"
+      "Name": {
+        "maxLength": 50,
+        "minLength": 3,
+        "pattern": "^[a-zA-Z0-9._-]\u002B$",
+        "type": "string",
+        "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n",
+        "example": "my-oauth-app"
       },
-      "SetPolicyFileJsonRequest": {
-        "type": "object"
+      "Description": {
+        "maxLength": 300,
+        "type": "string",
+        "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n",
+        "example": "An OAuth app used to provision devices."
       },
       "RedirectUrIs": {
         "type": "array",
@@ -5705,6 +5713,12 @@
             "example": true
           }
         }
+      },
+      "SetPolicyFileJsonRequest": {
+        "type": "object"
+      },
+      "SetPolicyFileHujsonRequest": {
+        "type": "string"
       },
       "PreviewRuleMatchesJsonRequest": {
         "type": "object"
