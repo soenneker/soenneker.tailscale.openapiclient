@@ -58,7 +58,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #endif
         /// <summary>The type of key to create. Defaults to &quot;auth&quot; if omitted.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.CreateKeyRequestKeyType? KeyType { get; set; }
-        /// <summary>A list of scopes to grant to the key. At least one scope is required for OAuth clients and federated identities.See [trust credentials scopes](https://tailscale.com/kb/1623/trust-credentials#scopes) for a list of available scopes.Only applies to OAuth clients and federated identities.</summary>
+        /// <summary>A list of scopes to grant to the key. At least one scope is required for OAuth clients and federated identities.See [trust credentials scopes](https://tailscale.com/docs/reference/trust-credentials#scopes) for a list of available scopes.Only applies to OAuth clients and federated identities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }

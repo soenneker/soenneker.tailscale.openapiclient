@@ -111,7 +111,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl.Preview
             [QueryParameter("previewFor")]
             public string PreviewFor { get; set; }
 #endif
-            /// <summary>Specify for which type of resource (user or IP port) matching rules are to be fetched.Read about [previewing changes in the admin console](https://tailscale.com/kb/1018/#previewing-changes).OAuth Scope: `policy_file:read`.</summary>
+            /// <summary>Specify for which type of resource (user or IP port) matching rules are to be fetched.Read about [previewing changes in the admin console](https://tailscale.com/docs/features/tailnet-policy-file/manage-tailnet-policies#preview-changes).OAuth Scope: `policy_file:read`.</summary>
             [QueryParameter("type")]
             public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetTailnetAclPreviewType? Type { get; set; }
         }

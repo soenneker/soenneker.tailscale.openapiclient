@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Delete
         {
         }
         /// <summary>
-        /// Delete a user from their tailnet. Learn more about [deleting users](/kb/1145/remove-team-members#deleting-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot delete their own user.
+        /// Delete a user from their tailnet. Learn more about [deleting users](/docs/features/sharing/how-to/remove-team-members#deleting-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot delete their own user.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Delete
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a user from their tailnet. Learn more about [deleting users](/kb/1145/remove-team-members#deleting-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot delete their own user.
+        /// Delete a user from their tailnet. Learn more about [deleting users](/docs/features/sharing/how-to/remove-team-members#deleting-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot delete their own user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

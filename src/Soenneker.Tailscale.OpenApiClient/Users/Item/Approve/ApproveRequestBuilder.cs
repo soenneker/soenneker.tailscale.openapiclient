@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Approve
         {
         }
         /// <summary>
-        /// Approve a pending user&apos;s access to the tailnet.This is a no-op if user approval has not been enabled for the tailnet, or if the user is already approved.User approval can be managed using the [tailnet settings endpoints](#tag/tailnetsettings).Learn more about [user approval](/kb/1239/user-approval) and [enabling user approval for your network](/kb/1239/user-approval#enable-user-approval-for-your-network).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot approve their own user.
+        /// Approve a pending user&apos;s access to the tailnet.This is a no-op if user approval has not been enabled for the tailnet, or if the user is already approved.User approval can be managed using the [tailnet settings endpoints](#tag/tailnetsettings).Learn more about [user approval](/docs/features/access-control/user-approval) and [enabling user approval for your network](/docs/features/access-control/user-approval#enable-user-approval-for-your-network).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot approve their own user.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Approve
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Approve a pending user&apos;s access to the tailnet.This is a no-op if user approval has not been enabled for the tailnet, or if the user is already approved.User approval can be managed using the [tailnet settings endpoints](#tag/tailnetsettings).Learn more about [user approval](/kb/1239/user-approval) and [enabling user approval for your network](/kb/1239/user-approval#enable-user-approval-for-your-network).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot approve their own user.
+        /// Approve a pending user&apos;s access to the tailnet.This is a no-op if user approval has not been enabled for the tailnet, or if the user is already approved.User approval can be managed using the [tailnet settings endpoints](#tag/tailnetsettings).Learn more about [user approval](/docs/features/access-control/user-approval) and [enabling user approval for your network](/docs/features/access-control/user-approval#enable-user-approval-for-your-network).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot approve their own user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

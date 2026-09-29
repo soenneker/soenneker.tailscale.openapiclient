@@ -14,7 +14,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The role of the user. Learn more about [user roles](kb/1138/user-roles).</summary>
+        /// <summary>The role of the user. Learn more about [user roles](/docs/reference/user-roles).</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.UpdateUserRoleRequestRole? Role { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.UpdateUserRoleRequest"/> and sets the default values.

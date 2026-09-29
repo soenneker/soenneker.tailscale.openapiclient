@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Webhooks.Item.Rotate
         {
         }
         /// <summary>
-        /// Rotate and generate a new secret for a specific webhook.This secret is used for generating the `Tailscale-Webhook-Signature` header in requests sent to the endpoint URL.Learn more about [verifying webhook event signatures](/kb/1213/webhooks#verifying-an-event-signature).OAuth Scope: `webhooks`.
+        /// Rotate and generate a new secret for a specific webhook.This secret is used for generating the `Tailscale-Webhook-Signature` header in requests sent to the endpoint URL.Learn more about [verifying webhook event signatures](/docs/features/webhooks#verifying-an-event-signature).OAuth Scope: `webhooks`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.Webhook"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Webhooks.Item.Rotate
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.Webhook>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.Webhook.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Rotate and generate a new secret for a specific webhook.This secret is used for generating the `Tailscale-Webhook-Signature` header in requests sent to the endpoint URL.Learn more about [verifying webhook event signatures](/kb/1213/webhooks#verifying-an-event-signature).OAuth Scope: `webhooks`.
+        /// Rotate and generate a new secret for a specific webhook.This secret is used for generating the `Tailscale-Webhook-Signature` header in requests sent to the endpoint URL.Learn more about [verifying webhook event signatures](/docs/features/webhooks#verifying-an-event-signature).OAuth Scope: `webhooks`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

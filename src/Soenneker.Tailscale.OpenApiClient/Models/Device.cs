@@ -23,7 +23,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public List<string> Addresses { get; set; }
 #endif
-        /// <summary>The subnets this device requests to expose.Learn more about subnet routes at https://tailscale.com/kb/1019/.</summary>
+        /// <summary>The subnets this device requests to expose.Learn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AdvertisedRoutes { get; set; }
@@ -31,9 +31,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public List<string> AdvertisedRoutes { get; set; }
 #endif
-        /// <summary>&apos;true&apos; if the device has been authorized to join the tailnet; otherwise, &apos;false&apos;.Learn more about device authorization at https://tailscale.com/kb/1099/.</summary>
+        /// <summary>&apos;true&apos; if the device has been authorized to join the tailnet; otherwise, &apos;false&apos;.Learn more about device authorization at https://tailscale.com/docs/features/access-control/device-management/device-approval.</summary>
         public bool? Authorized { get; set; }
-        /// <summary>&apos;true&apos; if the device is not allowed to accept any connections over Tailscale, including pings.Learn more in the &quot;Allow incoming connections&quot; section of https://tailscale.com/kb/1072/.</summary>
+        /// <summary>&apos;true&apos; if the device is not allowed to accept any connections over Tailscale, including pings.Learn more in the &quot;Allow incoming connections&quot; section of https://tailscale.com/docs/features/client/manage-preferences.</summary>
         public bool? BlocksIncomingConnections { get; set; }
         /// <summary>clientConnectivity provides a report on the device&apos;s current physical network conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro Distro { get; set; }
 #endif
-        /// <summary>The subnet routes for this device that have been approved by a tailnet admin.Learn more about subnet routes at https://tailscale.com/kb/1019/.</summary>
+        /// <summary>The subnet routes for this device that have been approved by a tailnet admin.Learn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? EnabledRoutes { get; set; }
@@ -71,9 +71,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public List<string> EnabledRoutes { get; set; }
 #endif
-        /// <summary>The expiration date of the device&apos;s auth key.Learn more about key expiry at https://tailscale.com/kb/1028/.</summary>
+        /// <summary>The expiration date of the device&apos;s auth key.Learn more about key expiry at https://tailscale.com/docs/features/access-control/key-expiry.</summary>
         public DateTimeOffset? Expires { get; set; }
-        /// <summary>The machine name in the admin console.Learn more about machine names at https://tailscale.com/kb/1098/.</summary>
+        /// <summary>The machine name in the admin console.Learn more about machine names at https://tailscale.com/docs/concepts/machine-names.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Hostname { get; set; }
@@ -89,11 +89,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>&apos;true&apos; if the device is ephemeral.Learn more about ephemeral nodes at https://tailscale.com/kb/1111/ephemeral-nodes.</summary>
+        /// <summary>&apos;true&apos; if the device is ephemeral.Learn more about ephemeral nodes at https://tailscale.com/docs/features/ephemeral-nodes.</summary>
         public bool? IsEphemeral { get; set; }
-        /// <summary>&apos;true&apos;, indicates that a device is not a member of the tailnet, but is shared in to the tailnet;if &apos;false&apos;, the device is a member of the tailnet.Learn more about node sharing at https://tailscale.com/kb/1084/.</summary>
+        /// <summary>&apos;true&apos;, indicates that a device is not a member of the tailnet, but is shared in to the tailnet;if &apos;false&apos;, the device is a member of the tailnet.Learn more about node sharing at https://tailscale.com/docs/features/sharing.</summary>
         public bool? IsExternal { get; set; }
-        /// <summary>&apos;true&apos; if the keys for the device will not expire.Learn more at https://tailscale.com/kb/1028/.</summary>
+        /// <summary>&apos;true&apos; if the keys for the device will not expire.Learn more at https://tailscale.com/docs/features/access-control/key-expiry.</summary>
         public bool? KeyExpiryDisabled { get; set; }
         /// <summary>When the device was last connected to the Tailscale control server. Omitted if the device has never been online or `connectedToControl` is true.</summary>
         public DateTimeOffset? LastSeen { get; set; }
@@ -107,7 +107,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #endif
         /// <summary>&apos;true&apos;, indicates that multiple devices are currently connected using the same node key, which is usually a sign of node state being copied between machines.If only one device is connected using this node&apos;s key, the field is omitted.If the number of live connections goes back to 0 or 1, this field is also omitted, meaning it&apos;s not sticky. In case an attacker steals node state from a legitimate node, they can mask their activities by not connecting concurrently with the legitimate node.</summary>
         public bool? MultipleConnections { get; set; }
-        /// <summary>The MagicDNS name of the device.Learn more about MagicDNS at https://tailscale.com/kb/1081/.</summary>
+        /// <summary>The MagicDNS name of the device.Learn more about MagicDNS at https://tailscale.com/docs/features/magicdns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -123,7 +123,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public string NodeId { get; set; }
 #endif
-        /// <summary>Mostly for internal use, required for select operations, such as adding a node to a locked tailnet.Learn about tailnet locks at https://tailscale.com/kb/1226/.</summary>
+        /// <summary>Mostly for internal use, required for select operations, such as adding a node to a locked tailnet.Learn about tailnet locks at https://tailscale.com/docs/features/tailnet-lock.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NodeKey { get; set; }
@@ -139,7 +139,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public string Os { get; set; }
 #endif
-        /// <summary>Contains extra identifiers from the device when the tailnet it is connected to has device posture identification collection enabled.If the device has not opted-in to posture identification collection, this will contain {&quot;disabled&quot;: true}.Learn more about posture identity at https://tailscale.com/kb/1326/device-identity.</summary>
+        /// <summary>Contains extra identifiers from the device when the tailnet it is connected to has device posture identification collection enabled.If the device has not opted-in to posture identification collection, this will contain {&quot;disabled&quot;: true}.Learn more about posture identity at https://tailscale.com/docs/features/access-control/device-management/how-to/manage-identity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity? PostureIdentity { get; set; }
@@ -147,9 +147,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity PostureIdentity { get; set; }
 #endif
-        /// <summary>&apos;true&apos; if Tailscale SSH is enabled on this device.Learn more about Tailscale SSH at https://tailscale.com/kb/1193/.</summary>
+        /// <summary>&apos;true&apos; if Tailscale SSH is enabled on this device.Learn more about Tailscale SSH at https://tailscale.com/docs/features/tailscale-ssh.</summary>
         public bool? SshEnabled { get; set; }
-        /// <summary>Lets you assign an identity to a device that is separate from human users, and use it as part of an ACL to restrict access.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.This value is empty for external devices.Learn more about tags at https://tailscale.com/kb/1068/.</summary>
+        /// <summary>Lets you assign an identity to a device that is separate from human users, and use it as part of an ACL to restrict access.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.This value is empty for external devices.Learn more about tags at https://tailscale.com/docs/features/tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Tags { get; set; }
@@ -165,7 +165,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public string TailnetLockError { get; set; }
 #endif
-        /// <summary>The node&apos;s tailnet lock key.Every node generates a tailnet lock key (so the value will be present) even if tailnet lock is not enabled.Learn more about tailnet lock at https://tailscale.com/kb/1226/.</summary>
+        /// <summary>The node&apos;s tailnet lock key.Every node generates a tailnet lock key (so the value will be present) even if tailnet lock is not enabled.Learn more about tailnet lock at https://tailscale.com/docs/features/tailnet-lock.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TailnetLockKey { get; set; }

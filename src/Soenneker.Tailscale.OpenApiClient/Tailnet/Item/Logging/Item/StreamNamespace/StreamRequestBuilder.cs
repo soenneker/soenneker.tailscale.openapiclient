@@ -88,7 +88,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Logging.Item.StreamName
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfiguration>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfiguration.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set the log streaming configuration for the provided log type.OAuth Scope: `log_streaming`. `device_invites` and `policy_file` are also required if streaming to a [private endpoint](https://tailscale.com/kb/1255/log-streaming#private-endpoints).
+        /// Set the log streaming configuration for the provided log type.OAuth Scope: `log_streaming`. `device_invites` and `policy_file` are also required if streaming to a [private endpoint](https://tailscale.com/docs/features/logging/log-streaming#private-endpoints).
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The current configuration of a log streaming endpoint.</param>
@@ -155,7 +155,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Logging.Item.StreamName
             return requestInfo;
         }
         /// <summary>
-        /// Set the log streaming configuration for the provided log type.OAuth Scope: `log_streaming`. `device_invites` and `policy_file` are also required if streaming to a [private endpoint](https://tailscale.com/kb/1255/log-streaming#private-endpoints).
+        /// Set the log streaming configuration for the provided log type.OAuth Scope: `log_streaming`. `device_invites` and `policy_file` are also required if streaming to a [private endpoint](https://tailscale.com/docs/features/logging/log-streaming#private-endpoints).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The current configuration of a log streaming endpoint.</param>

@@ -15,7 +15,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The MagicDNS name of the device.Learn more about MagicDNS at https://tailscale.com/kb/1081/.</summary>
+        /// <summary>The MagicDNS name of the device.Learn more about MagicDNS at https://tailscale.com/docs/features/magicdns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Fqdn { get; set; }

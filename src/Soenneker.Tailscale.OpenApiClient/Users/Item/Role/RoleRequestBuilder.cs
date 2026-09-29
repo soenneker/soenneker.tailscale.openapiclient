@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Role
         {
         }
         /// <summary>
-        /// Update the role for the specified user.Learn more about [user roles](kb/1138/user-roles).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot update their own user&apos;s role.
+        /// Update the role for the specified user.Learn more about [user roles](/docs/reference/user-roles).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot update their own user&apos;s role.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Role
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update the role for the specified user.Learn more about [user roles](kb/1138/user-roles).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot update their own user&apos;s role.
+        /// Update the role for the specified user.Learn more about [user roles](/docs/reference/user-roles).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot update their own user&apos;s role.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

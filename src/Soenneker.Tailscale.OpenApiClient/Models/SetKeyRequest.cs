@@ -48,7 +48,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #endif
         /// <summary>The type of the key being updated.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.SetKeyRequestKeyType? KeyType { get; set; }
-        /// <summary>A list of scopes to grant to the key. At least one scope is required.See [trust credentials scopes](https://tailscale.com/kb/1623/trust-credentials#scopes) for a list of available scopes.</summary>
+        /// <summary>A list of scopes to grant to the key. At least one scope is required.See [trust credentials scopes](https://tailscale.com/docs/reference/trust-credentials#scopes) for a list of available scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }

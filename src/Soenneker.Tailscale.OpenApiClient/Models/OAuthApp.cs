@@ -64,7 +64,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public List<string> RedirectURIs { get; set; }
 #endif
-        /// <summary>The list of OAuth scopes granted to the app.Must be non-empty.Learn more about [OAuth clients and scopes](/kb/1215/oauth-clients).</summary>
+        /// <summary>The list of OAuth scopes granted to the app.Must be non-empty.Learn more about [OAuth clients and scopes](/docs/features/oauth-clients).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }

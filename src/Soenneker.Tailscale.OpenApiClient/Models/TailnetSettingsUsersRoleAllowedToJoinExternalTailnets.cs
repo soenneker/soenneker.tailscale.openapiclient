@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
-    /// <summary>Which user roles are allowed to [join external tailnets](/kb/1271/invite-any-user).</summary>
+    /// <summary>Which user roles are allowed to [join external tailnets](/docs/features/sharing/how-to/invite-any-user).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TailnetSettingsUsersRoleAllowedToJoinExternalTailnets
     {

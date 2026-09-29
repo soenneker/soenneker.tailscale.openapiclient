@@ -44,7 +44,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public DateTimeOffset? LastModified { get; set; }
         /// <summary>The provider type for the webhook destination, or an empty string if none are applicable.Outgoing webhook events are sent in the format expected by the provider type if non-empty.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.WebhookProviderType? ProviderType { get; set; }
-        /// <summary>The webhook secret associated with the endpoint.Only populated on creation or when the secret is rotated.This secret is used for generating the `Tailscale-Webhook-Signature` header in requests sent to the endpoint URL.Learn more about [verifying webhook event signatures](/kb/1213/webhooks#verifying-an-event-signature).</summary>
+        /// <summary>The webhook secret associated with the endpoint.Only populated on creation or when the secret is rotated.This secret is used for generating the `Tailscale-Webhook-Signature` header in requests sent to the endpoint URL.Learn more about [verifying webhook event signatures](/docs/features/webhooks#verifying-an-event-signature).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Secret { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public string Secret { get; set; }
 #endif
-        /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/kb/1213/webhooks#events).</summary>
+        /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/docs/features/webhooks#events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Tailscale.OpenApiClient.Models.WebhookSubscriptionsItem?>? Subscriptions { get; set; }

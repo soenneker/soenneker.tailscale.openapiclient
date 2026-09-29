@@ -68,6 +68,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         #pragma warning disable CS1591
         GroupPushGroupAttributes,
         #pragma warning restore CS1591
+        [EnumMember(Value = "GROUP.UPDATE.USER_ROLE")]
+        #pragma warning disable CS1591
+        GroupUpdateUserRole,
+        #pragma warning restore CS1591
         [EnumMember(Value = "INVITE.ACCEPT.FEATURE")]
         #pragma warning disable CS1591
         InviteAcceptFeature,

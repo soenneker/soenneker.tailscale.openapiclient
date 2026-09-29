@@ -24,7 +24,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #endif
         /// <summary>The provider type for the webhook destination, or an empty string if none are applicable.Outgoing webhook events are sent in the format expected by the provider type if non-empty.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType? ProviderType { get; set; }
-        /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/kb/1213/webhooks#events).</summary>
+        /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/docs/features/webhooks#events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem?>? Subscriptions { get; set; }

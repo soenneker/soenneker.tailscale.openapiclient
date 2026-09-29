@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
     /// <summary>
-    /// Contains extra identifiers from the device when the tailnet it is connected to has device posture identification collection enabled.If the device has not opted-in to posture identification collection, this will contain {&quot;disabled&quot;: true}.Learn more about posture identity at https://tailscale.com/kb/1326/device-identity.
+    /// Contains extra identifiers from the device when the tailnet it is connected to has device posture identification collection enabled.If the device has not opted-in to posture identification collection, this will contain {&quot;disabled&quot;: true}.Learn more about posture identity at https://tailscale.com/docs/features/access-control/device-management/how-to/manage-identity.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DevicePostureIdentity : IAdditionalDataHolder, IParsable

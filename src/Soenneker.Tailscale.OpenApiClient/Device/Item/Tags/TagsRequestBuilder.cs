@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Tags
         {
         }
         /// <summary>
-        /// Tags let you assign an identity to a device that is separate from human users, and use that identity as part of an ACL to restrict access.Tags are similar to role accounts, but more flexible.Tags are created in the tailnet policy file by defining the tag and an owner of the tag.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.Consult the policy file for your tailnet in the [admin console](https://login.tailscale.com/admin/acls) for the list of tags that have been created for your tailnet.Learn more about [tags](https://tailscale.com/kb/1068/).OAuth Scope: `devices:core`.
+        /// Tags let you assign an identity to a device that is separate from human users, and use that identity as part of an ACL to restrict access.Tags are similar to role accounts, but more flexible.Tags are created in the tailnet policy file by defining the tag and an owner of the tag.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.Consult the policy file for your tailnet in the [admin console](https://login.tailscale.com/admin/acls) for the list of tags that have been created for your tailnet.Learn more about [tags](https://tailscale.com/docs/features/tags).OAuth Scope: `devices:core`.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Tags
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Tags let you assign an identity to a device that is separate from human users, and use that identity as part of an ACL to restrict access.Tags are similar to role accounts, but more flexible.Tags are created in the tailnet policy file by defining the tag and an owner of the tag.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.Consult the policy file for your tailnet in the [admin console](https://login.tailscale.com/admin/acls) for the list of tags that have been created for your tailnet.Learn more about [tags](https://tailscale.com/kb/1068/).OAuth Scope: `devices:core`.
+        /// Tags let you assign an identity to a device that is separate from human users, and use that identity as part of an ACL to restrict access.Tags are similar to role accounts, but more flexible.Tags are created in the tailnet policy file by defining the tag and an owner of the tag.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.Consult the policy file for your tailnet in the [admin console](https://login.tailscale.com/admin/acls) for the list of tags that have been created for your tailnet.Learn more about [tags](https://tailscale.com/docs/features/tags).OAuth Scope: `devices:core`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

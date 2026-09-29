@@ -55,7 +55,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public string ProfilePicUrl { get; set; }
 #endif
-        /// <summary>The role of the user. Learn more about [user roles](kb/1138/user-roles).</summary>
+        /// <summary>The role of the user. Learn more about [user roles](/docs/reference/user-roles).</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.UserRole? Role { get; set; }
         /// <summary>The status of the user.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.UserStatus? Status { get; set; }

@@ -25,23 +25,23 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public bool? AclsExternallyManagedOn { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether [device approval](/kb/1099/device-approval) is enabled for the tailnet.</summary>
+        /// <summary>Whether [device approval](/docs/features/access-control/device-management/device-approval) is enabled for the tailnet.</summary>
         public bool? DevicesApprovalOn { get; set; }
-        /// <summary>Whether [auto updates](/kb/1067/update#auto-updates) are enabled for devices that belong to this tailnet.</summary>
+        /// <summary>Whether [auto updates](/docs/features/client/update#auto-updates) are enabled for devices that belong to this tailnet.</summary>
         public bool? DevicesAutoUpdatesOn { get; set; }
-        /// <summary>The [key expiry](/kb/1028/key-expiry) duration for devices on this tailnet.</summary>
+        /// <summary>The [key expiry](/docs/features/access-control/key-expiry) duration for devices on this tailnet.</summary>
         public int? DevicesKeyDurationDays { get; set; }
-        /// <summary>Whether provisioning of [HTTPS certificates](/kb/1153/enabling-https) is enabled for this tailnet.</summary>
+        /// <summary>Whether provisioning of [HTTPS certificates](/docs/how-to/set-up-https-certificates) is enabled for this tailnet.</summary>
         public bool? HttpsEnabled { get; set; }
-        /// <summary>Whether [network flog logs](/kb/1219/network-flow-logs) are enabled for the tailnet.</summary>
+        /// <summary>Whether [network flog logs](/docs/features/logging/network-flow-logs) are enabled for the tailnet.</summary>
         public bool? NetworkFlowLoggingOn { get; set; }
-        /// <summary>Whether [identity collection](/kb/1326/device-identity) is enabled for [device posture](/kb/1288/device-posture) integrations for the tailnet.</summary>
+        /// <summary>Whether [identity collection](/docs/features/access-control/device-management/how-to/manage-identity) is enabled for [device posture](/docs/features/device-posture) integrations for the tailnet.</summary>
         public bool? PostureIdentityCollectionOn { get; set; }
-        /// <summary>Whether [regional routing](/kb/1115/high-availability#regional-routing) is enabled for the tailnet.</summary>
+        /// <summary>Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.</summary>
         public bool? RegionalRoutingOn { get; set; }
-        /// <summary>Whether [user approval](/kb/1239/user-approval) is enabled for this tailnet.</summary>
+        /// <summary>Whether [user approval](/docs/features/access-control/user-approval) is enabled for this tailnet.</summary>
         public bool? UsersApprovalOn { get; set; }
-        /// <summary>Which user roles are allowed to [join external tailnets](/kb/1271/invite-any-user).</summary>
+        /// <summary>Which user roles are allowed to [join external tailnets](/docs/features/sharing/how-to/invite-any-user).</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets? UsersRoleAllowedToJoinExternalTailnets { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings"/> and sets the default values.

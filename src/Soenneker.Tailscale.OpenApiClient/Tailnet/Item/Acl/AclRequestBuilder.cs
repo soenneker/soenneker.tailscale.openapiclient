@@ -46,7 +46,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
         {
         }
         /// <summary>
-        /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/kb/1337/acl-syntax).OAuth Scope: `policy_file:read`.
+        /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file:read`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -75,7 +75,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sets the ACL for the given tailnet. HuJSON and JSON are both accepted inputs.An `If-Match` header can be set to avoid missed updates.On success, returns the updated ACL in JSON or HuJSON according to the `Accept` header.Otherwise, errors are returned for incorrectly defined ACLs, ACLs with failing tests on attempted updates, and mismatched `If-Match` header and `ETag`.Learn more about [policy file ACL syntax](https://tailscale.com/kb/1337/acl-syntax).OAuth Scope: `policy_file`.
+        /// Sets the ACL for the given tailnet. HuJSON and JSON are both accepted inputs.An `If-Match` header can be set to avoid missed updates.On success, returns the updated ACL in JSON or HuJSON according to the `Accept` header.Otherwise, errors are returned for incorrectly defined ACLs, ACLs with failing tests on attempted updates, and mismatched `If-Match` header and `ETag`.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema"/></returns>
         /// <param name="body">The request body</param>
@@ -108,7 +108,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/kb/1337/acl-syntax).OAuth Scope: `policy_file:read`.
+        /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file:read`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
             return requestInfo;
         }
         /// <summary>
-        /// Sets the ACL for the given tailnet. HuJSON and JSON are both accepted inputs.An `If-Match` header can be set to avoid missed updates.On success, returns the updated ACL in JSON or HuJSON according to the `Accept` header.Otherwise, errors are returned for incorrectly defined ACLs, ACLs with failing tests on attempted updates, and mismatched `If-Match` header and `ETag`.Learn more about [policy file ACL syntax](https://tailscale.com/kb/1337/acl-syntax).OAuth Scope: `policy_file`.
+        /// Sets the ACL for the given tailnet. HuJSON and JSON are both accepted inputs.An `If-Match` header can be set to avoid missed updates.On success, returns the updated ACL in JSON or HuJSON according to the `Accept` header.Otherwise, errors are returned for incorrectly defined ACLs, ACLs with failing tests on attempted updates, and mismatched `If-Match` header and `ETag`.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -158,7 +158,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
             return new global::Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl.AclRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/kb/1337/acl-syntax).OAuth Scope: `policy_file:read`.
+        /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file:read`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AclRequestBuilderGetQueryParameters 

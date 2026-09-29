@@ -59,7 +59,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Dns.Nameservers
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.ListDnsNameservers200Response>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.ListDnsNameservers200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Replaces the list of global DNS nameservers for the given tailnet with the list supplied in the request.Note that changing the list of DNS nameservers may also affect the status of MagicDNS (if MagicDNS is on; learn about [MagicDNS](https://tailscale.com/kb/1081)).If all nameservers have been removed, MagicDNS will be automatically disabled (until explicitly turned back on by the user).
+        /// Replaces the list of global DNS nameservers for the given tailnet with the list supplied in the request.Note that changing the list of DNS nameservers may also affect the status of MagicDNS (if MagicDNS is on; learn about [MagicDNS](https://tailscale.com/docs/features/magicdns)).If all nameservers have been removed, MagicDNS will be automatically disabled (until explicitly turned back on by the user).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.SetDnsNameservers200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Dns.Nameservers
             return requestInfo;
         }
         /// <summary>
-        /// Replaces the list of global DNS nameservers for the given tailnet with the list supplied in the request.Note that changing the list of DNS nameservers may also affect the status of MagicDNS (if MagicDNS is on; learn about [MagicDNS](https://tailscale.com/kb/1081)).If all nameservers have been removed, MagicDNS will be automatically disabled (until explicitly turned back on by the user).
+        /// Replaces the list of global DNS nameservers for the given tailnet with the list supplied in the request.Note that changing the list of DNS nameservers may also affect the status of MagicDNS (if MagicDNS is on; learn about [MagicDNS](https://tailscale.com/docs/features/magicdns)).If all nameservers have been removed, MagicDNS will be automatically disabled (until explicitly turned back on by the user).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

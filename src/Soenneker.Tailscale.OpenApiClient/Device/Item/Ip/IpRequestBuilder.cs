@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Ip
         {
         }
         /// <summary>
-        /// When a device is added to a tailnet, its Tailscale IPv4 address is set at random either from the CGNAT range,or a subset of the CGNAT range specified by an [ip pool](https://tailscale.com/kb/1304/ip-pool).This endpoint can be used to replace the existing IPv4 address with a specific value.This action will break any existing connections to this machine.You will need to reconnect to this machine using the new IP address.You may also need to flush your DNS cache.OAuth Scope: `devices:core`.
+        /// When a device is added to a tailnet, its Tailscale IPv4 address is set at random either from the CGNAT range,or a subset of the CGNAT range specified by an [ip pool](https://tailscale.com/docs/reference/ip-pool).This endpoint can be used to replace the existing IPv4 address with a specific value.This action will break any existing connections to this machine.You will need to reconnect to this machine using the new IP address.You may also need to flush your DNS cache.OAuth Scope: `devices:core`.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Ip
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// When a device is added to a tailnet, its Tailscale IPv4 address is set at random either from the CGNAT range,or a subset of the CGNAT range specified by an [ip pool](https://tailscale.com/kb/1304/ip-pool).This endpoint can be used to replace the existing IPv4 address with a specific value.This action will break any existing connections to this machine.You will need to reconnect to this machine using the new IP address.You may also need to flush your DNS cache.OAuth Scope: `devices:core`.
+        /// When a device is added to a tailnet, its Tailscale IPv4 address is set at random either from the CGNAT range,or a subset of the CGNAT range specified by an [ip pool](https://tailscale.com/docs/reference/ip-pool).This endpoint can be used to replace the existing IPv4 address with a specific value.This action will break any existing connections to this machine.You will need to reconnect to this machine using the new IP address.You may also need to flush your DNS cache.OAuth Scope: `devices:core`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

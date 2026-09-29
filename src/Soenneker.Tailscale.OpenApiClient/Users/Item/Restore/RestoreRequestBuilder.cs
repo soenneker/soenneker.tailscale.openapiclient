@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Restore
         {
         }
         /// <summary>
-        /// Restores a suspended user&apos;s access to their tailnet. Learn more about [restoring users](/kb/1145/remove-team-members#restoring-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot restore their own user.
+        /// Restores a suspended user&apos;s access to their tailnet. Learn more about [restoring users](/docs/features/sharing/how-to/remove-team-members#restoring-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot restore their own user.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Restore
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Restores a suspended user&apos;s access to their tailnet. Learn more about [restoring users](/kb/1145/remove-team-members#restoring-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot restore their own user.
+        /// Restores a suspended user&apos;s access to their tailnet. Learn more about [restoring users](/docs/features/sharing/how-to/remove-team-members#restoring-users).OAuth Scope: `users`.&gt; ⓘ User-based access tokens cannot restore their own user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

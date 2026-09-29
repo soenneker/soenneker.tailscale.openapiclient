@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Routes
         {
         }
         /// <summary>
-        /// Retrieve the list of subnet routes that a device is advertising,as well as those that are enabled for it.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/kb/1019/subnets) and [exit nodes](/kb/1103/exit-nodes).OAuth Scope: `devices:routes:read`.
+        /// Retrieve the list of subnet routes that a device is advertising,as well as those that are enabled for it.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/docs/features/subnet-routers) and [exit nodes](/docs/features/exit-nodes).OAuth Scope: `devices:routes:read`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DeviceRoutes"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Routes
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.DeviceRoutes>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.DeviceRoutes.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set a device&apos;s enabled subnet routes by replacing the existing list of subnet routes with the supplied parameters.[Advertised routes](/kb/1019/subnets#advertise-subnet-routes) cannot be set through the API, since they must be set directly on the device.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/kb/1019/subnets) and [exit nodes](/kb/1103/exit-nodes).OAuth Scope: `devices:routes`.
+        /// Set a device&apos;s enabled subnet routes by replacing the existing list of subnet routes with the supplied parameters.[Advertised routes](/docs/features/subnet-routers#advertise-subnet-routes) cannot be set through the API, since they must be set directly on the device.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/docs/features/subnet-routers) and [exit nodes](/docs/features/exit-nodes).OAuth Scope: `devices:routes`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DeviceRoutes"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Routes
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.DeviceRoutes>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.DeviceRoutes.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the list of subnet routes that a device is advertising,as well as those that are enabled for it.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/kb/1019/subnets) and [exit nodes](/kb/1103/exit-nodes).OAuth Scope: `devices:routes:read`.
+        /// Retrieve the list of subnet routes that a device is advertising,as well as those that are enabled for it.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/docs/features/subnet-routers) and [exit nodes](/docs/features/exit-nodes).OAuth Scope: `devices:routes:read`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -109,7 +109,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Routes
             return requestInfo;
         }
         /// <summary>
-        /// Set a device&apos;s enabled subnet routes by replacing the existing list of subnet routes with the supplied parameters.[Advertised routes](/kb/1019/subnets#advertise-subnet-routes) cannot be set through the API, since they must be set directly on the device.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/kb/1019/subnets) and [exit nodes](/kb/1103/exit-nodes).OAuth Scope: `devices:routes`.
+        /// Set a device&apos;s enabled subnet routes by replacing the existing list of subnet routes with the supplied parameters.[Advertised routes](/docs/features/subnet-routers#advertise-subnet-routes) cannot be set through the API, since they must be set directly on the device.Routes must be both advertised and enabled for a device to act as a subnet router or exit node.If a device has advertised routes, they are not exposed to traffic until they are enabled.Conversely, if routes are enabled before they are advertised, they are not available for routing until the device in question has advertised them.Learn more about [subnet routers](/docs/features/subnet-routers) and [exit nodes](/docs/features/exit-nodes).OAuth Scope: `devices:routes`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

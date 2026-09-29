@@ -96,7 +96,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Users
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 
         {
-            /// <summary>Allows for filtering the output by user role. Learn more about [user roles](kb/1138/user-roles).</summary>
+            /// <summary>Allows for filtering the output by user role. Learn more about [user roles](/docs/reference/user-roles).</summary>
             [QueryParameter("role")]
             public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetTailnetUsersRole? Role { get; set; }
             /// <summary>Allows for filtering the output by user type.</summary>

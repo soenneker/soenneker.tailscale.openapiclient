@@ -59,7 +59,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Dns.Preferences
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.DnsPreferences>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.DnsPreferences.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set the DNS preferences for a tailnet; specifically, the MagicDNS setting.Note that MagicDNS is dependent on DNS servers.Learn about [MagicDNS](https://tailscale.com/kb/1081).If there is at least one DNS server, then MagicDNS can be enabled.Otherwise, it returns an error.Note that removing all nameservers will turn off MagicDNS.To reenable it, nameservers must be added back, and MagicDNS must be explicitly turned on.
+        /// Set the DNS preferences for a tailnet; specifically, the MagicDNS setting.Note that MagicDNS is dependent on DNS servers.Learn about [MagicDNS](https://tailscale.com/docs/features/magicdns).If there is at least one DNS server, then MagicDNS can be enabled.Otherwise, it returns an error.Note that removing all nameservers will turn off MagicDNS.To reenable it, nameservers must be added back, and MagicDNS must be explicitly turned on.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DnsPreferences"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Dns.Preferences
             return requestInfo;
         }
         /// <summary>
-        /// Set the DNS preferences for a tailnet; specifically, the MagicDNS setting.Note that MagicDNS is dependent on DNS servers.Learn about [MagicDNS](https://tailscale.com/kb/1081).If there is at least one DNS server, then MagicDNS can be enabled.Otherwise, it returns an error.Note that removing all nameservers will turn off MagicDNS.To reenable it, nameservers must be added back, and MagicDNS must be explicitly turned on.
+        /// Set the DNS preferences for a tailnet; specifically, the MagicDNS setting.Note that MagicDNS is dependent on DNS servers.Learn about [MagicDNS](https://tailscale.com/docs/features/magicdns).If there is at least one DNS server, then MagicDNS can be enabled.Otherwise, it returns an error.Note that removing all nameservers will turn off MagicDNS.To reenable it, nameservers must be added back, and MagicDNS must be explicitly turned on.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

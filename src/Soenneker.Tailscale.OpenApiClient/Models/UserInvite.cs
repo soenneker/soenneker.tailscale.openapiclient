@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
     /// <summary>
-    /// A user invite is an active invitation that lets a user join a tailnetwith a preassigned [user role](https://tailscale.com/kb/1138/user-roles).Each user invite has a unique ID that is used to identify the invitein API calls. You can find all user invite IDs for a particular tailnetby [listing user invites](#tag/userinvites/get/tailnet/{tailnet}/user-invites).
+    /// A user invite is an active invitation that lets a user join a tailnetwith a preassigned [user role](https://tailscale.com/docs/reference/user-roles).Each user invite has a unique ID that is used to identify the invitein API calls. You can find all user invite IDs for a particular tailnetby [listing user invites](#tag/userinvites/get/tailnet/{tailnet}/user-invites).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UserInvite : IAdditionalDataHolder, IParsable
