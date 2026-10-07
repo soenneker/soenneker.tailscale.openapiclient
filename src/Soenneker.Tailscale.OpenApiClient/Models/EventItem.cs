@@ -380,6 +380,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         #pragma warning disable CS1591
         TailnetUpdatePostureIntegration,
         #pragma warning restore CS1591
+        [EnumMember(Value = "TAILNET.UPDATE.ROUTE_SELECTION")]
+        #pragma warning disable CS1591
+        TailnetUpdateRouteSelection,
+        #pragma warning restore CS1591
         [EnumMember(Value = "TAILNET.UPDATE.SECURITY_EMAIL")]
         #pragma warning disable CS1591
         TailnetUpdateSecurityEmail,

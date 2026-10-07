@@ -187,5 +187,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         #pragma warning disable CS1591
         AuthProvider,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ROUTE_SELECTION")]
+        #pragma warning disable CS1591
+        RouteSelection,
+        #pragma warning restore CS1591
     }
 }

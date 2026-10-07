@@ -5359,8 +5359,12 @@
               "null",
               "boolean"
             ],
-            "description": "Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.\n",
+            "description": "Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.\nA PATCH request should prefer setting \u0060routeSelection\u0060.\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
+            "readOnly": true,
             "example": false
+          },
+          "routeSelection": {
+            "$ref": "#/components/schemas/TailnetSettingsRouteSelection"
           },
           "postureIdentityCollectionOn": {
             "type": [
@@ -8524,6 +8528,35 @@
           ]
         }
       },
+      "TailnetSettingsRouteSelection": {
+        "enum": [
+          "active-passive-failover",
+          "regional-routing",
+          "regional-routing-failover"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:\n* \u0060active-passive-failover\u0060 - Active-passive failover (formerly known as \u0022Failover\u0022)\n* \u0060regional-routing\u0060 - Regional routing\n* \u0060regional-routing-failover\u0060 - Regional routing with in-region failover\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
+        "example": "active-passive-failover",
+        "x-ms-enum": {
+          "name": "TailnetSettingsRouteSelection",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "active-passive-failover",
+              "name": "ActivePassiveFailover"
+            },
+            {
+              "value": "regional-routing",
+              "name": "RegionalRouting"
+            },
+            {
+              "value": "regional-routing-failover",
+              "name": "RegionalRoutingFailover"
+            }
+          ]
+        }
+      },
       "ServiceHostInfoApprovalLevel": {
         "enum": [
           "not-approved",
@@ -8736,7 +8769,8 @@
           "SECRET",
           "TCD",
           "TKA",
-          "AUTH_PROVIDER"
+          "AUTH_PROVIDER",
+          "ROUTE_SELECTION"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -8925,6 +8959,10 @@
             {
               "value": "AUTH_PROVIDER",
               "name": "AuthProvider"
+            },
+            {
+              "value": "ROUTE_SELECTION",
+              "name": "RouteSelection"
             }
           ]
         }
@@ -9191,6 +9229,7 @@
           "TAILNET.UPDATE.LOGSTREAM_ENDPOINT",
           "TAILNET.UPDATE.MAX_KEY_DURATION",
           "TAILNET.UPDATE.POSTURE_INTEGRATION",
+          "TAILNET.UPDATE.ROUTE_SELECTION",
           "TAILNET.UPDATE.SECURITY_EMAIL",
           "TAILNET.UPDATE.SUPPORT_EMAIL",
           "TAILNET.UPDATE.TCD",
@@ -9615,6 +9654,10 @@
             {
               "value": "TAILNET.UPDATE.POSTURE_INTEGRATION",
               "name": "TailnetUpdatePostureIntegration"
+            },
+            {
+              "value": "TAILNET.UPDATE.ROUTE_SELECTION",
+              "name": "TailnetUpdateRouteSelection"
             },
             {
               "value": "TAILNET.UPDATE.SECURITY_EMAIL",

@@ -37,8 +37,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public bool? NetworkFlowLoggingOn { get; set; }
         /// <summary>Whether [identity collection](/docs/features/access-control/device-management/how-to/manage-identity) is enabled for [device posture](/docs/features/device-posture) integrations for the tailnet.</summary>
         public bool? PostureIdentityCollectionOn { get; set; }
-        /// <summary>Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.</summary>
-        public bool? RegionalRoutingOn { get; set; }
+        /// <summary>Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.A PATCH request should prefer setting `routeSelection`.A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
+        public bool? RegionalRoutingOn { get; private set; }
+        /// <summary>The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:* `active-passive-failover` - Active-passive failover (formerly known as &quot;Failover&quot;)* `regional-routing` - Regional routing* `regional-routing-failover` - Regional routing with in-region failoverA PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
+        public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection? RouteSelection { get; set; }
         /// <summary>Whether [user approval](/docs/features/access-control/user-approval) is enabled for this tailnet.</summary>
         public bool? UsersApprovalOn { get; set; }
         /// <summary>Which user roles are allowed to [join external tailnets](/docs/features/sharing/how-to/invite-any-user).</summary>
@@ -77,6 +79,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
                 { "networkFlowLoggingOn", n => { NetworkFlowLoggingOn = n.GetBoolValue(); } },
                 { "postureIdentityCollectionOn", n => { PostureIdentityCollectionOn = n.GetBoolValue(); } },
                 { "regionalRoutingOn", n => { RegionalRoutingOn = n.GetBoolValue(); } },
+                { "routeSelection", n => { RouteSelection = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection>(); } },
                 { "usersApprovalOn", n => { UsersApprovalOn = n.GetBoolValue(); } },
                 { "usersRoleAllowedToJoinExternalTailnets", n => { UsersRoleAllowedToJoinExternalTailnets = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets>(); } },
             };
@@ -96,7 +99,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteBoolValue("httpsEnabled", HttpsEnabled);
             writer.WriteBoolValue("networkFlowLoggingOn", NetworkFlowLoggingOn);
             writer.WriteBoolValue("postureIdentityCollectionOn", PostureIdentityCollectionOn);
-            writer.WriteBoolValue("regionalRoutingOn", RegionalRoutingOn);
+            writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection>("routeSelection", RouteSelection);
             writer.WriteBoolValue("usersApprovalOn", UsersApprovalOn);
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets>("usersRoleAllowedToJoinExternalTailnets", UsersRoleAllowedToJoinExternalTailnets);
             writer.WriteAdditionalData(AdditionalData);
