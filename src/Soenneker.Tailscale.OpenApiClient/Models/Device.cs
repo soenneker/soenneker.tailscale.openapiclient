@@ -147,6 +147,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #else
         public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity PostureIdentity { get; set; }
 #endif
+        /// <summary>Reports the status of a single posture for a device.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus? PostureStatus { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus PostureStatus { get; set; }
+#endif
         /// <summary>&apos;true&apos; if Tailscale SSH is enabled on this device.Learn more about Tailscale SSH at https://tailscale.com/docs/features/tailscale-ssh.</summary>
         public bool? SshEnabled { get; set; }
         /// <summary>Lets you assign an identity to a device that is separate from human users, and use it as part of an ACL to restrict access.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.This value is empty for external devices.Learn more about tags at https://tailscale.com/docs/features/tags.</summary>
@@ -232,6 +240,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
                 { "nodeKey", n => { NodeKey = n.GetStringValue(); } },
                 { "os", n => { Os = n.GetStringValue(); } },
                 { "postureIdentity", n => { PostureIdentity = n.GetObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity>(global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity.CreateFromDiscriminatorValue); } },
+                { "postureStatus", n => { PostureStatus = n.GetObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus>(global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus.CreateFromDiscriminatorValue); } },
                 { "sshEnabled", n => { SshEnabled = n.GetBoolValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "tailnetLockError", n => { TailnetLockError = n.GetStringValue(); } },
@@ -271,6 +280,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteStringValue("nodeKey", NodeKey);
             writer.WriteStringValue("os", Os);
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity>("postureIdentity", PostureIdentity);
+            writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus>("postureStatus", PostureStatus);
             writer.WriteBoolValue("sshEnabled", SshEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteStringValue("tailnetLockError", TailnetLockError);

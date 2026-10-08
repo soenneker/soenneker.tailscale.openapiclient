@@ -4212,6 +4212,9 @@
           "postureIdentity": {
             "$ref": "#/components/schemas/DevicePostureIdentity"
           },
+          "postureStatus": {
+            "$ref": "#/components/schemas/DevicePostureStatus"
+          },
           "isEphemeral": {
             "type": "boolean",
             "description": "\u0027true\u0027 if the device is ephemeral.\nLearn more about ephemeral nodes at https://tailscale.com/docs/features/ephemeral-nodes.\n",
@@ -5914,6 +5917,27 @@
             "CP74LFQJXM"
           ]
         }
+      },
+      "DevicePostureStatus": {
+        "type": "object",
+        "properties": {
+          "passing": {
+            "type": "boolean",
+            "description": "Reports whether the device is passing this posture."
+          },
+          "impacting": {
+            "type": "boolean",
+            "description": "Whether the status of this posture affects the connectivity of the device."
+          },
+          "failingAssertions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of posture assertions the device is failing. Empty if the device is passing."
+          }
+        },
+        "description": "Reports the status of a single posture for a device.\n"
       },
       "DeviceDistro": {
         "type": "object",
@@ -8536,7 +8560,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:\n* \u0060active-passive-failover\u0060 - Active-passive failover (formerly known as \u0022Failover\u0022)\n* \u0060regional-routing\u0060 - Regional routing\n* \u0060regional-routing-failover\u0060 - Regional routing with in-region failover\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
+        "description": "The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:\n* \u0060active-passive-failover\u0060 - Active-passive failover (formerly known as \u0022Failover\u0022)\n* \u0060regional-routing\u0060 - Regional routing\n* \u0060regional-routing-failover\u0060 - Regional routing with in-region failover\n\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
         "example": "active-passive-failover",
         "x-ms-enum": {
           "name": "TailnetSettingsRouteSelection",

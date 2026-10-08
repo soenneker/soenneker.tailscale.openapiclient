@@ -4774,6 +4774,22 @@ components:
           example:
             serialNumbers:
               - CP74LFQJXM
+        postureStatus:
+          type: object
+          description: |
+            Reports the status of a single posture for a device.
+          properties:
+            passing:
+              type: boolean
+              description: Reports whether the device is passing this posture.
+            impacting:
+              type: boolean
+              description: Whether the status of this posture affects the connectivity of the device.
+            failingAssertions:
+              type: array
+              description: List of posture assertions the device is failing. Empty if the device is passing.
+              items:
+                type: string
         isEphemeral:
           type: boolean
           example: false
@@ -6300,6 +6316,7 @@ components:
             * `active-passive-failover` - Active-passive failover (formerly known as "Failover")
             * `regional-routing` - Regional routing
             * `regional-routing-failover` - Regional routing with in-region failover
+
             A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.
         postureIdentityCollectionOn:
           type:
