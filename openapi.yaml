@@ -6300,7 +6300,7 @@ components:
           example: false
           readOnly: true
           description: |
-            Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.
+            Whether [regional routing](/docs/features/route-selection#regional-routing) is enabled for the tailnet.
             A PATCH request should prefer setting `routeSelection`.
             A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.
         routeSelection:
@@ -6310,12 +6310,14 @@ components:
             - active-passive-failover
             - regional-routing
             - regional-routing-failover
+            - magicroute
           example: active-passive-failover
           description: |
-            The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:
+            The [route selection](/docs/features/route-selection) algorithm used by the tailnet:
             * `active-passive-failover` - Active-passive failover (formerly known as "Failover")
             * `regional-routing` - Regional routing
             * `regional-routing-failover` - Regional routing with in-region failover
+            * `magicroute` - MagicRoute
 
             A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.
         postureIdentityCollectionOn:

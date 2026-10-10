@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
-    /// <summary>The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:* `active-passive-failover` - Active-passive failover (formerly known as &quot;Failover&quot;)* `regional-routing` - Regional routing* `regional-routing-failover` - Regional routing with in-region failoverA PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
+    /// <summary>The [route selection](/docs/features/route-selection) algorithm used by the tailnet:* `active-passive-failover` - Active-passive failover (formerly known as &quot;Failover&quot;)* `regional-routing` - Regional routing* `regional-routing-failover` - Regional routing with in-region failover* `magicroute` - MagicRouteA PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TailnetSettingsRouteSelection
     {
@@ -18,6 +18,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         [EnumMember(Value = "regional-routing-failover")]
         #pragma warning disable CS1591
         RegionalRoutingFailover,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "magicroute")]
+        #pragma warning disable CS1591
+        Magicroute,
         #pragma warning restore CS1591
     }
 }

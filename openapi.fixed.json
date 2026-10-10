@@ -5362,7 +5362,7 @@
               "null",
               "boolean"
             ],
-            "description": "Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.\nA PATCH request should prefer setting \u0060routeSelection\u0060.\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
+            "description": "Whether [regional routing](/docs/features/route-selection#regional-routing) is enabled for the tailnet.\nA PATCH request should prefer setting \u0060routeSelection\u0060.\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
             "readOnly": true,
             "example": false
           },
@@ -8556,11 +8556,12 @@
         "enum": [
           "active-passive-failover",
           "regional-routing",
-          "regional-routing-failover"
+          "regional-routing-failover",
+          "magicroute"
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:\n* \u0060active-passive-failover\u0060 - Active-passive failover (formerly known as \u0022Failover\u0022)\n* \u0060regional-routing\u0060 - Regional routing\n* \u0060regional-routing-failover\u0060 - Regional routing with in-region failover\n\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
+        "description": "The [route selection](/docs/features/route-selection) algorithm used by the tailnet:\n* \u0060active-passive-failover\u0060 - Active-passive failover (formerly known as \u0022Failover\u0022)\n* \u0060regional-routing\u0060 - Regional routing\n* \u0060regional-routing-failover\u0060 - Regional routing with in-region failover\n* \u0060magicroute\u0060 - MagicRoute\n\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
         "example": "active-passive-failover",
         "x-ms-enum": {
           "name": "TailnetSettingsRouteSelection",
@@ -8577,6 +8578,10 @@
             {
               "value": "regional-routing-failover",
               "name": "RegionalRoutingFailover"
+            },
+            {
+              "value": "magicroute",
+              "name": "Magicroute"
             }
           ]
         }

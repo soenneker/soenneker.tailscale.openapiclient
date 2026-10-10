@@ -37,9 +37,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public bool? NetworkFlowLoggingOn { get; set; }
         /// <summary>Whether [identity collection](/docs/features/access-control/device-management/how-to/manage-identity) is enabled for [device posture](/docs/features/device-posture) integrations for the tailnet.</summary>
         public bool? PostureIdentityCollectionOn { get; set; }
-        /// <summary>Whether [regional routing](/docs/how-to/set-up-high-availability#regional-routing) is enabled for the tailnet.A PATCH request should prefer setting `routeSelection`.A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
+        /// <summary>Whether [regional routing](/docs/features/route-selection#regional-routing) is enabled for the tailnet.A PATCH request should prefer setting `routeSelection`.A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
         public bool? RegionalRoutingOn { get; private set; }
-        /// <summary>The [route selection](/docs/how-to/set-up-high-availability) algorithm used by the tailnet:* `active-passive-failover` - Active-passive failover (formerly known as &quot;Failover&quot;)* `regional-routing` - Regional routing* `regional-routing-failover` - Regional routing with in-region failoverA PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
+        /// <summary>The [route selection](/docs/features/route-selection) algorithm used by the tailnet:* `active-passive-failover` - Active-passive failover (formerly known as &quot;Failover&quot;)* `regional-routing` - Regional routing* `regional-routing-failover` - Regional routing with in-region failover* `magicroute` - MagicRouteA PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection? RouteSelection { get; set; }
         /// <summary>Whether [user approval](/docs/features/access-control/user-approval) is enabled for this tailnet.</summary>
         public bool? UsersApprovalOn { get; set; }
