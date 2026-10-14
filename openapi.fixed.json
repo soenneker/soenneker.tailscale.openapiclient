@@ -5315,6 +5315,13 @@
             "format": "uri",
             "example": "https://github.com/example/tailnet-policy"
           },
+          "adminConsoleSessionTimeoutMinutes": {
+            "maximum": 43200,
+            "minimum": 0,
+            "type": "integer",
+            "description": "The [admin console session timeout](/docs/account/admin-console-session-timeout) for members of this tailnet.\nSetting it to 0 disables the timeout.\n",
+            "example": 180
+          },
           "devicesApprovalOn": {
             "type": [
               "null",

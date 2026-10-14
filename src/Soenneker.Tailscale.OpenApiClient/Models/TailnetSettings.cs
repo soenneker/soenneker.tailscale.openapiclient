@@ -25,6 +25,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public bool? AclsExternallyManagedOn { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The [admin console session timeout](/docs/account/admin-console-session-timeout) for members of this tailnet.Setting it to 0 disables the timeout.</summary>
+        public int? AdminConsoleSessionTimeoutMinutes { get; set; }
         /// <summary>Whether [device approval](/docs/features/access-control/device-management/device-approval) is enabled for the tailnet.</summary>
         public bool? DevicesApprovalOn { get; set; }
         /// <summary>Whether [auto updates](/docs/features/client/update#auto-updates) are enabled for devices that belong to this tailnet.</summary>
@@ -72,6 +74,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             {
                 { "aclsExternalLink", n => { AclsExternalLink = n.GetStringValue(); } },
                 { "aclsExternallyManagedOn", n => { AclsExternallyManagedOn = n.GetBoolValue(); } },
+                { "adminConsoleSessionTimeoutMinutes", n => { AdminConsoleSessionTimeoutMinutes = n.GetIntValue(); } },
                 { "devicesApprovalOn", n => { DevicesApprovalOn = n.GetBoolValue(); } },
                 { "devicesAutoUpdatesOn", n => { DevicesAutoUpdatesOn = n.GetBoolValue(); } },
                 { "devicesKeyDurationDays", n => { DevicesKeyDurationDays = n.GetIntValue(); } },
@@ -93,6 +96,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("aclsExternalLink", AclsExternalLink);
             writer.WriteBoolValue("aclsExternallyManagedOn", AclsExternallyManagedOn);
+            writer.WriteIntValue("adminConsoleSessionTimeoutMinutes", AdminConsoleSessionTimeoutMinutes);
             writer.WriteBoolValue("devicesApprovalOn", DevicesApprovalOn);
             writer.WriteBoolValue("devicesAutoUpdatesOn", DevicesAutoUpdatesOn);
             writer.WriteIntValue("devicesKeyDurationDays", DevicesKeyDurationDays);
