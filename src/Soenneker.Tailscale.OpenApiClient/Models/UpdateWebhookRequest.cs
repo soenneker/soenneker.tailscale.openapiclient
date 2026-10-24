@@ -17,10 +17,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/docs/features/webhooks#events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem?>? Subscriptions { get; set; }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.UpdateWebhookRequestSubscriptionsItem?>? Subscriptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem?> Subscriptions { get; set; }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.UpdateWebhookRequestSubscriptionsItem?> Subscriptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.UpdateWebhookRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem>()?.AsList(); } },
+                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.UpdateWebhookRequestSubscriptionsItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem>("subscriptions", Subscriptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.UpdateWebhookRequestSubscriptionsItem>("subscriptions", Subscriptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

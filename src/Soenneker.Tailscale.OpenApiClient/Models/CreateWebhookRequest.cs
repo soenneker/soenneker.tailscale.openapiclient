@@ -27,10 +27,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/docs/features/webhooks#events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem?>? Subscriptions { get; set; }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?>? Subscriptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem?> Subscriptions { get; set; }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?> Subscriptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequest"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             {
                 { "endpointUrl", n => { EndpointUrl = n.GetStringValue(); } },
                 { "providerType", n => { ProviderType = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType>(); } },
-                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem>()?.AsList(); } },
+                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpointUrl", EndpointUrl);
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType>("providerType", ProviderType);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.SubscriptionsItem>("subscriptions", Subscriptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem>("subscriptions", Subscriptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

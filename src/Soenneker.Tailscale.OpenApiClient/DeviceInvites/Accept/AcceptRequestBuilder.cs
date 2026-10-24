@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept
 {
     /// <summary>
-    /// Builds and executes requests for operations under \device-invites\accept
+    /// Builds and executes requests for operations under \device-invites\-\accept
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AcceptRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AcceptRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/device-invites/accept", pathParameters)
+        public AcceptRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/device-invites/-/accept", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AcceptRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/device-invites/accept", rawUrl)
+        public AcceptRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/device-invites/-/accept", rawUrl)
         {
         }
         /// <summary>

@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept;
 using Soenneker.Tailscale.OpenApiClient.DeviceInvites.Item;
 using System.Collections.Generic;
 using System.IO;
@@ -16,10 +15,10 @@ namespace Soenneker.Tailscale.OpenApiClient.DeviceInvites
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeviceInvitesRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The accept property</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept.AcceptRequestBuilder Accept
+        /// <summary>The minus property</summary>
+        public global::Soenneker.Tailscale.OpenApiClient.DeviceInvites.Minus_RequestBuilder Minus
         {
-            get => new global::Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept.AcceptRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Tailscale.OpenApiClient.DeviceInvites.Minus_RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Tailscale.OpenApiClient.deviceInvites.item collection</summary>
         /// <param name="position">ID of the device invite.</param>

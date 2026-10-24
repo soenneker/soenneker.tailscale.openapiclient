@@ -51,7 +51,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "$ref": "#/components/parameters/fields"
@@ -104,7 +111,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -153,7 +167,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -231,7 +252,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -263,7 +290,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -344,7 +377,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -393,7 +432,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -434,7 +479,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -475,7 +526,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -516,7 +573,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -557,7 +620,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -596,7 +665,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -678,10 +753,23 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         },
         {
-          "$ref": "#/components/parameters/attributeKey"
+          "name": "attributeKey",
+          "in": "path",
+          "description": "The name of the posture attribute to set.\nThis must be prefixed with \u0060custom\u0060:\n\nKeys have a maximum length of 128 characters including the namespace,\nand can only contain letters, numbers, underscores, and colon.\n\nKeys are case-sensitive. Keys must be unique,\nbut are checked for uniqueness in a case-insensitive manner.\nFor example, \u0060custom:MyAttribute\u0060 and \u0060custom:myattribute\u0060 cannot both be set within a single tailnet.\n\nAll values for a given key need to be of the same type,\nwhich is determined when the first value is written for a given key.\nFor example, \u0060custom:myattribute\u0060 cannot have a numeric value (\u006087\u0060) for one node and a string value (\u0060\u002278\u0022\u0060)\nfor another node within the same tailnet.\n",
+          "required": true,
+          "schema": {
+            "maxLength": 128,
+            "type": "string"
+          }
         }
       ]
     },
@@ -762,7 +850,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -834,7 +928,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -890,7 +991,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userInviteId"
+          "name": "userInviteId",
+          "in": "path",
+          "description": "ID of the user invite.",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -918,7 +1025,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userInviteId"
+          "name": "userInviteId",
+          "in": "path",
+          "description": "ID of the user invite.",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -974,7 +1087,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceInviteId"
+          "name": "deviceInviteId",
+          "in": "path",
+          "description": "ID of the device invite.",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -1002,11 +1121,17 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/deviceInviteId"
+          "name": "deviceInviteId",
+          "in": "path",
+          "description": "ID of the device invite.",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
-    "/device-invites/accept": {
+    "/device-invites/-/accept": {
       "post": {
         "tags": [
           "DeviceInvites"
@@ -1094,7 +1219,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "$ref": "#/components/parameters/start"
@@ -1152,7 +1284,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "$ref": "#/components/parameters/start"
@@ -1193,10 +1332,23 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/logType"
+          "name": "logType",
+          "in": "path",
+          "description": "The type of log.",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/LogType"
+          }
         }
       ]
     },
@@ -1289,10 +1441,23 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/logType"
+          "name": "logType",
+          "in": "path",
+          "description": "The type of log.",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/LogType"
+          }
         }
       ]
     },
@@ -1339,7 +1504,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1386,7 +1558,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "name": "id",
@@ -1468,7 +1647,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1540,7 +1726,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1612,7 +1805,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1721,7 +1921,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1793,7 +2000,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1872,7 +2086,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -1970,10 +2191,24 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/keyId"
+          "name": "keyId",
+          "in": "path",
+          "description": "The id of the key.\nThe key ID can be found in the [admin console](https://login.tailscale.com/admin/settings/keys).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "k123456CNTRL"
+          }
         }
       ]
     },
@@ -2158,7 +2393,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "$ref": "#/components/parameters/AcceptHeaderParam"
@@ -2228,7 +2470,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "name": "type",
@@ -2364,7 +2613,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -2507,7 +2763,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -2602,7 +2865,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/id"
+          "name": "id",
+          "in": "path",
+          "description": "Unique identifier for a posture integration.",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "p56wQiqrn7mfDEVEL"
+          }
         }
       ]
     },
@@ -2645,7 +2915,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
           "name": "type",
@@ -2704,7 +2981,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userId"
+          "name": "userId",
+          "in": "path",
+          "description": "ID of the user.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -2749,7 +3032,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userId"
+          "name": "userId",
+          "in": "path",
+          "description": "ID of the user.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -2789,7 +3078,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userId"
+          "name": "userId",
+          "in": "path",
+          "description": "ID of the user.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -2825,7 +3120,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userId"
+          "name": "userId",
+          "in": "path",
+          "description": "ID of the user.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -2861,7 +3162,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userId"
+          "name": "userId",
+          "in": "path",
+          "description": "ID of the user.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -2897,7 +3204,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/userId"
+          "name": "userId",
+          "in": "path",
+          "description": "ID of the user.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -2947,7 +3260,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -2991,10 +3311,23 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/contactType"
+          "name": "contactType",
+          "in": "path",
+          "description": "Type of contact.",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/TailnetTailnetContactsContactTypeContactType"
+          }
         }
       ]
     },
@@ -3030,10 +3363,23 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/contactType"
+          "name": "contactType",
+          "in": "path",
+          "description": "Type of contact.",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/TailnetTailnetContactsContactTypeResendVerificationEmailContactType"
+          }
         }
       ]
     },
@@ -3121,7 +3467,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -3238,7 +3591,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/endpointId"
+          "name": "endpointId",
+          "in": "path",
+          "description": "ID for the webhook endpoint.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -3274,7 +3633,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/endpointId"
+          "name": "endpointId",
+          "in": "path",
+          "description": "ID for the webhook endpoint.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -3317,7 +3682,13 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/endpointId"
+          "name": "endpointId",
+          "in": "path",
+          "description": "ID for the webhook endpoint.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -3397,7 +3768,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -3440,7 +3818,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -3571,10 +3956,24 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/serviceName"
+          "name": "serviceName",
+          "in": "path",
+          "description": "The unique name of a Service. The name should be prefixed with \u0022svc:\u0022. It should be unique\nacross the tailnet, so names already used for a machine cannot be reused for a Service.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "example": "svc:example"
         }
       ]
     },
@@ -3621,10 +4020,24 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/serviceName"
+          "name": "serviceName",
+          "in": "path",
+          "description": "The unique name of a Service. The name should be prefixed with \u0022svc:\u0022. It should be unique\nacross the tailnet, so names already used for a machine cannot be reused for a Service.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "example": "svc:example"
         }
       ]
     },
@@ -3722,13 +4135,33 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/serviceName"
+          "name": "serviceName",
+          "in": "path",
+          "description": "The unique name of a Service. The name should be prefixed with \u0022svc:\u0022. It should be unique\nacross the tailnet, so names already used for a machine cannot be reused for a Service.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "example": "svc:example"
         },
         {
-          "$ref": "#/components/parameters/deviceId"
+          "name": "deviceId",
+          "in": "path",
+          "description": "ID of the device. Using the device\u0027s \u0060nodeId\u0060 is preferred, but its numeric \u0060id\u0060 value can also be used.\n",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -3816,7 +4249,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         }
       ]
     },
@@ -3933,10 +4373,24 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/tailnet"
+          "name": "tailnet",
+          "in": "path",
+          "description": "The tailnet ID. \n\nTailnets created before Oct 2025 can still use the legacy ID, but the Tailnet ID is the preferred identifier.\n\nWhen specifying a tailnet in the API, you can:\n\n- Provide a dash (\u0060-\u0060) to reference the default tailnet of the access token being used to make the API call.\n  This is the best option for most users.\n  Your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/-/...\u0022\n  \u0060\u0060\u0060\n\n- Provide the **tailnet ID** found on the **[General Settings](https://login.tailscale.com/admin/settings/general)**\n  page of the Tailscale admin console.\n\n  For example, if your tailnet ID name is \u0060T1234CNTRL\u0060, your API calls would start:\n\n  \u0060\u0060\u0060sh\n  curl \u0022https://api.tailscale.com/api/v2/tailnet/T1234CNTRL/...\u0022\n  \u0060\u0060\u0060\n\n  Learn more about [tailnet ID](https://tailscale.com/docs/concepts/tailnet-name#tailnet-id).\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "example.com"
+          }
         },
         {
-          "$ref": "#/components/parameters/appId"
+          "name": "appId",
+          "in": "path",
+          "description": "The ID of the OAuth app.\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "a123456CNTRL"
+          }
         }
       ]
     },
@@ -4058,7 +4512,14 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/organization"
+          "name": "organization",
+          "in": "path",
+          "description": "The organization identifier.\n\nUse a dash (\u0060-\u0060) to reference the organization of the access token being used to make the API call.\n",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "-"
+          }
         }
       ]
     }
@@ -4073,7 +4534,11 @@
             "items": {
               "type": "string"
             },
-            "description": "A list of Tailscale IP addresses for the device,\nincluding both IPv4 (formatted as 100.x.y.z)\nand IPv6 (formatted as fd7a:115c:a1e0:a:b:c:d:e) addresses.\n"
+            "description": "A list of Tailscale IP addresses for the device,\nincluding both IPv4 (formatted as 100.x.y.z)\nand IPv6 (formatted as fd7a:115c:a1e0:a:b:c:d:e) addresses.\n",
+            "example": [
+              "100.87.74.78",
+              "fd7a:115c:a1e0:ac82:4843:ca90:697d:c36e"
+            ]
           },
           "id": {
             "type": "string",
@@ -4160,7 +4625,8 @@
           },
           "machineKey": {
             "type": "string",
-            "description": "For internal use and is not required for any API operations.\nThis value is empty for external devices.\n"
+            "description": "For internal use and is not required for any API operations.\nThis value is empty for external devices.\n",
+            "example": ""
           },
           "nodeKey": {
             "type": "string",
@@ -4177,14 +4643,22 @@
             "items": {
               "type": "string"
             },
-            "description": "The subnet routes for this device that have been approved by a tailnet admin.\nLearn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.\n"
+            "description": "The subnet routes for this device that have been approved by a tailnet admin.\nLearn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.\n",
+            "example": [
+              "10.0.0.0/16",
+              "192.168.1.0/24"
+            ]
           },
           "advertisedRoutes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The subnets this device requests to expose.\nLearn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.\n"
+            "description": "The subnets this device requests to expose.\nLearn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.\n",
+            "example": [
+              "10.0.0.0/16",
+              "192.168.1.0/24"
+            ]
           },
           "clientConnectivity": {
             "$ref": "#/components/schemas/DeviceClientConnectivity"
@@ -4194,15 +4668,20 @@
             "items": {
               "type": "string"
             },
-            "description": "Lets you assign an identity to a device that is separate from human users, and use it as part of an ACL to restrict access.\nOnce a device is tagged, the tag is the owner of that device.\nA single node can have multiple tags assigned.\nThis value is empty for external devices.\nLearn more about tags at https://tailscale.com/docs/features/tags.\n"
+            "description": "Lets you assign an identity to a device that is separate from human users, and use it as part of an ACL to restrict access.\nOnce a device is tagged, the tag is the owner of that device.\nA single node can have multiple tags assigned.\nThis value is empty for external devices.\nLearn more about tags at https://tailscale.com/docs/features/tags.\n",
+            "example": [
+              "tag:golink"
+            ]
           },
           "tailnetLockError": {
             "type": "string",
-            "description": "Indicates an issue with the tailnet lock node-key signature on this device.\nThis field is only populated when tailnet lock is enabled.\n"
+            "description": "Indicates an issue with the tailnet lock node-key signature on this device.\nThis field is only populated when tailnet lock is enabled.\n",
+            "example": ""
           },
           "tailnetLockKey": {
             "type": "string",
-            "description": "The node\u0027s tailnet lock key.\nEvery node generates a tailnet lock key (so the value will be present) even if tailnet lock is not enabled.\nLearn more about tailnet lock at https://tailscale.com/docs/features/tailnet-lock.\n"
+            "description": "The node\u0027s tailnet lock key.\nEvery node generates a tailnet lock key (so the value will be present) even if tailnet lock is not enabled.\nLearn more about tailnet lock at https://tailscale.com/docs/features/tailnet-lock.\n",
+            "example": ""
           },
           "sshEnabled": {
             "type": "boolean",
@@ -4245,14 +4724,22 @@
             "items": {
               "type": "string"
             },
-            "description": "The subnets this device requests to expose.\n"
+            "description": "The subnets this device requests to expose.\n",
+            "example": [
+              "10.0.0.0/16",
+              "192.168.1.0/24"
+            ]
           },
           "enabledRoutes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The subnet routes for this device that have been approved by a tailnet admin.\n"
+            "description": "The subnet routes for this device that have been approved by a tailnet admin.\n",
+            "example": [
+              "10.0.0.0/16",
+              "192.168.1.0/24"
+            ]
           }
         }
       },
@@ -4621,7 +5108,6 @@
           "network"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of log for logging endpoints.\n",
         "example": "configuration",
         "x-ms-enum": {
@@ -4876,7 +5362,11 @@
             "items": {
               "type": "string"
             },
-            "description": "The search domains for the given tailnet.\n"
+            "description": "The search domains for the given tailnet.\n",
+            "example": [
+              "user1.example.com",
+              "user2.example.com"
+            ]
           }
         }
       },
@@ -4941,7 +5431,17 @@
             "items": {
               "$ref": "#/components/schemas/DnsConfigurationResolver"
             },
-            "description": "Global DNS resolvers to use. If \u0060preferences.overrideLocalDNS\u0060 is true, these override the local OS configuration; otherwise they are used as fallback resolvers.\n"
+            "description": "Global DNS resolvers to use. If \u0060preferences.overrideLocalDNS\u0060 is true, these override the local OS configuration; otherwise they are used as fallback resolvers.\n",
+            "example": [
+              {
+                "address": "8.8.8.8",
+                "useWithExitNode": true
+              },
+              {
+                "address": "1.1.1.1",
+                "useWithExitNode": false
+              }
+            ]
           },
           "splitDNS": {
             "$ref": "#/components/schemas/DnsConfigurationSplitDnsProperty"
@@ -4951,7 +5451,11 @@
             "items": {
               "type": "string"
             },
-            "description": "Search domain paths to apply.\n"
+            "description": "Search domain paths to apply.\n",
+            "example": [
+              "user1.example.com",
+              "user2.example.com"
+            ]
           },
           "preferences": {
             "$ref": "#/components/schemas/DnsConfigurationPreferences"
@@ -5017,14 +5521,20 @@
             "items": {
               "type": "string"
             },
-            "description": "A list of scopes granted to the key.\n\nOnly applies to OAuth clients, API access tokens, and federated identities.\n"
+            "description": "A list of scopes granted to the key.\n\nOnly applies to OAuth clients, API access tokens, and federated identities.\n",
+            "example": [
+              "all:read"
+            ]
           },
           "tags": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "A list of tags associated to the trust credential. \nAuth keys created with this client must have these exact tags, or tags owned by the client\u0027s tags. \nMandatory if the scopes include \u0022devices:core\u0022 or \u0022auth_keys\u0022. \n\nOnly applies to OAuth clients and federated identities.\n"
+            "description": "A list of tags associated to the trust credential. \nAuth keys created with this client must have these exact tags, or tags owned by the client\u0027s tags. \nMandatory if the scopes include \u0022devices:core\u0022 or \u0022auth_keys\u0022. \n\nOnly applies to OAuth clients and federated identities.\n",
+            "example": [
+              "tag:example"
+            ]
           },
           "description": {
             "type": "string",
@@ -5142,7 +5652,8 @@
           },
           "profilePicUrl": {
             "type": "string",
-            "description": "The profile pic URL for the user.\n"
+            "description": "The profile pic URL for the user.\n",
+            "example": ""
           },
           "tailnetId": {
             "type": "string",
@@ -5247,7 +5758,11 @@
             "items": {
               "$ref": "#/components/schemas/WebhookSubscriptionsItem"
             },
-            "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n"
+            "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n",
+            "example": [
+              "nodeCreated",
+              "userDeleted"
+            ]
           },
           "secret": {
             "type": "string",
@@ -5265,7 +5780,6 @@
           "discord"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The provider type for the webhook destination, or an empty string if none are applicable.\nOutgoing webhook events are sent in the format expected by the provider type if non-empty.\n",
         "example": "slack",
         "x-ms-enum": {
@@ -5296,7 +5810,11 @@
         "items": {
           "$ref": "#/components/schemas/SubscriptionsItem"
         },
-        "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n"
+        "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n",
+        "example": [
+          "nodeCreated",
+          "userDeleted"
+        ]
       },
       "TailnetSettings": {
         "type": "object",
@@ -5414,7 +5932,11 @@
             "items": {
               "type": "string"
             },
-            "description": "The IP addresses assigned to the Service: the IPv4 followed by the IPv6.\n"
+            "description": "The IP addresses assigned to the Service: the IPv4 followed by the IPv6.\n",
+            "example": [
+              "100.93.49.180",
+              "fd7a:115c:a1e0::3456:3cb4"
+            ]
           },
           "comment": {
             "type": "string",
@@ -5426,14 +5948,21 @@
             "items": {
               "type": "string"
             },
-            "description": "A list of protocol:port pairs to be exposed by the Service.\n\nThe only supported protocol is \u0022tcp\u0022 at this time. \u0022do-not-validate\u0022 can be used to skip validation.\n"
+            "description": "A list of protocol:port pairs to be exposed by the Service.\n\nThe only supported protocol is \u0022tcp\u0022 at this time. \u0022do-not-validate\u0022 can be used to skip validation.\n",
+            "example": [
+              "tcp:80",
+              "tcp:443"
+            ]
           },
           "tags": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "A list of optional tags associated with the Service."
+            "description": "A list of optional tags associated with the Service.",
+            "example": [
+              "tag:example"
+            ]
           }
         },
         "description": "An information summary for a Service.\n\nEach Service has a unique name within the tailnet, one IPv4 and one IPv6 address, optional comment, list of ports, \nand optional tags.\n"
@@ -5442,11 +5971,7 @@
         "type": "object",
         "properties": {
           "addrs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The IP addresses assigned to the Service.\n\n- For new Services: either unset or a single IPv4 to assign the Service.\n- For existing Services: an IPv4 and an IPv6. The IPv4 can be updated, but not the IPv6.\n"
+            "$ref": "#/components/schemas/VipServiceInfoPutAddrs"
           },
           "name": {
             "type": "string",
@@ -5469,14 +5994,21 @@
             "items": {
               "type": "string"
             },
-            "description": "A list of protocol:port pairs to be exposed by the Service.\n\nThe only supported protocol is \u0022tcp\u0022 at this time. \u0022do-not-validate\u0022 can be used to skip validation.\n"
+            "description": "A list of protocol:port pairs to be exposed by the Service.\n\nThe only supported protocol is \u0022tcp\u0022 at this time. \u0022do-not-validate\u0022 can be used to skip validation.\n",
+            "example": [
+              "tcp:80",
+              "tcp:443"
+            ]
           },
           "tags": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "A list of optional tags associated with the Service."
+            "description": "A list of optional tags associated with the Service.",
+            "example": [
+              "tag:example"
+            ]
           }
         }
       },
@@ -5540,21 +6072,30 @@
             "items": {
               "type": "string"
             },
-            "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n"
+            "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n",
+            "example": [
+              "https://example.com/oauth/callback"
+            ]
           },
           "scopes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n"
+            "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n",
+            "example": [
+              "auth_keys:create"
+            ]
           },
           "allowedNodeAttributes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
+            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n",
+            "example": [
+              "custom:myattribute"
+            ]
           },
           "clientSecret": {
             "type": "string",
@@ -5595,21 +6136,30 @@
         "items": {
           "type": "string"
         },
-        "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n"
+        "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n",
+        "example": [
+          "https://example.com/oauth/callback"
+        ]
       },
       "Scopes": {
         "type": "array",
         "items": {
           "type": "string"
         },
-        "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n"
+        "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n",
+        "example": [
+          "auth_keys:create"
+        ]
       },
       "AllowedNodeAttributes": {
         "type": "array",
         "items": {
           "type": "string"
         },
-        "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
+        "description": "The list of custom device attributes that the OAuth app is allowed to set.\n",
+        "example": [
+          "custom:myattribute"
+        ]
       },
       "OrganizationTailnet": {
         "type": "object",
@@ -5741,7 +6291,6 @@
         "type": "string"
       },
       "ValidateAndTestPolicyFileJsonRequest": {
-        "type": "object",
         "oneOf": [
           {
             "type": "array",
@@ -5761,7 +6310,6 @@
         "description": "The HuJSON representation of the policy file.\n"
       },
       "DevicePostureAttributesAttributesAdditionalProperties": {
-        "type": "object",
         "anyOf": [
           {
             "type": "string"
@@ -5776,22 +6324,22 @@
         "x-additionalPropertiesName": "Posture attributes"
       },
       "ConfigurationAuditLogOld": {
-        "type": "object",
         "anyOf": [
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogOldBranch1"
+            "type": "string"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogOldBranch2"
+            "type": "number"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogOldBranch3"
+            "type": "integer"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogOldBranch4"
+            "type": "boolean"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogOldBranch5"
+            "type": "array",
+            "items": {}
           },
           {
             "type": "object"
@@ -5800,22 +6348,22 @@
         "description": "The value of \u0060target.property\u0060\u0060 prior to the event."
       },
       "ConfigurationAuditLogNew": {
-        "type": "object",
         "anyOf": [
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogNewBranch1"
+            "type": "string"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogNewBranch2"
+            "type": "number"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogNewBranch3"
+            "type": "integer"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogNewBranch4"
+            "type": "boolean"
           },
           {
-            "$ref": "#/components/schemas/ConfigurationAuditLogNewBranch5"
+            "type": "array",
+            "items": {}
           },
           {
             "type": "object"
@@ -5831,7 +6379,11 @@
             "items": {
               "type": "string"
             },
-            "description": "The IP addresses assigned to the Service.\n\n- For new Services: either unset or a single IPv4 to assign the Service.\n- For existing Services: an IPv4 and an IPv6. The IPv4 can be updated, but not the IPv6.\n"
+            "description": "The IP addresses assigned to the Service.\n\n- For new Services: either unset or a single IPv4 to assign the Service.\n- For existing Services: an IPv4 and an IPv6. The IPv4 can be updated, but not the IPv6.\n",
+            "example": [
+              "100.93.49.180",
+              "fd7a:115c:a1e0::3456:3cb4"
+            ]
           }
         }
       },
@@ -5843,7 +6395,6 @@
         "description": "Array of ACL tests.\n"
       },
       "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsAdditionalProperties": {
-        "type": "object",
         "anyOf": [
           {
             "type": "string"
@@ -5865,7 +6416,11 @@
             "items": {
               "type": "string"
             },
-            "description": "Client\u0027s magicsock UDP IP:port endpoints (IPv4 or IPv6).\n"
+            "description": "Client\u0027s magicsock UDP IP:port endpoints (IPv4 or IPv6).\n",
+            "example": [
+              "199.9.14.201:59128",
+              "192.68.0.21:59128"
+            ]
           },
           "mappingVariesByDestIP": {
             "type": "boolean",
@@ -5912,7 +6467,10 @@
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "example": [
+              "CP74LFQJXM"
+            ]
           },
           "disabled": {
             "type": "boolean"
@@ -6005,7 +6563,8 @@
           },
           "profilePicUrl": {
             "type": "string",
-            "description": "The profile pic URL for the user who accepted the share invite.\n"
+            "description": "The profile pic URL for the user who accepted the share invite.\n",
+            "example": ""
           }
         },
         "description": "Set when the invite has been accepted.\nIt holds information about the user who accepted the share invite.\n"
@@ -6035,7 +6594,11 @@
             "items": {
               "type": "string"
             },
-            "description": "Indicates the tags owning a node. Its value is only set if \u0060type\u0060 is \u0060NODE\u0060."
+            "description": "Indicates the tags owning a node. Its value is only set if \u0060type\u0060 is \u0060NODE\u0060.",
+            "example": [
+              "server",
+              "datacenter1"
+            ]
           }
         },
         "description": "The person who caused the action related to this event."
@@ -6280,7 +6843,10 @@
             "items": {
               "type": "string"
             },
-            "description": "tags are the tags that will be set on devices registered with this key.\nLearn about tags at https://tailscale.com/docs/features/tags.\n\nWhether tags are required or optional depends on the owner of the auth key:\n- When creating an auth key owned by the tailnet (using OAuth), it must have tags. The auth tags specified for that new auth key must exactly match the tags that are on the OAuth client used to create that auth key (or they must be tags that are owned by the tags that are on the OAuth client used to create the auth key).\n- When creating an auth key owned by a user (using a user\u0027s access token), tags are optional.\n"
+            "description": "tags are the tags that will be set on devices registered with this key.\nLearn about tags at https://tailscale.com/docs/features/tags.\n\nWhether tags are required or optional depends on the owner of the auth key:\n- When creating an auth key owned by the tailnet (using OAuth), it must have tags. The auth tags specified for that new auth key must exactly match the tags that are on the OAuth client used to create that auth key (or they must be tags that are owned by the tags that are on the OAuth client used to create the auth key).\n- When creating an auth key owned by a user (using a user\u0027s access token), tags are optional.\n",
+            "example": [
+              "tag:example"
+            ]
           }
         },
         "description": "\u0060create\u0060 specifies the key\u0027s permissions when creating devices.\n"
@@ -6350,7 +6916,11 @@
             "items": {
               "type": "string"
             },
-            "description": "The new list of enabled subnet routes.\n"
+            "description": "The new list of enabled subnet routes.\n",
+            "example": [
+              "10.0.0.0/16",
+              "192.168.1.0/24"
+            ]
           }
         }
       },
@@ -6387,7 +6957,11 @@
             "items": {
               "type": "string"
             },
-            "description": "The new list of tags for the device.\n"
+            "description": "The new list of tags for the device.\n",
+            "example": [
+              "tag:foo",
+              "tag:bar"
+            ]
           }
         }
       },
@@ -6440,7 +7014,35 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DeviceInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "12345",
+            "created": "2024-05-08T20:19:51.777861756Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22011,
+            "allowExitNode": true,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": false
+          },
+          {
+            "id": "12346",
+            "created": "2024-04-03T21:38:49.333829261Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22012,
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": true,
+            "acceptedBy": {
+              "id": 33223,
+              "loginName": "someone@example.com",
+              "profilePicUrl": ""
+            }
+          }
+        ]
       },
       "CreateDeviceInvitesRequest": {
         "type": "array",
@@ -6452,13 +7054,56 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DeviceInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "12345",
+            "created": "2024-05-08T20:19:51.777861756Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22011,
+            "allowExitNode": true,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": false
+          },
+          {
+            "id": "12346",
+            "created": "2024-04-03T21:38:49.333829261Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22012,
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": false
+          }
+        ]
       },
       "ListUserInvites200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UserInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "29214",
+            "role": "admin",
+            "tailnetId": 12345,
+            "inviterId": 34567,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
+            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+          },
+          {
+            "id": "29215",
+            "role": "admin",
+            "tailnetId": 12345,
+            "inviterId": 34567,
+            "email": "someoneelse@example.com",
+            "lastEmailSentAt": "2024-05-09T17:23:30.91778771Z",
+            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+          }
+        ]
       },
       "CreateUserInvitesRequest": {
         "type": "array",
@@ -6470,7 +7115,18 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UserInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "29214",
+            "role": "admin",
+            "tailnetId": 12345,
+            "inviterId": 34567,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
+            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+          }
+        ]
       },
       "AcceptDeviceInviteRequest": {
         "required": [
@@ -6537,7 +7193,11 @@
             "items": {
               "type": "string"
             },
-            "description": "DNS nameservers.\n"
+            "description": "DNS nameservers.\n",
+            "example": [
+              "8.8.8.8",
+              "1.2.3.4"
+            ]
           }
         }
       },
@@ -6549,7 +7209,11 @@
             "items": {
               "type": "string"
             },
-            "description": "DNS nameservers.\n"
+            "description": "DNS nameservers.\n",
+            "example": [
+              "8.8.8.8",
+              "1.2.3.4"
+            ]
           }
         }
       },
@@ -6561,7 +7225,11 @@
             "items": {
               "type": "string"
             },
-            "description": "DNS nameservers.\n"
+            "description": "DNS nameservers.\n",
+            "example": [
+              "8.8.8.8",
+              "1.2.3.4"
+            ]
           },
           "magicDNS": {
             "type": "boolean",
@@ -6596,14 +7264,20 @@
             "items": {
               "type": "string"
             },
-            "description": "A list of scopes to grant to the key. At least one scope is required for OAuth clients and federated identities.\nSee [trust credentials scopes](https://tailscale.com/docs/reference/trust-credentials#scopes) for a list of available scopes.\n\nOnly applies to OAuth clients and federated identities.\n"
+            "description": "A list of scopes to grant to the key. At least one scope is required for OAuth clients and federated identities.\nSee [trust credentials scopes](https://tailscale.com/docs/reference/trust-credentials#scopes) for a list of available scopes.\n\nOnly applies to OAuth clients and federated identities.\n",
+            "example": [
+              "all:read"
+            ]
           },
           "tags": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "A list of tags associated to the trust credential. Auth keys created with this credential must have these exact tags, or tags owned by the credential\u0027s tags.\nMandatory if the scopes include \u0022devices:core\u0022 or \u0022auth_keys\u0022.\n\nOnly applies to OAuth clients and federated identities.\n"
+            "description": "A list of tags associated to the trust credential. Auth keys created with this credential must have these exact tags, or tags owned by the credential\u0027s tags.\nMandatory if the scopes include \u0022devices:core\u0022 or \u0022auth_keys\u0022.\n\nOnly applies to OAuth clients and federated identities.\n",
+            "example": [
+              "tag:example"
+            ]
           },
           "issuer": {
             "type": "string",
@@ -6642,14 +7316,20 @@
             "items": {
               "type": "string"
             },
-            "description": "A list of scopes to grant to the key. At least one scope is required.\nSee [trust credentials scopes](https://tailscale.com/docs/reference/trust-credentials#scopes) for a list of available scopes.\n"
+            "description": "A list of scopes to grant to the key. At least one scope is required.\nSee [trust credentials scopes](https://tailscale.com/docs/reference/trust-credentials#scopes) for a list of available scopes.\n",
+            "example": [
+              "all:read"
+            ]
           },
           "tags": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "A list of tags associated to the trust credential. Auth keys created with this credential must have these exact tags, or tags owned by the credential\u0027s tags.\nMandatory if the scopes include \u0022devices:core\u0022 or \u0022auth_keys\u0022.\n"
+            "description": "A list of tags associated to the trust credential. Auth keys created with this credential must have these exact tags, or tags owned by the credential\u0027s tags.\nMandatory if the scopes include \u0022devices:core\u0022 or \u0022auth_keys\u0022.\n",
+            "example": [
+              "tag:example"
+            ]
           },
           "issuer": {
             "type": "string",
@@ -6721,7 +7401,15 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ValidateAndTestPolicyFile200ResponseDataItem"
-            }
+            },
+            "example": [
+              {
+                "user": "user1@example.com",
+                "errors": [
+                  "address \u00222.2.2.2:22\u0022: want: Drop, got: Accept"
+                ]
+              }
+            ]
           }
         }
       },
@@ -6781,9 +7469,13 @@
           "subscriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SubscriptionsItem"
+              "$ref": "#/components/schemas/CreateWebhookRequestSubscriptionsItem"
             },
-            "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n"
+            "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n",
+            "example": [
+              "nodeCreated",
+              "userDeleted"
+            ]
           }
         }
       },
@@ -6793,9 +7485,13 @@
           "subscriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SubscriptionsItem"
+              "$ref": "#/components/schemas/UpdateWebhookRequestSubscriptionsItem"
             },
-            "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n"
+            "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n",
+            "example": [
+              "nodeCreated",
+              "userDeleted"
+            ]
           }
         }
       },
@@ -6819,35 +7515,47 @@
         "properties": {
           "name": {
             "maxLength": 50,
+            "minLength": 3,
             "pattern": "^[a-zA-Z0-9._-]\u002B$",
             "type": "string",
-            "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n"
+            "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n",
+            "example": "my-oauth-app"
           },
           "description": {
             "maxLength": 300,
             "type": "string",
-            "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n"
+            "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n",
+            "example": "An OAuth app used to provision devices."
           },
           "redirectURIs": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n"
+            "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n",
+            "example": [
+              "https://example.com/oauth/callback"
+            ]
           },
           "scopes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n"
+            "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n",
+            "example": [
+              "auth_keys:create"
+            ]
           },
           "allowedNodeAttributes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
+            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n",
+            "example": [
+              "custom:myattribute"
+            ]
           }
         }
       },
@@ -6861,157 +7569,53 @@
         "properties": {
           "name": {
             "maxLength": 50,
+            "minLength": 3,
             "pattern": "^[a-zA-Z0-9._-]\u002B$",
             "type": "string",
-            "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n"
+            "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n",
+            "example": "my-oauth-app"
           },
           "description": {
             "maxLength": 300,
             "type": "string",
-            "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n"
+            "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n",
+            "example": "An OAuth app used to provision devices."
           },
           "redirectURIs": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n"
+            "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n",
+            "example": [
+              "https://example.com/oauth/callback"
+            ]
           },
           "scopes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n"
+            "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n",
+            "example": [
+              "auth_keys:create"
+            ]
           },
           "allowedNodeAttributes": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n"
+            "description": "The list of custom device attributes that the OAuth app is allowed to set.\n",
+            "example": [
+              "custom:myattribute"
+            ]
           }
         }
       },
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
-      },
-      "ConfigurationAuditLogOldBranch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "ConfigurationAuditLogOldBranch2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "number"
-          }
-        }
-      },
-      "ConfigurationAuditLogOldBranch3": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer"
-          }
-        }
-      },
-      "ConfigurationAuditLogOldBranch4": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "boolean"
-          }
-        }
-      },
-      "ConfigurationAuditLogOldBranch5": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ConfigurationAuditLogOldBranch5ValueItem"
-            }
-          }
-        }
-      },
-      "ConfigurationAuditLogNewBranch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "ConfigurationAuditLogNewBranch2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "number"
-          }
-        }
-      },
-      "ConfigurationAuditLogNewBranch3": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer"
-          }
-        }
-      },
-      "ConfigurationAuditLogNewBranch4": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "boolean"
-          }
-        }
-      },
-      "ConfigurationAuditLogNewBranch5": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ConfigurationAuditLogNewBranch5ValueItem"
-            }
-          }
-        }
       },
       "ListTailnetDevices200Response": {
         "type": "object",
@@ -7028,7 +7632,35 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DeviceInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "12345",
+            "created": "2024-05-08T20:19:51.777861756Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22011,
+            "allowExitNode": true,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": false
+          },
+          {
+            "id": "12346",
+            "created": "2024-04-03T21:38:49.333829261Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22012,
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": true,
+            "acceptedBy": {
+              "id": 33223,
+              "loginName": "someone@example.com",
+              "profilePicUrl": ""
+            }
+          }
+        ]
       },
       "CreateDeviceInvitesRequestRequestBody": {
         "type": "array",
@@ -7040,13 +7672,56 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DeviceInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "12345",
+            "created": "2024-05-08T20:19:51.777861756Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22011,
+            "allowExitNode": true,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": false
+          },
+          {
+            "id": "12346",
+            "created": "2024-04-03T21:38:49.333829261Z",
+            "tailnetId": 59954,
+            "deviceId": 11055,
+            "sharerId": 22012,
+            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+            "accepted": false
+          }
+        ]
       },
       "ListUserInvites200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UserInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "29214",
+            "role": "admin",
+            "tailnetId": 12345,
+            "inviterId": 34567,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
+            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+          },
+          {
+            "id": "29215",
+            "role": "admin",
+            "tailnetId": 12345,
+            "inviterId": 34567,
+            "email": "someoneelse@example.com",
+            "lastEmailSentAt": "2024-05-09T17:23:30.91778771Z",
+            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+          }
+        ]
       },
       "CreateUserInvitesRequestRequestBody": {
         "type": "array",
@@ -7058,7 +7733,18 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UserInvite"
-        }
+        },
+        "example": [
+          {
+            "id": "29214",
+            "role": "admin",
+            "tailnetId": 12345,
+            "inviterId": 34567,
+            "email": "user@example.com",
+            "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
+            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+          }
+        ]
       },
       "ListConfigurationAuditLogs200Response": {
         "type": "object",
@@ -7108,7 +7794,16 @@
           },
           "x-additionalPropertiesName": "Domain names to DNS"
         },
-        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n"
+        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
+        "example": {
+          "example.com": [
+            "1.1.1.1",
+            "1.2.3.4"
+          ],
+          "other.com": [
+            "2.2.2.2"
+          ]
+        }
       },
       "UpdateSplitDnsRequest": {
         "type": "object",
@@ -7122,7 +7817,16 @@
           },
           "x-additionalPropertiesName": "Domain names to DNS"
         },
-        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n"
+        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
+        "example": {
+          "example.com": [
+            "1.1.1.1",
+            "1.2.3.4"
+          ],
+          "other.com": [
+            "2.2.2.2"
+          ]
+        }
       },
       "UpdateSplitDns200Response": {
         "type": "object",
@@ -7136,7 +7840,16 @@
           },
           "x-additionalPropertiesName": "Domain names to DNS"
         },
-        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n"
+        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
+        "example": {
+          "example.com": [
+            "1.1.1.1",
+            "1.2.3.4"
+          ],
+          "other.com": [
+            "2.2.2.2"
+          ]
+        }
       },
       "SetSplitDnsRequest": {
         "type": "object",
@@ -7150,7 +7863,16 @@
           },
           "x-additionalPropertiesName": "Domain names to DNS"
         },
-        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n"
+        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
+        "example": {
+          "example.com": [
+            "1.1.1.1",
+            "1.2.3.4"
+          ],
+          "other.com": [
+            "2.2.2.2"
+          ]
+        }
       },
       "SetSplitDns200Response": {
         "type": "object",
@@ -7164,7 +7886,16 @@
           },
           "x-additionalPropertiesName": "Domain names to DNS"
         },
-        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n"
+        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
+        "example": {
+          "example.com": [
+            "1.1.1.1",
+            "1.2.3.4"
+          ],
+          "other.com": [
+            "2.2.2.2"
+          ]
+        }
       },
       "ListTailnetKeys200Response": {
         "type": "object",
@@ -7318,8 +8049,18 @@
           }
         }
       },
+      "VipServiceInfoPutAddrs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The IP addresses assigned to the Service.\n\n- For new Services: either unset or a single IPv4 to assign the Service.\n- For existing Services: an IPv4 and an IPv6. The IPv4 can be updated, but not the IPv6.\n",
+        "example": [
+          "100.93.49.180",
+          "fd7a:115c:a1e0::3456:3cb4"
+        ]
+      },
       "BatchUpdateCustomDevicePostureAttributesRequestNodesAdditionalPropertiesAdditionalPropertiesValue": {
-        "type": "object",
         "anyOf": [
           {
             "type": "string"
@@ -7334,7 +8075,6 @@
         "description": "Attribute value.\n"
       },
       "SetCustomDevicePostureAttributesRequestValue": {
-        "type": "object",
         "anyOf": [
           {
             "type": "string"
@@ -7378,7 +8118,25 @@
           },
           "x-additionalPropertiesName": "Domain names to DNS resolvers"
         },
-        "description": "Map of DNS name suffixes (domains) to lists of resolvers for Split DNS and advanced routing overlays.\n"
+        "description": "Map of DNS name suffixes (domains) to lists of resolvers for Split DNS and advanced routing overlays.\n",
+        "example": {
+          "corp.example.com": [
+            {
+              "address": "10.0.0.53",
+              "useWithExitNode": true
+            },
+            {
+              "address": "10.0.1.53",
+              "useWithExitNode": true
+            }
+          ],
+          "other.internal": [
+            {
+              "address": "10.0.2.53",
+              "useWithExitNode": false
+            }
+          ]
+        }
       },
       "KeyCustomClaimRulesProperty": {
         "type": "object",
@@ -7386,21 +8144,37 @@
           "type": "string",
           "x-additionalPropertiesName": "Custom claim rule"
         },
-        "description": "A map of claim names to pattern strings used to match against arbitrary claims in the OIDC identity token.\nPatterns can include \u0060*\u0060 characters to match against any character.\n\nOnly applies to federated identities.\n"
+        "description": "A map of claim names to pattern strings used to match against arbitrary claims in the OIDC identity token.\nPatterns can include \u0060*\u0060 characters to match against any character.\n\nOnly applies to federated identities.\n",
+        "example": {
+          "exampleAdditionalClaim": "valueToMatch",
+          "otherAdditionalClaim": "valueWithWildcard*"
+        }
       },
       "DeviceClientConnectivityLatencyProperty": {
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/DeviceClientConnectivityLatencyAdditionalProperties"
         },
-        "description": "Map of DERP server locations and their current latency."
+        "description": "Map of DERP server locations and their current latency.",
+        "example": {
+          "Dallas": {
+            "latencyMs": 60.463043
+          },
+          "New York City": {
+            "preferred": true,
+            "latencyMs": 31.32381
+          }
+        }
       },
       "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsProperty": {
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsAdditionalProperties"
         },
-        "description": "Specifies the [device posture attributes](https://tailscale.com/docs/reference/syntax/policy-file#proto-1)\nas key-value pairs to use when evaluating posture conditions in access rules.\nYou only need to use this field if the access rules contain \n[device posture conditions](https://tailscale.com/docs/features/device-posture#device-posture-conditions).\n"
+        "description": "Specifies the [device posture attributes](https://tailscale.com/docs/reference/syntax/policy-file#proto-1)\nas key-value pairs to use when evaluating posture conditions in access rules.\nYou only need to use this field if the access rules contain \n[device posture conditions](https://tailscale.com/docs/features/device-posture#device-posture-conditions).\n",
+        "example": {
+          "node:os": "windows"
+        }
       },
       "BatchUpdateCustomDevicePostureAttributesRequestNodes": {
         "type": "object",
@@ -7503,7 +8277,8 @@
           },
           "profilePicURL": {
             "type": "string",
-            "description": "The profile pic URL for the user who created the share invite.\n"
+            "description": "The profile pic URL for the user who created the share invite.\n",
+            "example": ""
           }
         },
         "description": "The user who create the device share invite.\n"
@@ -7528,7 +8303,8 @@
           },
           "profilePicURL": {
             "type": "string",
-            "description": "The profile pic URL for the user who accepted the share invite.\n"
+            "description": "The profile pic URL for the user who accepted the share invite.\n",
+            "example": ""
           }
         },
         "description": "The user accepting the device share invite.\n"
@@ -7570,14 +8346,20 @@
             "items": {
               "type": "string"
             },
-            "description": "Source entities affected by the rule.\n"
+            "description": "Source entities affected by the rule.\n",
+            "example": [
+              "*"
+            ]
           },
           "ports": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Destinations that can be accessed.\n"
+            "description": "Destinations that can be accessed.\n",
+            "example": [
+              "*.*"
+            ]
           },
           "lineNumber": {
             "type": "integer",
@@ -7587,12 +8369,6 @@
         }
       },
       "ValidateAndTestPolicyFile200ResponseDataItem": {
-        "type": "object"
-      },
-      "ConfigurationAuditLogOldBranch5ValueItem": {
-        "type": "object"
-      },
-      "ConfigurationAuditLogNewBranch5ValueItem": {
         "type": "object"
       },
       "CreateDeviceInvitesRequestRequestBodyItem": {
@@ -7665,7 +8441,6 @@
           "auditor"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tailnet user role to assign to the invited user upon accepting the invite.\n",
         "example": "admin",
         "x-ms-enum": {
@@ -7704,7 +8479,6 @@
           "CONFIG"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of log (always \u0022CONFIG\u0022).",
         "x-ms-enum": {
           "name": "ConfigType",
@@ -7731,7 +8505,6 @@
           "BORDER0_API"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The initiator of the action that generated the event, typically an API or user interface, like the Tailscale admin panel.",
         "example": "ADMIN_CONSOLE",
         "x-ms-enum": {
@@ -7808,7 +8581,6 @@
           "MIGRATE_AUTH_PROVIDER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of change attempted against the \u0060target\u0060.",
         "example": "CREATE",
         "x-ms-enum": {
@@ -7927,7 +8699,6 @@
           "udp"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "IP protocol name (or number if no name used).",
         "example": "ipv4",
         "x-ms-enum": {
@@ -8001,7 +8772,6 @@
           "s3"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of system to which logs are being streamed.",
         "example": "elastic",
         "x-ms-enum": {
@@ -8050,7 +8820,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The compression algorithm with which to compress logs. \u0060none\u0060 disables compression. Defaults to \u0060none\u0060.",
         "example": "zstd",
         "x-ms-enum": {
@@ -8078,7 +8847,6 @@
           "rolearn"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "What type of authentication to use for S3. Required if the destinationType is \u0060s3\u0060. Tailscale recommends using \u0060rolearn\u0060. See [Amazon documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html).",
         "x-ms-enum": {
           "name": "LogstreamEndpointConfigurationS3AuthenticationType",
@@ -8103,7 +8871,6 @@
           "federated"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of key. Can be one of \u0022auth\u0022, \u0022client\u0022, \u0022federated\u0022, or \u0022api\u0022.\n- \u0022auth\u0022 refers to machine auth keys.\n- \u0022client\u0022 refers to OAuth clients.\n- \u0022federated\u0022 refers to federated identities.\n- \u0022api\u0022 refers to personal API access tokens or tokens generated using an OAuth client or federated identity.\n",
         "example": "auth",
         "x-ms-enum": {
@@ -8139,7 +8906,6 @@
           "sentinelone"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The device posture provider.\n\nRequired on POST requests, ignored on PATCH requests.\n",
         "example": "falcon",
         "x-ms-enum": {
@@ -8179,7 +8945,6 @@
           "shared"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of relation this user has to the tailnet associated with the request.\n",
         "example": "member",
         "x-ms-enum": {
@@ -8208,7 +8973,6 @@
           "auditor"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The role of the user. Learn more about [user roles](/docs/reference/user-roles).\n",
         "example": "member",
         "x-ms-enum": {
@@ -8255,7 +9019,6 @@
           "over-billing-limit"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The status of the user.\n",
         "example": "active",
         "x-enumDescriptions": {
@@ -8300,7 +9063,6 @@
           "discord"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The provider type for the webhook destination, or an empty string if none are applicable.\nOutgoing webhook events are sent in the format expected by the provider type if non-empty.\n",
         "example": "slack",
         "x-ms-enum": {
@@ -8348,7 +9110,6 @@
           "exitNodeIPForwardingNotEnabled"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "WebhookSubscriptionsItem",
           "modelAsString": false,
@@ -8450,7 +9211,6 @@
           "exitNodeIPForwardingNotEnabled"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SubscriptionsItem",
           "modelAsString": false,
@@ -8537,7 +9297,6 @@
           "member"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Which user roles are allowed to [join external tailnets](/docs/features/sharing/how-to/invite-any-user).\n",
         "example": "admin",
         "x-ms-enum": {
@@ -8567,7 +9326,6 @@
           "magicroute"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The [route selection](/docs/features/route-selection) algorithm used by the tailnet:\n* \u0060active-passive-failover\u0060 - Active-passive failover (formerly known as \u0022Failover\u0022)\n* \u0060regional-routing\u0060 - Regional routing\n* \u0060regional-routing-failover\u0060 - Regional routing with in-region failover\n* \u0060magicroute\u0060 - MagicRoute\n\nA PATCH request must not specify both the \u0060regionalRoutingOn\u0060 and \u0060routeSelection\u0060 fields.\n",
         "example": "active-passive-failover",
         "x-ms-enum": {
@@ -8600,7 +9358,6 @@
           "approved:manual"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The approval level of the device hosting the Service.\n",
         "x-ms-enum": {
           "name": "ServiceHostInfoApprovalLevel",
@@ -8635,7 +9392,6 @@
           "PAM_SERVICE_ACCOUNT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The entity type of the actor.",
         "example": "USER",
         "x-ms-enum": {
@@ -8701,7 +9457,6 @@
           "FAILED_REQUEST"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The entity type of Target.",
         "example": "NODE",
         "x-ms-enum": {
@@ -8809,7 +9564,6 @@
           "ROUTE_SELECTION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The property name on this target which was updated by the event. When empty, the event didn\u0027t update any fields on this target.",
         "example": "ALLOWED_IPS",
         "x-ms-enum": {
@@ -9010,7 +9764,6 @@
           "federated"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of key to create. Defaults to \u0022auth\u0022 if omitted.\n",
         "x-ms-enum": {
           "name": "CreateKeyRequestKeyType",
@@ -9037,7 +9790,6 @@
           "federated"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the key being updated.\n",
         "x-ms-enum": {
           "name": "SetKeyRequestKeyType",
@@ -9065,7 +9817,6 @@
           "auditor"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The role of the user. Learn more about [user roles](/docs/reference/user-roles).\n",
         "example": "member",
         "x-ms-enum": {
@@ -9103,6 +9854,208 @@
           ]
         }
       },
+      "CreateWebhookRequestSubscriptionsItem": {
+        "enum": [
+          "nodeCreated",
+          "nodeNeedsApproval",
+          "nodeApproved",
+          "nodeKeyExpiringInOneDay",
+          "nodeKeyExpired",
+          "nodeDeleted",
+          "nodeSigned",
+          "nodeNeedsSignature",
+          "policyUpdate",
+          "userCreated",
+          "userNeedsApproval",
+          "userSuspended",
+          "userRestored",
+          "userDeleted",
+          "userApproved",
+          "userRoleUpdated",
+          "subnetIPForwardingNotEnabled",
+          "exitNodeIPForwardingNotEnabled"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "CreateWebhookRequestSubscriptionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "nodeCreated",
+              "name": "NodeCreated"
+            },
+            {
+              "value": "nodeNeedsApproval",
+              "name": "NodeNeedsApproval"
+            },
+            {
+              "value": "nodeApproved",
+              "name": "NodeApproved"
+            },
+            {
+              "value": "nodeKeyExpiringInOneDay",
+              "name": "NodeKeyExpiringInOneDay"
+            },
+            {
+              "value": "nodeKeyExpired",
+              "name": "NodeKeyExpired"
+            },
+            {
+              "value": "nodeDeleted",
+              "name": "NodeDeleted"
+            },
+            {
+              "value": "nodeSigned",
+              "name": "NodeSigned"
+            },
+            {
+              "value": "nodeNeedsSignature",
+              "name": "NodeNeedsSignature"
+            },
+            {
+              "value": "policyUpdate",
+              "name": "PolicyUpdate"
+            },
+            {
+              "value": "userCreated",
+              "name": "UserCreated"
+            },
+            {
+              "value": "userNeedsApproval",
+              "name": "UserNeedsApproval"
+            },
+            {
+              "value": "userSuspended",
+              "name": "UserSuspended"
+            },
+            {
+              "value": "userRestored",
+              "name": "UserRestored"
+            },
+            {
+              "value": "userDeleted",
+              "name": "UserDeleted"
+            },
+            {
+              "value": "userApproved",
+              "name": "UserApproved"
+            },
+            {
+              "value": "userRoleUpdated",
+              "name": "UserRoleUpdated"
+            },
+            {
+              "value": "subnetIPForwardingNotEnabled",
+              "name": "SubnetIpForwardingNotEnabled"
+            },
+            {
+              "value": "exitNodeIPForwardingNotEnabled",
+              "name": "ExitNodeIpForwardingNotEnabled"
+            }
+          ]
+        }
+      },
+      "UpdateWebhookRequestSubscriptionsItem": {
+        "enum": [
+          "nodeCreated",
+          "nodeNeedsApproval",
+          "nodeApproved",
+          "nodeKeyExpiringInOneDay",
+          "nodeKeyExpired",
+          "nodeDeleted",
+          "nodeSigned",
+          "nodeNeedsSignature",
+          "policyUpdate",
+          "userCreated",
+          "userNeedsApproval",
+          "userSuspended",
+          "userRestored",
+          "userDeleted",
+          "userApproved",
+          "userRoleUpdated",
+          "subnetIPForwardingNotEnabled",
+          "exitNodeIPForwardingNotEnabled"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "UpdateWebhookRequestSubscriptionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "nodeCreated",
+              "name": "NodeCreated"
+            },
+            {
+              "value": "nodeNeedsApproval",
+              "name": "NodeNeedsApproval"
+            },
+            {
+              "value": "nodeApproved",
+              "name": "NodeApproved"
+            },
+            {
+              "value": "nodeKeyExpiringInOneDay",
+              "name": "NodeKeyExpiringInOneDay"
+            },
+            {
+              "value": "nodeKeyExpired",
+              "name": "NodeKeyExpired"
+            },
+            {
+              "value": "nodeDeleted",
+              "name": "NodeDeleted"
+            },
+            {
+              "value": "nodeSigned",
+              "name": "NodeSigned"
+            },
+            {
+              "value": "nodeNeedsSignature",
+              "name": "NodeNeedsSignature"
+            },
+            {
+              "value": "policyUpdate",
+              "name": "PolicyUpdate"
+            },
+            {
+              "value": "userCreated",
+              "name": "UserCreated"
+            },
+            {
+              "value": "userNeedsApproval",
+              "name": "UserNeedsApproval"
+            },
+            {
+              "value": "userSuspended",
+              "name": "UserSuspended"
+            },
+            {
+              "value": "userRestored",
+              "name": "UserRestored"
+            },
+            {
+              "value": "userDeleted",
+              "name": "UserDeleted"
+            },
+            {
+              "value": "userApproved",
+              "name": "UserApproved"
+            },
+            {
+              "value": "userRoleUpdated",
+              "name": "UserRoleUpdated"
+            },
+            {
+              "value": "subnetIPForwardingNotEnabled",
+              "name": "SubnetIpForwardingNotEnabled"
+            },
+            {
+              "value": "exitNodeIPForwardingNotEnabled",
+              "name": "ExitNodeIpForwardingNotEnabled"
+            }
+          ]
+        }
+      },
       "CreateUserInvitesRequestItemRole": {
         "enum": [
           "member",
@@ -9113,7 +10066,6 @@
           "auditor"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Optionally specifies a user role to assign the invited user.\n",
         "example": "admin",
         "x-ms-enum": {
@@ -9153,7 +10105,6 @@
           "default"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "all",
         "x-ms-enum": {
           "name": "Fields",
@@ -9314,7 +10265,6 @@
           "PAM_SETTINGS.UPDATE.SETUP_WIZARD"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EventItem",
           "modelAsString": false,
@@ -9889,7 +10839,6 @@
           "security"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "account",
         "x-ms-enum": {
           "name": "ContactType",
@@ -9916,7 +10865,6 @@
           "ipport"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "user",
         "x-enumDescriptions": {
           "user": "Specify \u0060user\u0060 if the \u0060previewFor\u0060 value is a user\u0027s email.\nNote that \u0060user\u0060 remains in the API for compatibility purposes,\nbut has been replaced by \u0060src\u0060 in policy files.\n",
@@ -9944,7 +10892,6 @@
           "all"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "member",
         "x-ms-enum": {
           "name": "TailnetTailnetUsersType",
@@ -9977,7 +10924,6 @@
           "all"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "all",
         "x-ms-enum": {
           "name": "TailnetTailnetUsersRole",
@@ -10014,6 +10960,60 @@
             {
               "value": "all",
               "name": "All"
+            }
+          ]
+        }
+      },
+      "TailnetTailnetContactsContactTypeContactType": {
+        "enum": [
+          "account",
+          "support",
+          "security"
+        ],
+        "type": "string",
+        "example": "account",
+        "x-ms-enum": {
+          "name": "TailnetTailnetContactsContactTypeContactType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "account",
+              "name": "Account"
+            },
+            {
+              "value": "support",
+              "name": "Support"
+            },
+            {
+              "value": "security",
+              "name": "Security"
+            }
+          ]
+        }
+      },
+      "TailnetTailnetContactsContactTypeResendVerificationEmailContactType": {
+        "enum": [
+          "account",
+          "support",
+          "security"
+        ],
+        "type": "string",
+        "example": "account",
+        "x-ms-enum": {
+          "name": "TailnetTailnetContactsContactTypeResendVerificationEmailContactType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "account",
+              "name": "Account"
+            },
+            {
+              "value": "support",
+              "name": "Support"
+            },
+            {
+              "value": "security",
+              "name": "Security"
             }
           ]
         }

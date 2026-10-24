@@ -8,51 +8,13 @@ using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch1"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch2"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch3"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch4"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch5"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember2"/>, <see cref="int"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConfigurationAuditLogNew : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch1? ConfigurationAuditLogNewBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch1 ConfigurationAuditLogNewBranch1 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch2? ConfigurationAuditLogNewBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch2 ConfigurationAuditLogNewBranch2 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch3? ConfigurationAuditLogNewBranch3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch3 ConfigurationAuditLogNewBranch3 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch4"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch4? ConfigurationAuditLogNewBranch4 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch4 ConfigurationAuditLogNewBranch4 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch5"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch5? ConfigurationAuditLogNewBranch5 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch5 ConfigurationAuditLogNewBranch5 { get; set; }
-#endif
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,6 +22,26 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1 ConfigurationAuditLogNewMember1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember2? ConfigurationAuditLogNewMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember2 ConfigurationAuditLogNewMember2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="double"/></summary>
+        public double? Double { get; set; }
+        /// <summary>Composed type representation for type <see cref="int"/></summary>
+        public int? Integer { get; set; }
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -70,12 +52,26 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew();
-            result.ConfigurationAuditLogNewBranch1 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch1();
-            result.ConfigurationAuditLogNewBranch2 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch2();
-            result.ConfigurationAuditLogNewBranch3 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch3();
-            result.ConfigurationAuditLogNewBranch4 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch4();
-            result.ConfigurationAuditLogNewBranch5 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch5();
-            result.ConfigurationAuditLogNewMember1 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1();
+            if(parseNode.GetBoolValue() is bool booleanValue)
+            {
+                result.Boolean = booleanValue;
+            }
+            else if(parseNode.GetDoubleValue() is double doubleValue)
+            {
+                result.Double = doubleValue;
+            }
+            else if(parseNode.GetIntValue() is int integerValue)
+            {
+                result.Integer = integerValue;
+            }
+            else if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.ConfigurationAuditLogNewMember1 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1();
+                result.ConfigurationAuditLogNewMember2 = new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember2();
+            }
             return result;
         }
         /// <summary>
@@ -84,9 +80,9 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(ConfigurationAuditLogNewBranch1 != null || ConfigurationAuditLogNewBranch2 != null || ConfigurationAuditLogNewBranch3 != null || ConfigurationAuditLogNewBranch4 != null || ConfigurationAuditLogNewBranch5 != null || ConfigurationAuditLogNewMember1 != null)
+            if(ConfigurationAuditLogNewMember1 != null || ConfigurationAuditLogNewMember2 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ConfigurationAuditLogNewBranch1, ConfigurationAuditLogNewBranch2, ConfigurationAuditLogNewBranch3, ConfigurationAuditLogNewBranch4, ConfigurationAuditLogNewBranch5, ConfigurationAuditLogNewMember1);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ConfigurationAuditLogNewMember1, ConfigurationAuditLogNewMember2);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -97,7 +93,25 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewBranch1>(null, ConfigurationAuditLogNewBranch1, ConfigurationAuditLogNewBranch2, ConfigurationAuditLogNewBranch3, ConfigurationAuditLogNewBranch4, ConfigurationAuditLogNewBranch5, ConfigurationAuditLogNewMember1);
+            if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else if(Double != null)
+            {
+                writer.WriteDoubleValue(null, Double);
+            }
+            else if(Integer != null)
+            {
+                writer.WriteIntValue(null, Integer);
+            }
+            else if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNewMember1>(null, ConfigurationAuditLogNewMember1, ConfigurationAuditLogNewMember2);
+            }
         }
     }
 }
