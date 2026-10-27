@@ -604,6 +604,10 @@
           "200": {
             "description": "Successful operation."
           },
+          "400": {
+            "description": "The address is malformed, is outside the Tailscale IPv4 range, is reserved,\nor is already assigned to another device in the tailnet.\n",
+            "$ref": "#/components/responses/400"
+          },
           "404": {
             "description": "Device not found.",
             "$ref": "#/components/responses/404"
