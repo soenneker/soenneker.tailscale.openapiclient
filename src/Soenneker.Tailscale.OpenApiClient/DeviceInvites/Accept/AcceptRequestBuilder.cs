@@ -57,6 +57,8 @@ namespace Soenneker.Tailscale.OpenApiClient.DeviceInvites.Accept
             {
                 { "400", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200Response>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

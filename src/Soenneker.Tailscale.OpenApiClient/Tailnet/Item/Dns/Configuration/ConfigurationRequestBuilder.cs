@@ -55,6 +55,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Dns.Configuration
             {
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfiguration>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfiguration.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -82,6 +84,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Dns.Configuration
             {
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfiguration>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfiguration.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

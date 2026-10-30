@@ -11,32 +11,48 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AcceptDeviceInvite200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acceptedBy") is { } nullNodeAcceptedBy && nullNodeAcceptedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedBy = null;
+            if (parseNode.GetChildNode("device") is { } nullNodeDevice && nullNodeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Device = null;
+            if (parseNode.GetChildNode("sharer") is { } nullNodeSharer && nullNodeSharer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sharer = null;
+        }
+
         /// <summary>The user accepting the device share invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy? AcceptedBy { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy? AcceptedBy { get => _explicitNullValueAcceptedBy; set { _explicitNullValueAcceptedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedBy"); else _explicitNullProperties?.Remove("acceptedBy"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy? _explicitNullValueAcceptedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy AcceptedBy { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy AcceptedBy { get => _explicitNullValueAcceptedBy; set { _explicitNullValueAcceptedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedBy"); else _explicitNullProperties?.Remove("acceptedBy"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy _explicitNullValueAcceptedBy = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Information about the device being shared.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice? Device { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice? Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice? _explicitNullValueDevice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice Device { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice _explicitNullValueDevice = default!;
 #endif
         /// <summary>The user who create the device share invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer? Sharer { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer? Sharer { get => _explicitNullValueSharer; set { _explicitNullValueSharer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharer"); else _explicitNullProperties?.Remove("sharer"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer? _explicitNullValueSharer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer Sharer { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer Sharer { get => _explicitNullValueSharer; set { _explicitNullValueSharer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharer"); else _explicitNullProperties?.Remove("sharer"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer _explicitNullValueSharer = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200Response"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseAcceptedBy>("acceptedBy", AcceptedBy);
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseDevice>("device", Device);
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.AcceptDeviceInvite200ResponseSharer>("sharer", Sharer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

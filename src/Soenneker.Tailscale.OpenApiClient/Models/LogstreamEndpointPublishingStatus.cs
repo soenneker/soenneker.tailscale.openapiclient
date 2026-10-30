@@ -12,45 +12,78 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LogstreamEndpointPublishingStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lastActivity") is { } nullNodeLastActivity && nullNodeLastActivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastActivity = null;
+            if (parseNode.GetChildNode("lastError") is { } nullNodeLastError && nullNodeLastError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastError = null;
+            if (parseNode.GetChildNode("maxBodySize") is { } nullNodeMaxBodySize && nullNodeMaxBodySize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBodySize = null;
+            if (parseNode.GetChildNode("numBytesSent") is { } nullNodeNumBytesSent && nullNodeNumBytesSent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumBytesSent = null;
+            if (parseNode.GetChildNode("numEntriesSent") is { } nullNodeNumEntriesSent && nullNodeNumEntriesSent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumEntriesSent = null;
+            if (parseNode.GetChildNode("numFailedRequests") is { } nullNodeNumFailedRequests && nullNodeNumFailedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumFailedRequests = null;
+            if (parseNode.GetChildNode("numSpoofedEntries") is { } nullNodeNumSpoofedEntries && nullNodeNumSpoofedEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumSpoofedEntries = null;
+            if (parseNode.GetChildNode("numTotalRequests") is { } nullNodeNumTotalRequests && nullNodeNumTotalRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumTotalRequests = null;
+            if (parseNode.GetChildNode("rateBytesSent") is { } nullNodeRateBytesSent && nullNodeRateBytesSent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateBytesSent = null;
+            if (parseNode.GetChildNode("rateEntriesSent") is { } nullNodeRateEntriesSent && nullNodeRateEntriesSent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateEntriesSent = null;
+            if (parseNode.GetChildNode("rateFailedRequests") is { } nullNodeRateFailedRequests && nullNodeRateFailedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateFailedRequests = null;
+            if (parseNode.GetChildNode("rateTotalRequests") is { } nullNodeRateTotalRequests && nullNodeRateTotalRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateTotalRequests = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp of the most recent publishing activity, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastActivity { get; set; }
+        public string? LastActivity { get => _explicitNullValueLastActivity; set { _explicitNullValueLastActivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastActivity"); else _explicitNullProperties?.Remove("lastActivity"); } }
+        private string? _explicitNullValueLastActivity = default!;
 #nullable restore
 #else
-        public string LastActivity { get; set; }
+        public string LastActivity { get => _explicitNullValueLastActivity; set { _explicitNullValueLastActivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastActivity"); else _explicitNullProperties?.Remove("lastActivity"); } }
+        private string _explicitNullValueLastActivity = default!;
 #endif
         /// <summary>The most recent error (if any).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastError { get; set; }
+        public string? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastError"); else _explicitNullProperties?.Remove("lastError"); } }
+        private string? _explicitNullValueLastError = default!;
 #nullable restore
 #else
-        public string LastError { get; set; }
+        public string LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastError"); else _explicitNullProperties?.Remove("lastError"); } }
+        private string _explicitNullValueLastError = default!;
 #endif
         /// <summary>The size of the largest single request body.</summary>
-        public int? MaxBodySize { get; set; }
+        public int? MaxBodySize { get => _explicitNullValueMaxBodySize; set { _explicitNullValueMaxBodySize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxBodySize"); else _explicitNullProperties?.Remove("maxBodySize"); } }
+        private int? _explicitNullValueMaxBodySize = default!;
         /// <summary>Total bytes published across all requests.</summary>
-        public int? NumBytesSent { get; set; }
+        public int? NumBytesSent { get => _explicitNullValueNumBytesSent; set { _explicitNullValueNumBytesSent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numBytesSent"); else _explicitNullProperties?.Remove("numBytesSent"); } }
+        private int? _explicitNullValueNumBytesSent = default!;
         /// <summary>The total number of entries published.</summary>
-        public int? NumEntriesSent { get; set; }
+        public int? NumEntriesSent { get => _explicitNullValueNumEntriesSent; set { _explicitNullValueNumEntriesSent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numEntriesSent"); else _explicitNullProperties?.Remove("numEntriesSent"); } }
+        private int? _explicitNullValueNumEntriesSent = default!;
         /// <summary>The total number of requests to the streaming endpoint that have failed.</summary>
-        public int? NumFailedRequests { get; set; }
+        public int? NumFailedRequests { get => _explicitNullValueNumFailedRequests; set { _explicitNullValueNumFailedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numFailedRequests"); else _explicitNullProperties?.Remove("numFailedRequests"); } }
+        private int? _explicitNullValueNumFailedRequests = default!;
         /// <summary>The number of spoofed entries published. A spoofed entry is one that failed to validate because we did not see receive a matching flow log from the other side of the connection.</summary>
-        public int? NumSpoofedEntries { get; set; }
+        public int? NumSpoofedEntries { get => _explicitNullValueNumSpoofedEntries; set { _explicitNullValueNumSpoofedEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numSpoofedEntries"); else _explicitNullProperties?.Remove("numSpoofedEntries"); } }
+        private int? _explicitNullValueNumSpoofedEntries = default!;
         /// <summary>The total number of requests made to the streaming endpoint.</summary>
-        public int? NumTotalRequests { get; set; }
+        public int? NumTotalRequests { get => _explicitNullValueNumTotalRequests; set { _explicitNullValueNumTotalRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numTotalRequests"); else _explicitNullProperties?.Remove("numTotalRequests"); } }
+        private int? _explicitNullValueNumTotalRequests = default!;
         /// <summary>The exponentially weighted moving average rate at which data is being streamed to the endpoint, in bytes per second.</summary>
-        public double? RateBytesSent { get; set; }
+        public double? RateBytesSent { get => _explicitNullValueRateBytesSent; set { _explicitNullValueRateBytesSent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateBytesSent"); else _explicitNullProperties?.Remove("rateBytesSent"); } }
+        private double? _explicitNullValueRateBytesSent = default!;
         /// <summary>The exponentially weighted moving average rate at which entries are being sent to the endpoint, in entries per second.</summary>
-        public double? RateEntriesSent { get; set; }
+        public double? RateEntriesSent { get => _explicitNullValueRateEntriesSent; set { _explicitNullValueRateEntriesSent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateEntriesSent"); else _explicitNullProperties?.Remove("rateEntriesSent"); } }
+        private double? _explicitNullValueRateEntriesSent = default!;
         /// <summary>The exponentially weighted moving average rate at which requests are failing, in requests per second.</summary>
-        public double? RateFailedRequests { get; set; }
+        public double? RateFailedRequests { get => _explicitNullValueRateFailedRequests; set { _explicitNullValueRateFailedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateFailedRequests"); else _explicitNullProperties?.Remove("rateFailedRequests"); } }
+        private double? _explicitNullValueRateFailedRequests = default!;
         /// <summary>The exponentially weighted moving average rate at which requests are being made to the endpoint, in requests per second.</summary>
-        public double? RateTotalRequests { get; set; }
+        public double? RateTotalRequests { get => _explicitNullValueRateTotalRequests; set { _explicitNullValueRateTotalRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateTotalRequests"); else _explicitNullProperties?.Remove("rateTotalRequests"); } }
+        private double? _explicitNullValueRateTotalRequests = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointPublishingStatus"/> and sets the default values.
         /// </summary>
@@ -66,7 +99,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointPublishingStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointPublishingStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointPublishingStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +142,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteDoubleValue("rateEntriesSent", RateEntriesSent);
             writer.WriteDoubleValue("rateFailedRequests", RateFailedRequests);
             writer.WriteDoubleValue("rateTotalRequests", RateTotalRequests);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

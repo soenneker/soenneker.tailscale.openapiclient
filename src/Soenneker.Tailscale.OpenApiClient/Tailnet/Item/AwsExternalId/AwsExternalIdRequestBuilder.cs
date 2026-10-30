@@ -70,6 +70,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.AwsExternalId
             {
                 { "403", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.AwsExternalId>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.AwsExternalId.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

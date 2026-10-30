@@ -11,35 +11,58 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConnectionCounts : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dst") is { } nullNodeDst && nullNodeDst.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dst = null;
+            if (parseNode.GetChildNode("proto") is { } nullNodeProto && nullNodeProto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Proto = null;
+            if (parseNode.GetChildNode("rxBytes") is { } nullNodeRxBytes && nullNodeRxBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RxBytes = null;
+            if (parseNode.GetChildNode("rxPkts") is { } nullNodeRxPkts && nullNodeRxPkts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RxPkts = null;
+            if (parseNode.GetChildNode("src") is { } nullNodeSrc && nullNodeSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Src = null;
+            if (parseNode.GetChildNode("txBytes") is { } nullNodeTxBytes && nullNodeTxBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TxBytes = null;
+            if (parseNode.GetChildNode("txPkts") is { } nullNodeTxPkts && nullNodeTxPkts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TxPkts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Destination addr:port.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dst { get; set; }
+        public string? Dst { get => _explicitNullValueDst; set { _explicitNullValueDst = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dst"); else _explicitNullProperties?.Remove("dst"); } }
+        private string? _explicitNullValueDst = default!;
 #nullable restore
 #else
-        public string Dst { get; set; }
+        public string Dst { get => _explicitNullValueDst; set { _explicitNullValueDst = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dst"); else _explicitNullProperties?.Remove("dst"); } }
+        private string _explicitNullValueDst = default!;
 #endif
         /// <summary>IP protocol name (or number if no name used).</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto? Proto { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto? Proto { get => _explicitNullValueProto; set { _explicitNullValueProto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proto"); else _explicitNullProperties?.Remove("proto"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto? _explicitNullValueProto = default!;
         /// <summary>Number of bytes received.</summary>
-        public int? RxBytes { get; set; }
+        public int? RxBytes { get => _explicitNullValueRxBytes; set { _explicitNullValueRxBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rxBytes"); else _explicitNullProperties?.Remove("rxBytes"); } }
+        private int? _explicitNullValueRxBytes = default!;
         /// <summary>Number of packets received.</summary>
-        public int? RxPkts { get; set; }
+        public int? RxPkts { get => _explicitNullValueRxPkts; set { _explicitNullValueRxPkts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rxPkts"); else _explicitNullProperties?.Remove("rxPkts"); } }
+        private int? _explicitNullValueRxPkts = default!;
         /// <summary>Source addr:port.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Src { get; set; }
+        public string? Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        private string? _explicitNullValueSrc = default!;
 #nullable restore
 #else
-        public string Src { get; set; }
+        public string Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        private string _explicitNullValueSrc = default!;
 #endif
         /// <summary>Number of bytes sent.</summary>
-        public int? TxBytes { get; set; }
+        public int? TxBytes { get => _explicitNullValueTxBytes; set { _explicitNullValueTxBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("txBytes"); else _explicitNullProperties?.Remove("txBytes"); } }
+        private int? _explicitNullValueTxBytes = default!;
         /// <summary>Number of packets sent.</summary>
-        public int? TxPkts { get; set; }
+        public int? TxPkts { get => _explicitNullValueTxPkts; set { _explicitNullValueTxPkts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("txPkts"); else _explicitNullProperties?.Remove("txPkts"); } }
+        private int? _explicitNullValueTxPkts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts"/> and sets the default values.
         /// </summary>
@@ -55,7 +78,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteStringValue("src", Src);
             writer.WriteIntValue("txBytes", TxBytes);
             writer.WriteIntValue("txPkts", TxPkts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

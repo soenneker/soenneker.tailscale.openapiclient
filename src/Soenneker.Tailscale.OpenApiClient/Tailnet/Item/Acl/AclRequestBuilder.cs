@@ -48,7 +48,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
         /// <summary>
         /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file:read`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema"/></returns>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
@@ -57,11 +57,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema?> GetAsync(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl.AclRequestBuilder.AclRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl.AclRequestBuilder.AclRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema> GetAsync(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl.AclRequestBuilder.AclRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl.AclRequestBuilder.AclRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -71,13 +71,15 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
                 { "403", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.GetPolicyFile200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Sets the ACL for the given tailnet. HuJSON and JSON are both accepted inputs.An `If-Match` header can be set to avoid missed updates.On success, returns the updated ACL in JSON or HuJSON according to the `Accept` header.Otherwise, errors are returned for incorrectly defined ACLs, ACLs with failing tests on attempted updates, and mismatched `If-Match` header and `ETag`.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema"/></returns>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -88,11 +90,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema?> PostAsync(global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFileRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PostAsync(global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFileRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema> PostAsync(global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFileRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PostAsync(global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFileRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,8 +106,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Acl
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "412", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.SetPolicyFile200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves the current policy file for the given tailnet; this includes the ACL along with the rules and tests that have been defined.This method can return the policy file as JSON or HuJSON, depending on the Accept header.The response also includes an `ETag` header, which can be optionally included when [setting the policy file](#tag/policyfile/post/tailnet/{tailnet}/acl) to avoid missed updates.Learn more about [policy file ACL syntax](https://tailscale.com/docs/reference/syntax/policy-file).OAuth Scope: `policy_file:read`.

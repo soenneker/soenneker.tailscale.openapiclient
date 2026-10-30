@@ -12,21 +12,35 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DevicePostureStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("failingAssertions") is { } nullNodeFailingAssertions && nullNodeFailingAssertions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailingAssertions = null;
+            if (parseNode.GetChildNode("impacting") is { } nullNodeImpacting && nullNodeImpacting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impacting = null;
+            if (parseNode.GetChildNode("passing") is { } nullNodePassing && nullNodePassing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Passing = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of posture assertions the device is failing. Empty if the device is passing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FailingAssertions { get; set; }
+        public List<string>? FailingAssertions { get => _explicitNullValueFailingAssertions; set { _explicitNullValueFailingAssertions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failingAssertions"); else _explicitNullProperties?.Remove("failingAssertions"); } }
+        private List<string>? _explicitNullValueFailingAssertions = default!;
 #nullable restore
 #else
-        public List<string> FailingAssertions { get; set; }
+        public List<string> FailingAssertions { get => _explicitNullValueFailingAssertions; set { _explicitNullValueFailingAssertions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failingAssertions"); else _explicitNullProperties?.Remove("failingAssertions"); } }
+        private List<string> _explicitNullValueFailingAssertions = default!;
 #endif
         /// <summary>Whether the status of this posture affects the connectivity of the device.</summary>
-        public bool? Impacting { get; set; }
+        public bool? Impacting { get => _explicitNullValueImpacting; set { _explicitNullValueImpacting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impacting"); else _explicitNullProperties?.Remove("impacting"); } }
+        private bool? _explicitNullValueImpacting = default!;
         /// <summary>Reports whether the device is passing this posture.</summary>
-        public bool? Passing { get; set; }
+        public bool? Passing { get => _explicitNullValuePassing; set { _explicitNullValuePassing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passing"); else _explicitNullProperties?.Remove("passing"); } }
+        private bool? _explicitNullValuePassing = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("failingAssertions", FailingAssertions);
             writer.WriteBoolValue("impacting", Impacting);
             writer.WriteBoolValue("passing", Passing);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

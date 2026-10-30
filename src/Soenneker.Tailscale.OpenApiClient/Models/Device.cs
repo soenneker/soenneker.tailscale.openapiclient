@@ -12,184 +12,272 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Device : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addresses") is { } nullNodeAddresses && nullNodeAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Addresses = null;
+            if (parseNode.GetChildNode("advertisedRoutes") is { } nullNodeAdvertisedRoutes && nullNodeAdvertisedRoutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvertisedRoutes = null;
+            if (parseNode.GetChildNode("authorized") is { } nullNodeAuthorized && nullNodeAuthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorized = null;
+            if (parseNode.GetChildNode("blocksIncomingConnections") is { } nullNodeBlocksIncomingConnections && nullNodeBlocksIncomingConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlocksIncomingConnections = null;
+            if (parseNode.GetChildNode("clientConnectivity") is { } nullNodeClientConnectivity && nullNodeClientConnectivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientConnectivity = null;
+            if (parseNode.GetChildNode("clientVersion") is { } nullNodeClientVersion && nullNodeClientVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientVersion = null;
+            if (parseNode.GetChildNode("connectedToControl") is { } nullNodeConnectedToControl && nullNodeConnectedToControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectedToControl = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("distro") is { } nullNodeDistro && nullNodeDistro.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Distro = null;
+            if (parseNode.GetChildNode("enabledRoutes") is { } nullNodeEnabledRoutes && nullNodeEnabledRoutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledRoutes = null;
+            if (parseNode.GetChildNode("expires") is { } nullNodeExpires && nullNodeExpires.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expires = null;
+            if (parseNode.GetChildNode("hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isEphemeral") is { } nullNodeIsEphemeral && nullNodeIsEphemeral.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEphemeral = null;
+            if (parseNode.GetChildNode("isExternal") is { } nullNodeIsExternal && nullNodeIsExternal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternal = null;
+            if (parseNode.GetChildNode("keyExpiryDisabled") is { } nullNodeKeyExpiryDisabled && nullNodeKeyExpiryDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyExpiryDisabled = null;
+            if (parseNode.GetChildNode("lastSeen") is { } nullNodeLastSeen && nullNodeLastSeen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSeen = null;
+            if (parseNode.GetChildNode("machineKey") is { } nullNodeMachineKey && nullNodeMachineKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MachineKey = null;
+            if (parseNode.GetChildNode("multipleConnections") is { } nullNodeMultipleConnections && nullNodeMultipleConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleConnections = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
+            if (parseNode.GetChildNode("nodeKey") is { } nullNodeNodeKey && nullNodeNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeKey = null;
+            if (parseNode.GetChildNode("os") is { } nullNodeOs && nullNodeOs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Os = null;
+            if (parseNode.GetChildNode("postureIdentity") is { } nullNodePostureIdentity && nullNodePostureIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostureIdentity = null;
+            if (parseNode.GetChildNode("postureStatus") is { } nullNodePostureStatus && nullNodePostureStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostureStatus = null;
+            if (parseNode.GetChildNode("sshEnabled") is { } nullNodeSshEnabled && nullNodeSshEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SshEnabled = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("tailnetLockError") is { } nullNodeTailnetLockError && nullNodeTailnetLockError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TailnetLockError = null;
+            if (parseNode.GetChildNode("tailnetLockKey") is { } nullNodeTailnetLockKey && nullNodeTailnetLockKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TailnetLockKey = null;
+            if (parseNode.GetChildNode("updateAvailable") is { } nullNodeUpdateAvailable && nullNodeUpdateAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateAvailable = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of Tailscale IP addresses for the device,including both IPv4 (formatted as 100.x.y.z)and IPv6 (formatted as fd7a:115c:a1e0:a:b:c:d:e) addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Addresses { get; set; }
+        public List<string>? Addresses { get => _explicitNullValueAddresses; set { _explicitNullValueAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addresses"); else _explicitNullProperties?.Remove("addresses"); } }
+        private List<string>? _explicitNullValueAddresses = default!;
 #nullable restore
 #else
-        public List<string> Addresses { get; set; }
+        public List<string> Addresses { get => _explicitNullValueAddresses; set { _explicitNullValueAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addresses"); else _explicitNullProperties?.Remove("addresses"); } }
+        private List<string> _explicitNullValueAddresses = default!;
 #endif
         /// <summary>The subnets this device requests to expose.Learn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdvertisedRoutes { get; set; }
+        public List<string>? AdvertisedRoutes { get => _explicitNullValueAdvertisedRoutes; set { _explicitNullValueAdvertisedRoutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advertisedRoutes"); else _explicitNullProperties?.Remove("advertisedRoutes"); } }
+        private List<string>? _explicitNullValueAdvertisedRoutes = default!;
 #nullable restore
 #else
-        public List<string> AdvertisedRoutes { get; set; }
+        public List<string> AdvertisedRoutes { get => _explicitNullValueAdvertisedRoutes; set { _explicitNullValueAdvertisedRoutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advertisedRoutes"); else _explicitNullProperties?.Remove("advertisedRoutes"); } }
+        private List<string> _explicitNullValueAdvertisedRoutes = default!;
 #endif
         /// <summary>&apos;true&apos; if the device has been authorized to join the tailnet; otherwise, &apos;false&apos;.Learn more about device authorization at https://tailscale.com/docs/features/access-control/device-management/device-approval.</summary>
-        public bool? Authorized { get; set; }
+        public bool? Authorized { get => _explicitNullValueAuthorized; set { _explicitNullValueAuthorized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized"); else _explicitNullProperties?.Remove("authorized"); } }
+        private bool? _explicitNullValueAuthorized = default!;
         /// <summary>&apos;true&apos; if the device is not allowed to accept any connections over Tailscale, including pings.Learn more in the &quot;Allow incoming connections&quot; section of https://tailscale.com/docs/features/client/manage-preferences.</summary>
-        public bool? BlocksIncomingConnections { get; set; }
+        public bool? BlocksIncomingConnections { get => _explicitNullValueBlocksIncomingConnections; set { _explicitNullValueBlocksIncomingConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocksIncomingConnections"); else _explicitNullProperties?.Remove("blocksIncomingConnections"); } }
+        private bool? _explicitNullValueBlocksIncomingConnections = default!;
         /// <summary>clientConnectivity provides a report on the device&apos;s current physical network conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity? ClientConnectivity { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity? ClientConnectivity { get => _explicitNullValueClientConnectivity; set { _explicitNullValueClientConnectivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientConnectivity"); else _explicitNullProperties?.Remove("clientConnectivity"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity? _explicitNullValueClientConnectivity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity ClientConnectivity { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity ClientConnectivity { get => _explicitNullValueClientConnectivity; set { _explicitNullValueClientConnectivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientConnectivity"); else _explicitNullProperties?.Remove("clientConnectivity"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity _explicitNullValueClientConnectivity = default!;
 #endif
         /// <summary>The version of the Tailscale clientsoftware; this is empty for external devices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientVersion { get; set; }
+        public string? ClientVersion { get => _explicitNullValueClientVersion; set { _explicitNullValueClientVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientVersion"); else _explicitNullProperties?.Remove("clientVersion"); } }
+        private string? _explicitNullValueClientVersion = default!;
 #nullable restore
 #else
-        public string ClientVersion { get; set; }
+        public string ClientVersion { get => _explicitNullValueClientVersion; set { _explicitNullValueClientVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientVersion"); else _explicitNullProperties?.Remove("clientVersion"); } }
+        private string _explicitNullValueClientVersion = default!;
 #endif
         /// <summary>Indicates if the device recently maintained a TCP connection to the Tailscale control server.</summary>
-        public bool? ConnectedToControl { get; set; }
+        public bool? ConnectedToControl { get => _explicitNullValueConnectedToControl; set { _explicitNullValueConnectedToControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connectedToControl"); else _explicitNullProperties?.Remove("connectedToControl"); } }
+        private bool? _explicitNullValueConnectedToControl = default!;
         /// <summary>The date on which the device was addedto the tailnet; this is empty for external devices.</summary>
-        public DateTimeOffset? Created { get; set; }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>distro provides details of the operating system distribution, if available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro? Distro { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro? Distro { get => _explicitNullValueDistro; set { _explicitNullValueDistro = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distro"); else _explicitNullProperties?.Remove("distro"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro? _explicitNullValueDistro = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro Distro { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro Distro { get => _explicitNullValueDistro; set { _explicitNullValueDistro = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distro"); else _explicitNullProperties?.Remove("distro"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceDistro _explicitNullValueDistro = default!;
 #endif
         /// <summary>The subnet routes for this device that have been approved by a tailnet admin.Learn more about subnet routes at https://tailscale.com/docs/features/subnet-routers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EnabledRoutes { get; set; }
+        public List<string>? EnabledRoutes { get => _explicitNullValueEnabledRoutes; set { _explicitNullValueEnabledRoutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabledRoutes"); else _explicitNullProperties?.Remove("enabledRoutes"); } }
+        private List<string>? _explicitNullValueEnabledRoutes = default!;
 #nullable restore
 #else
-        public List<string> EnabledRoutes { get; set; }
+        public List<string> EnabledRoutes { get => _explicitNullValueEnabledRoutes; set { _explicitNullValueEnabledRoutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabledRoutes"); else _explicitNullProperties?.Remove("enabledRoutes"); } }
+        private List<string> _explicitNullValueEnabledRoutes = default!;
 #endif
         /// <summary>The expiration date of the device&apos;s auth key.Learn more about key expiry at https://tailscale.com/docs/features/access-control/key-expiry.</summary>
-        public DateTimeOffset? Expires { get; set; }
+        public DateTimeOffset? Expires { get => _explicitNullValueExpires; set { _explicitNullValueExpires = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires"); else _explicitNullProperties?.Remove("expires"); } }
+        private DateTimeOffset? _explicitNullValueExpires = default!;
         /// <summary>The machine name in the admin console.Learn more about machine names at https://tailscale.com/docs/concepts/machine-names.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hostname { get; set; }
+        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostname"); else _explicitNullProperties?.Remove("hostname"); } }
+        private string? _explicitNullValueHostname = default!;
 #nullable restore
 #else
-        public string Hostname { get; set; }
+        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostname"); else _explicitNullProperties?.Remove("hostname"); } }
+        private string _explicitNullValueHostname = default!;
 #endif
         /// <summary>The legacy identifier for a device; youcan supply this value wherever {deviceId} is indicated in theendpoint. Note that although &quot;id&quot; is still accepted, &quot;nodeId&quot; ispreferred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>&apos;true&apos; if the device is ephemeral.Learn more about ephemeral nodes at https://tailscale.com/docs/features/ephemeral-nodes.</summary>
-        public bool? IsEphemeral { get; set; }
+        public bool? IsEphemeral { get => _explicitNullValueIsEphemeral; set { _explicitNullValueIsEphemeral = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEphemeral"); else _explicitNullProperties?.Remove("isEphemeral"); } }
+        private bool? _explicitNullValueIsEphemeral = default!;
         /// <summary>&apos;true&apos;, indicates that a device is not a member of the tailnet, but is shared in to the tailnet;if &apos;false&apos;, the device is a member of the tailnet.Learn more about node sharing at https://tailscale.com/docs/features/sharing.</summary>
-        public bool? IsExternal { get; set; }
+        public bool? IsExternal { get => _explicitNullValueIsExternal; set { _explicitNullValueIsExternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isExternal"); else _explicitNullProperties?.Remove("isExternal"); } }
+        private bool? _explicitNullValueIsExternal = default!;
         /// <summary>&apos;true&apos; if the keys for the device will not expire.Learn more at https://tailscale.com/docs/features/access-control/key-expiry.</summary>
-        public bool? KeyExpiryDisabled { get; set; }
+        public bool? KeyExpiryDisabled { get => _explicitNullValueKeyExpiryDisabled; set { _explicitNullValueKeyExpiryDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyExpiryDisabled"); else _explicitNullProperties?.Remove("keyExpiryDisabled"); } }
+        private bool? _explicitNullValueKeyExpiryDisabled = default!;
         /// <summary>When the device was last connected to the Tailscale control server. Omitted if the device has never been online or `connectedToControl` is true.</summary>
-        public DateTimeOffset? LastSeen { get; set; }
+        public DateTimeOffset? LastSeen { get => _explicitNullValueLastSeen; set { _explicitNullValueLastSeen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSeen"); else _explicitNullProperties?.Remove("lastSeen"); } }
+        private DateTimeOffset? _explicitNullValueLastSeen = default!;
         /// <summary>For internal use and is not required for any API operations.This value is empty for external devices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MachineKey { get; set; }
+        public string? MachineKey { get => _explicitNullValueMachineKey; set { _explicitNullValueMachineKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("machineKey"); else _explicitNullProperties?.Remove("machineKey"); } }
+        private string? _explicitNullValueMachineKey = default!;
 #nullable restore
 #else
-        public string MachineKey { get; set; }
+        public string MachineKey { get => _explicitNullValueMachineKey; set { _explicitNullValueMachineKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("machineKey"); else _explicitNullProperties?.Remove("machineKey"); } }
+        private string _explicitNullValueMachineKey = default!;
 #endif
         /// <summary>&apos;true&apos;, indicates that multiple devices are currently connected using the same node key, which is usually a sign of node state being copied between machines.If only one device is connected using this node&apos;s key, the field is omitted.If the number of live connections goes back to 0 or 1, this field is also omitted, meaning it&apos;s not sticky. In case an attacker steals node state from a legitimate node, they can mask their activities by not connecting concurrently with the legitimate node.</summary>
-        public bool? MultipleConnections { get; set; }
+        public bool? MultipleConnections { get => _explicitNullValueMultipleConnections; set { _explicitNullValueMultipleConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleConnections"); else _explicitNullProperties?.Remove("multipleConnections"); } }
+        private bool? _explicitNullValueMultipleConnections = default!;
         /// <summary>The MagicDNS name of the device.Learn more about MagicDNS at https://tailscale.com/docs/features/magicdns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The preferred identifier for a device;supply this value wherever {deviceId} is indicated in the endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeId { get; set; }
+        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        private string? _explicitNullValueNodeId = default!;
 #nullable restore
 #else
-        public string NodeId { get; set; }
+        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        private string _explicitNullValueNodeId = default!;
 #endif
         /// <summary>Mostly for internal use, required for select operations, such as adding a node to a locked tailnet.Learn about tailnet locks at https://tailscale.com/docs/features/tailnet-lock.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeKey { get; set; }
+        public string? NodeKey { get => _explicitNullValueNodeKey; set { _explicitNullValueNodeKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeKey"); else _explicitNullProperties?.Remove("nodeKey"); } }
+        private string? _explicitNullValueNodeKey = default!;
 #nullable restore
 #else
-        public string NodeKey { get; set; }
+        public string NodeKey { get => _explicitNullValueNodeKey; set { _explicitNullValueNodeKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeKey"); else _explicitNullProperties?.Remove("nodeKey"); } }
+        private string _explicitNullValueNodeKey = default!;
 #endif
         /// <summary>The operating system that the device is running.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Os { get; set; }
+        public string? Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private string? _explicitNullValueOs = default!;
 #nullable restore
 #else
-        public string Os { get; set; }
+        public string Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private string _explicitNullValueOs = default!;
 #endif
         /// <summary>Contains extra identifiers from the device when the tailnet it is connected to has device posture identification collection enabled.If the device has not opted-in to posture identification collection, this will contain {&quot;disabled&quot;: true}.Learn more about posture identity at https://tailscale.com/docs/features/access-control/device-management/how-to/manage-identity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity? PostureIdentity { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity? PostureIdentity { get => _explicitNullValuePostureIdentity; set { _explicitNullValuePostureIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postureIdentity"); else _explicitNullProperties?.Remove("postureIdentity"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity? _explicitNullValuePostureIdentity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity PostureIdentity { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity PostureIdentity { get => _explicitNullValuePostureIdentity; set { _explicitNullValuePostureIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postureIdentity"); else _explicitNullProperties?.Remove("postureIdentity"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureIdentity _explicitNullValuePostureIdentity = default!;
 #endif
         /// <summary>Reports the status of a single posture for a device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus? PostureStatus { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus? PostureStatus { get => _explicitNullValuePostureStatus; set { _explicitNullValuePostureStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postureStatus"); else _explicitNullProperties?.Remove("postureStatus"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus? _explicitNullValuePostureStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus PostureStatus { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus PostureStatus { get => _explicitNullValuePostureStatus; set { _explicitNullValuePostureStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postureStatus"); else _explicitNullProperties?.Remove("postureStatus"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus _explicitNullValuePostureStatus = default!;
 #endif
         /// <summary>&apos;true&apos; if Tailscale SSH is enabled on this device.Learn more about Tailscale SSH at https://tailscale.com/docs/features/tailscale-ssh.</summary>
-        public bool? SshEnabled { get; set; }
+        public bool? SshEnabled { get => _explicitNullValueSshEnabled; set { _explicitNullValueSshEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sshEnabled"); else _explicitNullProperties?.Remove("sshEnabled"); } }
+        private bool? _explicitNullValueSshEnabled = default!;
         /// <summary>Lets you assign an identity to a device that is separate from human users, and use it as part of an ACL to restrict access.Once a device is tagged, the tag is the owner of that device.A single node can have multiple tags assigned.This value is empty for external devices.Learn more about tags at https://tailscale.com/docs/features/tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>Indicates an issue with the tailnet lock node-key signature on this device.This field is only populated when tailnet lock is enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TailnetLockError { get; set; }
+        public string? TailnetLockError { get => _explicitNullValueTailnetLockError; set { _explicitNullValueTailnetLockError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailnetLockError"); else _explicitNullProperties?.Remove("tailnetLockError"); } }
+        private string? _explicitNullValueTailnetLockError = default!;
 #nullable restore
 #else
-        public string TailnetLockError { get; set; }
+        public string TailnetLockError { get => _explicitNullValueTailnetLockError; set { _explicitNullValueTailnetLockError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailnetLockError"); else _explicitNullProperties?.Remove("tailnetLockError"); } }
+        private string _explicitNullValueTailnetLockError = default!;
 #endif
         /// <summary>The node&apos;s tailnet lock key.Every node generates a tailnet lock key (so the value will be present) even if tailnet lock is not enabled.Learn more about tailnet lock at https://tailscale.com/docs/features/tailnet-lock.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TailnetLockKey { get; set; }
+        public string? TailnetLockKey { get => _explicitNullValueTailnetLockKey; set { _explicitNullValueTailnetLockKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailnetLockKey"); else _explicitNullProperties?.Remove("tailnetLockKey"); } }
+        private string? _explicitNullValueTailnetLockKey = default!;
 #nullable restore
 #else
-        public string TailnetLockKey { get; set; }
+        public string TailnetLockKey { get => _explicitNullValueTailnetLockKey; set { _explicitNullValueTailnetLockKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailnetLockKey"); else _explicitNullProperties?.Remove("tailnetLockKey"); } }
+        private string _explicitNullValueTailnetLockKey = default!;
 #endif
         /// <summary>&apos;true&apos; if a Tailscale client versionupgrade is available. This value is empty for external devices.</summary>
-        public bool? UpdateAvailable { get; set; }
+        public bool? UpdateAvailable { get => _explicitNullValueUpdateAvailable; set { _explicitNullValueUpdateAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateAvailable"); else _explicitNullProperties?.Remove("updateAvailable"); } }
+        private bool? _explicitNullValueUpdateAvailable = default!;
         /// <summary>The user who registered the node. For untagged nodes, this user is the device owner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get; set; }
+        public string? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private string? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public string User { get; set; }
+        public string User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private string _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.Device"/> and sets the default values.
@@ -206,7 +294,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.Device CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.Device();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.Device(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -287,6 +375,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteStringValue("tailnetLockKey", TailnetLockKey);
             writer.WriteBoolValue("updateAvailable", UpdateAvailable);
             writer.WriteStringValue("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

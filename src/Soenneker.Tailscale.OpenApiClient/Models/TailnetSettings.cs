@@ -12,41 +12,73 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TailnetSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aclsExternalLink") is { } nullNodeAclsExternalLink && nullNodeAclsExternalLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AclsExternalLink = null;
+            if (parseNode.GetChildNode("aclsExternallyManagedOn") is { } nullNodeAclsExternallyManagedOn && nullNodeAclsExternallyManagedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AclsExternallyManagedOn = null;
+            if (parseNode.GetChildNode("adminConsoleSessionTimeoutMinutes") is { } nullNodeAdminConsoleSessionTimeoutMinutes && nullNodeAdminConsoleSessionTimeoutMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminConsoleSessionTimeoutMinutes = null;
+            if (parseNode.GetChildNode("devicesApprovalOn") is { } nullNodeDevicesApprovalOn && nullNodeDevicesApprovalOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevicesApprovalOn = null;
+            if (parseNode.GetChildNode("devicesAutoUpdatesOn") is { } nullNodeDevicesAutoUpdatesOn && nullNodeDevicesAutoUpdatesOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevicesAutoUpdatesOn = null;
+            if (parseNode.GetChildNode("devicesKeyDurationDays") is { } nullNodeDevicesKeyDurationDays && nullNodeDevicesKeyDurationDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevicesKeyDurationDays = null;
+            if (parseNode.GetChildNode("httpsEnabled") is { } nullNodeHttpsEnabled && nullNodeHttpsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsEnabled = null;
+            if (parseNode.GetChildNode("networkFlowLoggingOn") is { } nullNodeNetworkFlowLoggingOn && nullNodeNetworkFlowLoggingOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkFlowLoggingOn = null;
+            if (parseNode.GetChildNode("postureIdentityCollectionOn") is { } nullNodePostureIdentityCollectionOn && nullNodePostureIdentityCollectionOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostureIdentityCollectionOn = null;
+            if (parseNode.GetChildNode("routeSelection") is { } nullNodeRouteSelection && nullNodeRouteSelection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RouteSelection = null;
+            if (parseNode.GetChildNode("usersApprovalOn") is { } nullNodeUsersApprovalOn && nullNodeUsersApprovalOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersApprovalOn = null;
+            if (parseNode.GetChildNode("usersRoleAllowedToJoinExternalTailnets") is { } nullNodeUsersRoleAllowedToJoinExternalTailnets && nullNodeUsersRoleAllowedToJoinExternalTailnets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersRoleAllowedToJoinExternalTailnets = null;
+        }
+
         /// <summary>Link to the external tailnet policy definition or management solution for this tailnet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AclsExternalLink { get; set; }
+        public string? AclsExternalLink { get => _explicitNullValueAclsExternalLink; set { _explicitNullValueAclsExternalLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aclsExternalLink"); else _explicitNullProperties?.Remove("aclsExternalLink"); } }
+        private string? _explicitNullValueAclsExternalLink = default!;
 #nullable restore
 #else
-        public string AclsExternalLink { get; set; }
+        public string AclsExternalLink { get => _explicitNullValueAclsExternalLink; set { _explicitNullValueAclsExternalLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aclsExternalLink"); else _explicitNullProperties?.Remove("aclsExternalLink"); } }
+        private string _explicitNullValueAclsExternalLink = default!;
 #endif
         /// <summary>Prevents users from editing policies in the admin console to avoid conflicts with external management workflows like GitOps or Terraform.</summary>
-        public bool? AclsExternallyManagedOn { get; set; }
+        public bool? AclsExternallyManagedOn { get => _explicitNullValueAclsExternallyManagedOn; set { _explicitNullValueAclsExternallyManagedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aclsExternallyManagedOn"); else _explicitNullProperties?.Remove("aclsExternallyManagedOn"); } }
+        private bool? _explicitNullValueAclsExternallyManagedOn = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The [admin console session timeout](/docs/account/admin-console-session-timeout) for members of this tailnet.Setting it to 0 disables the timeout.</summary>
-        public int? AdminConsoleSessionTimeoutMinutes { get; set; }
+        public int? AdminConsoleSessionTimeoutMinutes { get => _explicitNullValueAdminConsoleSessionTimeoutMinutes; set { _explicitNullValueAdminConsoleSessionTimeoutMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adminConsoleSessionTimeoutMinutes"); else _explicitNullProperties?.Remove("adminConsoleSessionTimeoutMinutes"); } }
+        private int? _explicitNullValueAdminConsoleSessionTimeoutMinutes = default!;
         /// <summary>Whether [device approval](/docs/features/access-control/device-management/device-approval) is enabled for the tailnet.</summary>
-        public bool? DevicesApprovalOn { get; set; }
+        public bool? DevicesApprovalOn { get => _explicitNullValueDevicesApprovalOn; set { _explicitNullValueDevicesApprovalOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devicesApprovalOn"); else _explicitNullProperties?.Remove("devicesApprovalOn"); } }
+        private bool? _explicitNullValueDevicesApprovalOn = default!;
         /// <summary>Whether [auto updates](/docs/features/client/update#auto-updates) are enabled for devices that belong to this tailnet.</summary>
-        public bool? DevicesAutoUpdatesOn { get; set; }
+        public bool? DevicesAutoUpdatesOn { get => _explicitNullValueDevicesAutoUpdatesOn; set { _explicitNullValueDevicesAutoUpdatesOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devicesAutoUpdatesOn"); else _explicitNullProperties?.Remove("devicesAutoUpdatesOn"); } }
+        private bool? _explicitNullValueDevicesAutoUpdatesOn = default!;
         /// <summary>The [key expiry](/docs/features/access-control/key-expiry) duration for devices on this tailnet.</summary>
-        public int? DevicesKeyDurationDays { get; set; }
+        public int? DevicesKeyDurationDays { get => _explicitNullValueDevicesKeyDurationDays; set { _explicitNullValueDevicesKeyDurationDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devicesKeyDurationDays"); else _explicitNullProperties?.Remove("devicesKeyDurationDays"); } }
+        private int? _explicitNullValueDevicesKeyDurationDays = default!;
         /// <summary>Whether provisioning of [HTTPS certificates](/docs/how-to/set-up-https-certificates) is enabled for this tailnet.</summary>
-        public bool? HttpsEnabled { get; set; }
+        public bool? HttpsEnabled { get => _explicitNullValueHttpsEnabled; set { _explicitNullValueHttpsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpsEnabled"); else _explicitNullProperties?.Remove("httpsEnabled"); } }
+        private bool? _explicitNullValueHttpsEnabled = default!;
         /// <summary>Whether [network flog logs](/docs/features/logging/network-flow-logs) are enabled for the tailnet.</summary>
-        public bool? NetworkFlowLoggingOn { get; set; }
+        public bool? NetworkFlowLoggingOn { get => _explicitNullValueNetworkFlowLoggingOn; set { _explicitNullValueNetworkFlowLoggingOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networkFlowLoggingOn"); else _explicitNullProperties?.Remove("networkFlowLoggingOn"); } }
+        private bool? _explicitNullValueNetworkFlowLoggingOn = default!;
         /// <summary>Whether [identity collection](/docs/features/access-control/device-management/how-to/manage-identity) is enabled for [device posture](/docs/features/device-posture) integrations for the tailnet.</summary>
-        public bool? PostureIdentityCollectionOn { get; set; }
+        public bool? PostureIdentityCollectionOn { get => _explicitNullValuePostureIdentityCollectionOn; set { _explicitNullValuePostureIdentityCollectionOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postureIdentityCollectionOn"); else _explicitNullProperties?.Remove("postureIdentityCollectionOn"); } }
+        private bool? _explicitNullValuePostureIdentityCollectionOn = default!;
         /// <summary>Whether [regional routing](/docs/features/route-selection#regional-routing) is enabled for the tailnet.A PATCH request should prefer setting `routeSelection`.A PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
         public bool? RegionalRoutingOn { get; private set; }
         /// <summary>The [route selection](/docs/features/route-selection) algorithm used by the tailnet:* `active-passive-failover` - Active-passive failover (formerly known as &quot;Failover&quot;)* `regional-routing` - Regional routing* `regional-routing-failover` - Regional routing with in-region failover* `magicroute` - MagicRouteA PATCH request must not specify both the `regionalRoutingOn` and `routeSelection` fields.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection? RouteSelection { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection? RouteSelection { get => _explicitNullValueRouteSelection; set { _explicitNullValueRouteSelection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routeSelection"); else _explicitNullProperties?.Remove("routeSelection"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection? _explicitNullValueRouteSelection = default!;
         /// <summary>Whether [user approval](/docs/features/access-control/user-approval) is enabled for this tailnet.</summary>
-        public bool? UsersApprovalOn { get; set; }
+        public bool? UsersApprovalOn { get => _explicitNullValueUsersApprovalOn; set { _explicitNullValueUsersApprovalOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usersApprovalOn"); else _explicitNullProperties?.Remove("usersApprovalOn"); } }
+        private bool? _explicitNullValueUsersApprovalOn = default!;
         /// <summary>Which user roles are allowed to [join external tailnets](/docs/features/sharing/how-to/invite-any-user).</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets? UsersRoleAllowedToJoinExternalTailnets { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets? UsersRoleAllowedToJoinExternalTailnets { get => _explicitNullValueUsersRoleAllowedToJoinExternalTailnets; set { _explicitNullValueUsersRoleAllowedToJoinExternalTailnets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usersRoleAllowedToJoinExternalTailnets"); else _explicitNullProperties?.Remove("usersRoleAllowedToJoinExternalTailnets"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets? _explicitNullValueUsersRoleAllowedToJoinExternalTailnets = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings"/> and sets the default values.
         /// </summary>
@@ -62,7 +94,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +138,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsRouteSelection>("routeSelection", RouteSelection);
             writer.WriteBoolValue("usersApprovalOn", UsersApprovalOn);
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettingsUsersRoleAllowedToJoinExternalTailnets>("usersRoleAllowedToJoinExternalTailnets", UsersRoleAllowedToJoinExternalTailnets);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

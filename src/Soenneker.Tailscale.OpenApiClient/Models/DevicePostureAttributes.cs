@@ -11,24 +11,37 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DevicePostureAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("expiries") is { } nullNodeExpiries && nullNodeExpiries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiries = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains all the posture attributes assigned to a node.Attribute values can be strings, numbers or booleans.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty? Attributes { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty Attributes { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty _explicitNullValueAttributes = default!;
 #endif
         /// <summary>Contains the expiry time for each posture attribute, if set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty? Expiries { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty? Expiries { get => _explicitNullValueExpiries; set { _explicitNullValueExpiries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiries"); else _explicitNullProperties?.Remove("expiries"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty? _explicitNullValueExpiries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty Expiries { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty Expiries { get => _explicitNullValueExpiries; set { _explicitNullValueExpiries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiries"); else _explicitNullProperties?.Remove("expiries"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty _explicitNullValueExpiries = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributes"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty>("attributes", Attributes);
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty>("expiries", Expiries);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

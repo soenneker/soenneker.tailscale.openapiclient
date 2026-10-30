@@ -70,6 +70,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Device.Item.Attributes
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "504", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributes>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributes.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

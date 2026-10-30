@@ -11,87 +11,127 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConfigurationAuditLog : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("actionDetails") is { } nullNodeActionDetails && nullNodeActionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionDetails = null;
+            if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
+            if (parseNode.GetChildNode("deferredAt") is { } nullNodeDeferredAt && nullNodeDeferredAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeferredAt = null;
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("eventGroupID") is { } nullNodeEventGroupID && nullNodeEventGroupID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventGroupID = null;
+            if (parseNode.GetChildNode("eventTime") is { } nullNodeEventTime && nullNodeEventTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTime = null;
+            if (parseNode.GetChildNode("new") is { } nullNodeNew && nullNodeNew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) New = null;
+            if (parseNode.GetChildNode("old") is { } nullNodeOld && nullNodeOld.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Old = null;
+            if (parseNode.GetChildNode("origin") is { } nullNodeOrigin && nullNodeOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origin = null;
+            if (parseNode.GetChildNode("target") is { } nullNodeTarget && nullNodeTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Target = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The type of change attempted against the `target`.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogAction? Action { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogAction? _explicitNullValueAction = default!;
         /// <summary>Additional information about the event, such as a client-provided reason, if it exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionDetails { get; set; }
+        public string? ActionDetails { get => _explicitNullValueActionDetails; set { _explicitNullValueActionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionDetails"); else _explicitNullProperties?.Remove("actionDetails"); } }
+        private string? _explicitNullValueActionDetails = default!;
 #nullable restore
 #else
-        public string ActionDetails { get; set; }
+        public string ActionDetails { get => _explicitNullValueActionDetails; set { _explicitNullValueActionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionDetails"); else _explicitNullProperties?.Remove("actionDetails"); } }
+        private string _explicitNullValueActionDetails = default!;
 #endif
         /// <summary>The person who caused the action related to this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogActor? Actor { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogActor? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogActor? _explicitNullValueActor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogActor Actor { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogActor Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogActor _explicitNullValueActor = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp recording the time that the audit log rate limiter enqueued the record to be logged at a future time, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeferredAt { get; set; }
+        public string? DeferredAt { get => _explicitNullValueDeferredAt; set { _explicitNullValueDeferredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deferredAt"); else _explicitNullProperties?.Remove("deferredAt"); } }
+        private string? _explicitNullValueDeferredAt = default!;
 #nullable restore
 #else
-        public string DeferredAt { get; set; }
+        public string DeferredAt { get => _explicitNullValueDeferredAt; set { _explicitNullValueDeferredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deferredAt"); else _explicitNullProperties?.Remove("deferredAt"); } }
+        private string _explicitNullValueDeferredAt = default!;
 #endif
         /// <summary>Provided when the configuration change failed to be completed. It is a user-presentable reason for the failure.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get; set; }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get; set; }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string _explicitNullValueError = default!;
 #endif
         /// <summary>Identifier assigned to one or more audit log events, all of which are the result of a single operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventGroupID { get; set; }
+        public string? EventGroupID { get => _explicitNullValueEventGroupID; set { _explicitNullValueEventGroupID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventGroupID"); else _explicitNullProperties?.Remove("eventGroupID"); } }
+        private string? _explicitNullValueEventGroupID = default!;
 #nullable restore
 #else
-        public string EventGroupID { get; set; }
+        public string EventGroupID { get => _explicitNullValueEventGroupID; set { _explicitNullValueEventGroupID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventGroupID"); else _explicitNullProperties?.Remove("eventGroupID"); } }
+        private string _explicitNullValueEventGroupID = default!;
 #endif
         /// <summary>Timestamp of the audit log event, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTime { get; set; }
+        public string? EventTime { get => _explicitNullValueEventTime; set { _explicitNullValueEventTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTime"); else _explicitNullProperties?.Remove("eventTime"); } }
+        private string? _explicitNullValueEventTime = default!;
 #nullable restore
 #else
-        public string EventTime { get; set; }
+        public string EventTime { get => _explicitNullValueEventTime; set { _explicitNullValueEventTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTime"); else _explicitNullProperties?.Remove("eventTime"); } }
+        private string _explicitNullValueEventTime = default!;
 #endif
         /// <summary>The value of `target.property` after the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew? New { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew? New { get => _explicitNullValueNew; set { _explicitNullValueNew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new"); else _explicitNullProperties?.Remove("new"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew? _explicitNullValueNew = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew New { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew New { get => _explicitNullValueNew; set { _explicitNullValueNew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new"); else _explicitNullProperties?.Remove("new"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogNew _explicitNullValueNew = default!;
 #endif
         /// <summary>The value of `target.property`` prior to the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOld? Old { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOld? Old { get => _explicitNullValueOld; set { _explicitNullValueOld = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old"); else _explicitNullProperties?.Remove("old"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOld? _explicitNullValueOld = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOld Old { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOld Old { get => _explicitNullValueOld; set { _explicitNullValueOld = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old"); else _explicitNullProperties?.Remove("old"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOld _explicitNullValueOld = default!;
 #endif
         /// <summary>The initiator of the action that generated the event, typically an API or user interface, like the Tailscale admin panel.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOrigin? Origin { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOrigin? Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOrigin? _explicitNullValueOrigin = default!;
         /// <summary>The object of this event&apos;s action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget? Target { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget? Target { get => _explicitNullValueTarget; set { _explicitNullValueTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target"); else _explicitNullProperties?.Remove("target"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget? _explicitNullValueTarget = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget Target { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget Target { get => _explicitNullValueTarget; set { _explicitNullValueTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target"); else _explicitNullProperties?.Remove("target"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget _explicitNullValueTarget = default!;
 #endif
         /// <summary>The type of log (always &quot;CONFIG&quot;).</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigType? Type { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConfigType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ConfigType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLog"/> and sets the default values.
         /// </summary>
@@ -107,7 +147,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLog CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLog();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLog(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -150,6 +190,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOrigin>("origin", Origin);
             writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogTarget>("target", Target);
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConfigType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

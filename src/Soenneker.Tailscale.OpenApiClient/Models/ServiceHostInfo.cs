@@ -12,26 +12,41 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ServiceHostInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvalLevel") is { } nullNodeApprovalLevel && nullNodeApprovalLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalLevel = null;
+            if (parseNode.GetChildNode("configured") is { } nullNodeConfigured && nullNodeConfigured.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configured = null;
+            if (parseNode.GetChildNode("stableNodeID") is { } nullNodeStableNodeID && nullNodeStableNodeID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StableNodeID = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approval level of the device hosting the Service.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel? ApprovalLevel { get; set; }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel? ApprovalLevel { get => _explicitNullValueApprovalLevel; set { _explicitNullValueApprovalLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalLevel"); else _explicitNullProperties?.Remove("approvalLevel"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel? _explicitNullValueApprovalLevel = default!;
         /// <summary>The configuration status of the device hosting the Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Configured { get; set; }
+        public string? Configured { get => _explicitNullValueConfigured; set { _explicitNullValueConfigured = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configured"); else _explicitNullProperties?.Remove("configured"); } }
+        private string? _explicitNullValueConfigured = default!;
 #nullable restore
 #else
-        public string Configured { get; set; }
+        public string Configured { get => _explicitNullValueConfigured; set { _explicitNullValueConfigured = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configured"); else _explicitNullProperties?.Remove("configured"); } }
+        private string _explicitNullValueConfigured = default!;
 #endif
         /// <summary>The preferred identifier for a device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StableNodeID { get; set; }
+        public string? StableNodeID { get => _explicitNullValueStableNodeID; set { _explicitNullValueStableNodeID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableNodeID"); else _explicitNullProperties?.Remove("stableNodeID"); } }
+        private string? _explicitNullValueStableNodeID = default!;
 #nullable restore
 #else
-        public string StableNodeID { get; set; }
+        public string StableNodeID { get => _explicitNullValueStableNodeID; set { _explicitNullValueStableNodeID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableNodeID"); else _explicitNullProperties?.Remove("stableNodeID"); } }
+        private string _explicitNullValueStableNodeID = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfo"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public static global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel>("approvalLevel", ApprovalLevel);
             writer.WriteStringValue("configured", Configured);
             writer.WriteStringValue("stableNodeID", StableNodeID);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

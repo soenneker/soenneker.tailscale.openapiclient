@@ -2240,7 +2240,8 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPolicyFile200ResponseSchema"
+                  "type": "string",
+                  "format": "binary"
                 },
                 "examples": {
                   "exampleJSONPolicyFile": {
@@ -2258,16 +2259,23 @@
                       "errors": null
                     }
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/GetPolicyFile200ResponseSchema"
                 }
               },
               "application/hujson": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPolicyFile200HujsonResponseSchema"
+                  "type": "string",
+                  "format": "binary"
                 },
                 "examples": {
                   "exampleHuJSONPolicyFile": {
                     "$ref": "#/components/examples/ExampleHuJSONPolicyFile"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/GetPolicyFile200HujsonResponseSchema"
                 }
               }
             }
@@ -2337,22 +2345,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SetPolicyFile200ResponseSchema"
+                  "type": "string",
+                  "format": "binary"
                 },
                 "examples": {
                   "exampleJSONPolicyFile": {
                     "$ref": "#/components/examples/ExampleJSONPolicyFile"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/SetPolicyFile200ResponseSchema"
                 }
               },
               "application/hujson": {
                 "schema": {
-                  "$ref": "#/components/schemas/SetPolicyFile200HujsonResponseSchema"
+                  "type": "string",
+                  "format": "binary"
                 },
                 "examples": {
                   "exampleHuJSONPolicyFile": {
                     "$ref": "#/components/examples/ExampleHuJSONPolicyFile"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/SetPolicyFile200HujsonResponseSchema"
                 }
               }
             }
