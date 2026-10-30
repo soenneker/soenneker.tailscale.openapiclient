@@ -17,19 +17,22 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("security") is { } nullNodeSecurity && nullNodeSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Security = null;
-            if (parseNode.GetChildNode("support") is { } nullNodeSupport && nullNodeSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Support = null;
+            if (parseNode.GetChildNode("account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("account"); }
+            else if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("security") is null) { _explicitNullValueSecurity = default!; _explicitNullProperties?.Remove("security"); }
+            else if (parseNode.GetChildNode("security") is { } nullNodeSecurity && nullNodeSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Security = null;
+            if (parseNode.GetChildNode("support") is null) { _explicitNullValueSupport = default!; _explicitNullProperties?.Remove("support"); }
+            else if (parseNode.GetChildNode("support") is { } nullNodeSupport && nullNodeSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Support = null;
         }
 
         /// <summary>A tailnet contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.Contact? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.Contact _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,21 +40,21 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>A tailnet contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact? Security { get => _explicitNullValueSecurity; set { _explicitNullValueSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security"); else _explicitNullProperties?.Remove("security"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact? Security { get => _explicitNullValueSecurity; set { _explicitNullValueSecurity = value; AdditionalData?.Remove("security"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security"); else _explicitNullProperties?.Remove("security"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.Contact? _explicitNullValueSecurity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact Security { get => _explicitNullValueSecurity; set { _explicitNullValueSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security"); else _explicitNullProperties?.Remove("security"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact Security { get => _explicitNullValueSecurity; set { _explicitNullValueSecurity = value; AdditionalData?.Remove("security"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security"); else _explicitNullProperties?.Remove("security"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.Contact _explicitNullValueSecurity = default!;
 #endif
         /// <summary>A tailnet contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact? Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact? Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; AdditionalData?.Remove("support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.Contact? _explicitNullValueSupport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.Contact Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; AdditionalData?.Remove("support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.Contact _explicitNullValueSupport = default!;
 #endif
         /// <summary>

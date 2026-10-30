@@ -18,34 +18,37 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("approvalLevel") is { } nullNodeApprovalLevel && nullNodeApprovalLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalLevel = null;
-            if (parseNode.GetChildNode("configured") is { } nullNodeConfigured && nullNodeConfigured.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configured = null;
-            if (parseNode.GetChildNode("stableNodeID") is { } nullNodeStableNodeID && nullNodeStableNodeID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StableNodeID = null;
+            if (parseNode.GetChildNode("approvalLevel") is null) { _explicitNullValueApprovalLevel = default!; _explicitNullProperties?.Remove("approvalLevel"); }
+            else if (parseNode.GetChildNode("approvalLevel") is { } nullNodeApprovalLevel && nullNodeApprovalLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalLevel = null;
+            if (parseNode.GetChildNode("configured") is null) { _explicitNullValueConfigured = default!; _explicitNullProperties?.Remove("configured"); }
+            else if (parseNode.GetChildNode("configured") is { } nullNodeConfigured && nullNodeConfigured.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configured = null;
+            if (parseNode.GetChildNode("stableNodeID") is null) { _explicitNullValueStableNodeID = default!; _explicitNullProperties?.Remove("stableNodeID"); }
+            else if (parseNode.GetChildNode("stableNodeID") is { } nullNodeStableNodeID && nullNodeStableNodeID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StableNodeID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approval level of the device hosting the Service.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel? ApprovalLevel { get => _explicitNullValueApprovalLevel; set { _explicitNullValueApprovalLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalLevel"); else _explicitNullProperties?.Remove("approvalLevel"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel? ApprovalLevel { get => _explicitNullValueApprovalLevel; set { _explicitNullValueApprovalLevel = value; AdditionalData?.Remove("approvalLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalLevel"); else _explicitNullProperties?.Remove("approvalLevel"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel? _explicitNullValueApprovalLevel = default!;
         /// <summary>The configuration status of the device hosting the Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Configured { get => _explicitNullValueConfigured; set { _explicitNullValueConfigured = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configured"); else _explicitNullProperties?.Remove("configured"); } }
+        public string? Configured { get => _explicitNullValueConfigured; set { _explicitNullValueConfigured = value; AdditionalData?.Remove("configured"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configured"); else _explicitNullProperties?.Remove("configured"); } }
         private string? _explicitNullValueConfigured = default!;
 #nullable restore
 #else
-        public string Configured { get => _explicitNullValueConfigured; set { _explicitNullValueConfigured = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configured"); else _explicitNullProperties?.Remove("configured"); } }
+        public string Configured { get => _explicitNullValueConfigured; set { _explicitNullValueConfigured = value; AdditionalData?.Remove("configured"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configured"); else _explicitNullProperties?.Remove("configured"); } }
         private string _explicitNullValueConfigured = default!;
 #endif
         /// <summary>The preferred identifier for a device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StableNodeID { get => _explicitNullValueStableNodeID; set { _explicitNullValueStableNodeID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableNodeID"); else _explicitNullProperties?.Remove("stableNodeID"); } }
+        public string? StableNodeID { get => _explicitNullValueStableNodeID; set { _explicitNullValueStableNodeID = value; AdditionalData?.Remove("stableNodeID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableNodeID"); else _explicitNullProperties?.Remove("stableNodeID"); } }
         private string? _explicitNullValueStableNodeID = default!;
 #nullable restore
 #else
-        public string StableNodeID { get => _explicitNullValueStableNodeID; set { _explicitNullValueStableNodeID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableNodeID"); else _explicitNullProperties?.Remove("stableNodeID"); } }
+        public string StableNodeID { get => _explicitNullValueStableNodeID; set { _explicitNullValueStableNodeID = value; AdditionalData?.Remove("stableNodeID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableNodeID"); else _explicitNullProperties?.Remove("stableNodeID"); } }
         private string _explicitNullValueStableNodeID = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approvalLevel", n => { ApprovalLevel = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel>(); } },
+                { "approvalLevel", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ServiceHostInfoApprovalLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApprovalLevel = default; _explicitNullProperties?.Remove("approvalLevel"); AdditionalData["approvalLevel"] = unknown; } else { ApprovalLevel = parsed; AdditionalData.Remove("approvalLevel"); } } },
                 { "configured", n => { Configured = n.GetStringValue(); } },
                 { "stableNodeID", n => { StableNodeID = n.GetStringValue(); } },
             };

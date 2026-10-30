@@ -17,7 +17,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("searchPaths") is { } nullNodeSearchPaths && nullNodeSearchPaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchPaths = null;
+            if (parseNode.GetChildNode("searchPaths") is null) { _explicitNullValueSearchPaths = default!; _explicitNullProperties?.Remove("searchPaths"); }
+            else if (parseNode.GetChildNode("searchPaths") is { } nullNodeSearchPaths && nullNodeSearchPaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchPaths = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The search domains for the given tailnet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
+        public List<string>? SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; AdditionalData?.Remove("searchPaths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
         private List<string>? _explicitNullValueSearchPaths = default!;
 #nullable restore
 #else
-        public List<string> SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
+        public List<string> SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; AdditionalData?.Remove("searchPaths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
         private List<string> _explicitNullValueSearchPaths = default!;
 #endif
         /// <summary>

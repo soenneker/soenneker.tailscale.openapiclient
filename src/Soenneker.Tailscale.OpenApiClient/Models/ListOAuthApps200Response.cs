@@ -17,7 +17,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("oauthApps") is { } nullNodeOauthApps && nullNodeOauthApps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OauthApps = null;
+            if (parseNode.GetChildNode("oauthApps") is null) { _explicitNullValueOauthApps = default!; _explicitNullProperties?.Remove("oauthApps"); }
+            else if (parseNode.GetChildNode("oauthApps") is { } nullNodeOauthApps && nullNodeOauthApps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OauthApps = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The oauthApps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.OAuthApp>? OauthApps { get => _explicitNullValueOauthApps; set { _explicitNullValueOauthApps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauthApps"); else _explicitNullProperties?.Remove("oauthApps"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.OAuthApp>? OauthApps { get => _explicitNullValueOauthApps; set { _explicitNullValueOauthApps = value; AdditionalData?.Remove("oauthApps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauthApps"); else _explicitNullProperties?.Remove("oauthApps"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.OAuthApp>? _explicitNullValueOauthApps = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.OAuthApp> OauthApps { get => _explicitNullValueOauthApps; set { _explicitNullValueOauthApps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauthApps"); else _explicitNullProperties?.Remove("oauthApps"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.OAuthApp> OauthApps { get => _explicitNullValueOauthApps; set { _explicitNullValueOauthApps = value; AdditionalData?.Remove("oauthApps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauthApps"); else _explicitNullProperties?.Remove("oauthApps"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.OAuthApp> _explicitNullValueOauthApps = default!;
 #endif
         /// <summary>

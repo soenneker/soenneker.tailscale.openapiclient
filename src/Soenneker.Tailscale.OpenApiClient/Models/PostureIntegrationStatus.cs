@@ -18,11 +18,16 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("lastSync") is { } nullNodeLastSync && nullNodeLastSync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSync = null;
-            if (parseNode.GetChildNode("matchedCount") is { } nullNodeMatchedCount && nullNodeMatchedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedCount = null;
-            if (parseNode.GetChildNode("possibleMatchedCount") is { } nullNodePossibleMatchedCount && nullNodePossibleMatchedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PossibleMatchedCount = null;
-            if (parseNode.GetChildNode("providerHostCount") is { } nullNodeProviderHostCount && nullNodeProviderHostCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderHostCount = null;
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("lastSync") is null) { _explicitNullValueLastSync = default!; _explicitNullProperties?.Remove("lastSync"); }
+            else if (parseNode.GetChildNode("lastSync") is { } nullNodeLastSync && nullNodeLastSync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSync = null;
+            if (parseNode.GetChildNode("matchedCount") is null) { _explicitNullValueMatchedCount = default!; _explicitNullProperties?.Remove("matchedCount"); }
+            else if (parseNode.GetChildNode("matchedCount") is { } nullNodeMatchedCount && nullNodeMatchedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedCount = null;
+            if (parseNode.GetChildNode("possibleMatchedCount") is null) { _explicitNullValuePossibleMatchedCount = default!; _explicitNullProperties?.Remove("possibleMatchedCount"); }
+            else if (parseNode.GetChildNode("possibleMatchedCount") is { } nullNodePossibleMatchedCount && nullNodePossibleMatchedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PossibleMatchedCount = null;
+            if (parseNode.GetChildNode("providerHostCount") is null) { _explicitNullValueProviderHostCount = default!; _explicitNullProperties?.Remove("providerHostCount"); }
+            else if (parseNode.GetChildNode("providerHostCount") is { } nullNodeProviderHostCount && nullNodeProviderHostCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderHostCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,31 +35,31 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>If the last synchronization failed, this shows the error message associated with the failed synchronization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string _explicitNullValueError = default!;
 #endif
         /// <summary>Timestamp of the last synchronization with the device posture provider, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastSync { get => _explicitNullValueLastSync; set { _explicitNullValueLastSync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSync"); else _explicitNullProperties?.Remove("lastSync"); } }
+        public string? LastSync { get => _explicitNullValueLastSync; set { _explicitNullValueLastSync = value; AdditionalData?.Remove("lastSync"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSync"); else _explicitNullProperties?.Remove("lastSync"); } }
         private string? _explicitNullValueLastSync = default!;
 #nullable restore
 #else
-        public string LastSync { get => _explicitNullValueLastSync; set { _explicitNullValueLastSync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSync"); else _explicitNullProperties?.Remove("lastSync"); } }
+        public string LastSync { get => _explicitNullValueLastSync; set { _explicitNullValueLastSync = value; AdditionalData?.Remove("lastSync"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSync"); else _explicitNullProperties?.Remove("lastSync"); } }
         private string _explicitNullValueLastSync = default!;
 #endif
         /// <summary>The number of Tailscale nodes that were matched with provider.</summary>
-        public int? MatchedCount { get => _explicitNullValueMatchedCount; set { _explicitNullValueMatchedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedCount"); else _explicitNullProperties?.Remove("matchedCount"); } }
+        public int? MatchedCount { get => _explicitNullValueMatchedCount; set { _explicitNullValueMatchedCount = value; AdditionalData?.Remove("matchedCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedCount"); else _explicitNullProperties?.Remove("matchedCount"); } }
         private int? _explicitNullValueMatchedCount = default!;
         /// <summary>The number of Tailscale nodes with identifiers for matching.</summary>
-        public int? PossibleMatchedCount { get => _explicitNullValuePossibleMatchedCount; set { _explicitNullValuePossibleMatchedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("possibleMatchedCount"); else _explicitNullProperties?.Remove("possibleMatchedCount"); } }
+        public int? PossibleMatchedCount { get => _explicitNullValuePossibleMatchedCount; set { _explicitNullValuePossibleMatchedCount = value; AdditionalData?.Remove("possibleMatchedCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("possibleMatchedCount"); else _explicitNullProperties?.Remove("possibleMatchedCount"); } }
         private int? _explicitNullValuePossibleMatchedCount = default!;
         /// <summary>The number of devices known to the provider.</summary>
-        public int? ProviderHostCount { get => _explicitNullValueProviderHostCount; set { _explicitNullValueProviderHostCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerHostCount"); else _explicitNullProperties?.Remove("providerHostCount"); } }
+        public int? ProviderHostCount { get => _explicitNullValueProviderHostCount; set { _explicitNullValueProviderHostCount = value; AdditionalData?.Remove("providerHostCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerHostCount"); else _explicitNullProperties?.Remove("providerHostCount"); } }
         private int? _explicitNullValueProviderHostCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.PostureIntegrationStatus"/> and sets the default values.

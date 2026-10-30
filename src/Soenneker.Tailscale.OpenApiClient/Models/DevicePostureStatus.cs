@@ -18,9 +18,12 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failingAssertions") is { } nullNodeFailingAssertions && nullNodeFailingAssertions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailingAssertions = null;
-            if (parseNode.GetChildNode("impacting") is { } nullNodeImpacting && nullNodeImpacting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impacting = null;
-            if (parseNode.GetChildNode("passing") is { } nullNodePassing && nullNodePassing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Passing = null;
+            if (parseNode.GetChildNode("failingAssertions") is null) { _explicitNullValueFailingAssertions = default!; _explicitNullProperties?.Remove("failingAssertions"); }
+            else if (parseNode.GetChildNode("failingAssertions") is { } nullNodeFailingAssertions && nullNodeFailingAssertions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailingAssertions = null;
+            if (parseNode.GetChildNode("impacting") is null) { _explicitNullValueImpacting = default!; _explicitNullProperties?.Remove("impacting"); }
+            else if (parseNode.GetChildNode("impacting") is { } nullNodeImpacting && nullNodeImpacting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impacting = null;
+            if (parseNode.GetChildNode("passing") is null) { _explicitNullValuePassing = default!; _explicitNullProperties?.Remove("passing"); }
+            else if (parseNode.GetChildNode("passing") is { } nullNodePassing && nullNodePassing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Passing = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,18 +31,18 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>List of posture assertions the device is failing. Empty if the device is passing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FailingAssertions { get => _explicitNullValueFailingAssertions; set { _explicitNullValueFailingAssertions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failingAssertions"); else _explicitNullProperties?.Remove("failingAssertions"); } }
+        public List<string>? FailingAssertions { get => _explicitNullValueFailingAssertions; set { _explicitNullValueFailingAssertions = value; AdditionalData?.Remove("failingAssertions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failingAssertions"); else _explicitNullProperties?.Remove("failingAssertions"); } }
         private List<string>? _explicitNullValueFailingAssertions = default!;
 #nullable restore
 #else
-        public List<string> FailingAssertions { get => _explicitNullValueFailingAssertions; set { _explicitNullValueFailingAssertions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failingAssertions"); else _explicitNullProperties?.Remove("failingAssertions"); } }
+        public List<string> FailingAssertions { get => _explicitNullValueFailingAssertions; set { _explicitNullValueFailingAssertions = value; AdditionalData?.Remove("failingAssertions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failingAssertions"); else _explicitNullProperties?.Remove("failingAssertions"); } }
         private List<string> _explicitNullValueFailingAssertions = default!;
 #endif
         /// <summary>Whether the status of this posture affects the connectivity of the device.</summary>
-        public bool? Impacting { get => _explicitNullValueImpacting; set { _explicitNullValueImpacting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impacting"); else _explicitNullProperties?.Remove("impacting"); } }
+        public bool? Impacting { get => _explicitNullValueImpacting; set { _explicitNullValueImpacting = value; AdditionalData?.Remove("impacting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impacting"); else _explicitNullProperties?.Remove("impacting"); } }
         private bool? _explicitNullValueImpacting = default!;
         /// <summary>Reports whether the device is passing this posture.</summary>
-        public bool? Passing { get => _explicitNullValuePassing; set { _explicitNullValuePassing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passing"); else _explicitNullProperties?.Remove("passing"); } }
+        public bool? Passing { get => _explicitNullValuePassing; set { _explicitNullValuePassing = value; AdditionalData?.Remove("passing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passing"); else _explicitNullProperties?.Remove("passing"); } }
         private bool? _explicitNullValuePassing = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureStatus"/> and sets the default values.

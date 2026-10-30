@@ -17,10 +17,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("nameservers") is { } nullNodeNameservers && nullNodeNameservers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameservers = null;
-            if (parseNode.GetChildNode("preferences") is { } nullNodePreferences && nullNodePreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferences = null;
-            if (parseNode.GetChildNode("searchPaths") is { } nullNodeSearchPaths && nullNodeSearchPaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchPaths = null;
-            if (parseNode.GetChildNode("splitDNS") is { } nullNodeSplitDNS && nullNodeSplitDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SplitDNS = null;
+            if (parseNode.GetChildNode("nameservers") is null) { _explicitNullValueNameservers = default!; _explicitNullProperties?.Remove("nameservers"); }
+            else if (parseNode.GetChildNode("nameservers") is { } nullNodeNameservers && nullNodeNameservers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameservers = null;
+            if (parseNode.GetChildNode("preferences") is null) { _explicitNullValuePreferences = default!; _explicitNullProperties?.Remove("preferences"); }
+            else if (parseNode.GetChildNode("preferences") is { } nullNodePreferences && nullNodePreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferences = null;
+            if (parseNode.GetChildNode("searchPaths") is null) { _explicitNullValueSearchPaths = default!; _explicitNullProperties?.Remove("searchPaths"); }
+            else if (parseNode.GetChildNode("searchPaths") is { } nullNodeSearchPaths && nullNodeSearchPaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchPaths = null;
+            if (parseNode.GetChildNode("splitDNS") is null) { _explicitNullValueSplitDNS = default!; _explicitNullProperties?.Remove("splitDNS"); }
+            else if (parseNode.GetChildNode("splitDNS") is { } nullNodeSplitDNS && nullNodeSplitDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SplitDNS = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>Global DNS resolvers to use. If `preferences.overrideLocalDNS` is true, these override the local OS configuration; otherwise they are used as fallback resolvers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver>? Nameservers { get => _explicitNullValueNameservers; set { _explicitNullValueNameservers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameservers"); else _explicitNullProperties?.Remove("nameservers"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver>? Nameservers { get => _explicitNullValueNameservers; set { _explicitNullValueNameservers = value; AdditionalData?.Remove("nameservers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameservers"); else _explicitNullProperties?.Remove("nameservers"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver>? _explicitNullValueNameservers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver> Nameservers { get => _explicitNullValueNameservers; set { _explicitNullValueNameservers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameservers"); else _explicitNullProperties?.Remove("nameservers"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver> Nameservers { get => _explicitNullValueNameservers; set { _explicitNullValueNameservers = value; AdditionalData?.Remove("nameservers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameservers"); else _explicitNullProperties?.Remove("nameservers"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver> _explicitNullValueNameservers = default!;
 #endif
         /// <summary>The preferences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences? Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences? Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; AdditionalData?.Remove("preferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences? _explicitNullValuePreferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; AdditionalData?.Remove("preferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences _explicitNullValuePreferences = default!;
 #endif
         /// <summary>Search domain paths to apply.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
+        public List<string>? SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; AdditionalData?.Remove("searchPaths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
         private List<string>? _explicitNullValueSearchPaths = default!;
 #nullable restore
 #else
-        public List<string> SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
+        public List<string> SearchPaths { get => _explicitNullValueSearchPaths; set { _explicitNullValueSearchPaths = value; AdditionalData?.Remove("searchPaths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchPaths"); else _explicitNullProperties?.Remove("searchPaths"); } }
         private List<string> _explicitNullValueSearchPaths = default!;
 #endif
         /// <summary>Map of DNS name suffixes (domains) to lists of resolvers for Split DNS and advanced routing overlays.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationSplitDnsProperty? SplitDNS { get => _explicitNullValueSplitDNS; set { _explicitNullValueSplitDNS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splitDNS"); else _explicitNullProperties?.Remove("splitDNS"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationSplitDnsProperty? SplitDNS { get => _explicitNullValueSplitDNS; set { _explicitNullValueSplitDNS = value; AdditionalData?.Remove("splitDNS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splitDNS"); else _explicitNullProperties?.Remove("splitDNS"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationSplitDnsProperty? _explicitNullValueSplitDNS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationSplitDnsProperty SplitDNS { get => _explicitNullValueSplitDNS; set { _explicitNullValueSplitDNS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splitDNS"); else _explicitNullProperties?.Remove("splitDNS"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationSplitDnsProperty SplitDNS { get => _explicitNullValueSplitDNS; set { _explicitNullValueSplitDNS = value; AdditionalData?.Remove("splitDNS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splitDNS"); else _explicitNullProperties?.Remove("splitDNS"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationSplitDnsProperty _explicitNullValueSplitDNS = default!;
 #endif
         /// <summary>

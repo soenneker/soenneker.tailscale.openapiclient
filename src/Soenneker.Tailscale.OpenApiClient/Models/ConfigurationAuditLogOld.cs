@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOldMember1"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOldMember2"/>, <see cref="int"/>, <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOldMember1"/>, <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConfigurationAuditLogOldMember2"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConfigurationAuditLogOld : IComposedTypeWrapper, IParsable
@@ -38,8 +38,6 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 #endif
         /// <summary>Composed type representation for type <see cref="double"/></summary>
         public double? Double { get; set; }
-        /// <summary>Composed type representation for type <see cref="int"/></summary>
-        public int? Integer { get; set; }
         /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,10 +63,6 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             {
                 result.Double = doubleValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int integerValue)
-            {
-                result.Integer = integerValue;
-            }
             else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
@@ -79,7 +73,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            if (result.Boolean == null && result.ConfigurationAuditLogOldMember1 == null && result.ConfigurationAuditLogOldMember2 == null && result.Double == null && result.Integer == null && result.String == null) result.UnrecognizedValue = unionPayload;
+            if (result.Boolean == null && result.ConfigurationAuditLogOldMember1 == null && result.ConfigurationAuditLogOldMember2 == null && result.Double == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -88,6 +82,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(ConfigurationAuditLogOldMember1 != null || ConfigurationAuditLogOldMember2 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ConfigurationAuditLogOldMember1, ConfigurationAuditLogOldMember2);
@@ -101,9 +97,15 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (Boolean == null && ConfigurationAuditLogOldMember1 == null && ConfigurationAuditLogOldMember2 == null && Double == null && Integer == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (ConfigurationAuditLogOldMember1 != null && Boolean == null && ConfigurationAuditLogOldMember2 == null && Double == null && Integer == null && String == null) { if (ConfigurationAuditLogOldMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ConfigurationAuditLogOldMember1); return; }
-            if (ConfigurationAuditLogOldMember2 != null && Boolean == null && ConfigurationAuditLogOldMember1 == null && Double == null && Integer == null && String == null) { if (ConfigurationAuditLogOldMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ConfigurationAuditLogOldMember2); return; }
+            if (Boolean == null && ConfigurationAuditLogOldMember1 == null && ConfigurationAuditLogOldMember2 == null && Double == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            int selectedUnionBranches = 0;
+            if (Boolean != null) selectedUnionBranches++;
+            if (ConfigurationAuditLogOldMember1 != null) selectedUnionBranches++;
+            if (ConfigurationAuditLogOldMember2 != null) selectedUnionBranches++;
+            if (Double != null) selectedUnionBranches++;
+            if (String != null) selectedUnionBranches++;
+            if (ConfigurationAuditLogOldMember1 != null && selectedUnionBranches == 1) { if (ConfigurationAuditLogOldMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ConfigurationAuditLogOldMember1); return; }
+            if (ConfigurationAuditLogOldMember2 != null && selectedUnionBranches == 1) { if (ConfigurationAuditLogOldMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ConfigurationAuditLogOldMember2); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Boolean != null)
@@ -113,10 +115,6 @@ return result;
             else if(Double != null)
             {
                 writer.WriteDoubleValue(null, Double);
-            }
-            else if(Integer != null)
-            {
-                writer.WriteIntValue(null, Integer);
             }
             else if(String != null)
             {

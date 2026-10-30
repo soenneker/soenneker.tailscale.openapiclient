@@ -18,34 +18,37 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("loginName") is { } nullNodeLoginName && nullNodeLoginName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginName = null;
-            if (parseNode.GetChildNode("profilePicUrl") is { } nullNodeProfilePicUrl && nullNodeProfilePicUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfilePicUrl = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("loginName") is null) { _explicitNullValueLoginName = default!; _explicitNullProperties?.Remove("loginName"); }
+            else if (parseNode.GetChildNode("loginName") is { } nullNodeLoginName && nullNodeLoginName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginName = null;
+            if (parseNode.GetChildNode("profilePicUrl") is null) { _explicitNullValueProfilePicUrl = default!; _explicitNullProperties?.Remove("profilePicUrl"); }
+            else if (parseNode.GetChildNode("profilePicUrl") is { } nullNodeProfilePicUrl && nullNodeProfilePicUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfilePicUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the user who accepted the share invite.</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The login name of the user who accepted the share invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginName { get => _explicitNullValueLoginName; set { _explicitNullValueLoginName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginName"); else _explicitNullProperties?.Remove("loginName"); } }
+        public string? LoginName { get => _explicitNullValueLoginName; set { _explicitNullValueLoginName = value; AdditionalData?.Remove("loginName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginName"); else _explicitNullProperties?.Remove("loginName"); } }
         private string? _explicitNullValueLoginName = default!;
 #nullable restore
 #else
-        public string LoginName { get => _explicitNullValueLoginName; set { _explicitNullValueLoginName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginName"); else _explicitNullProperties?.Remove("loginName"); } }
+        public string LoginName { get => _explicitNullValueLoginName; set { _explicitNullValueLoginName = value; AdditionalData?.Remove("loginName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginName"); else _explicitNullProperties?.Remove("loginName"); } }
         private string _explicitNullValueLoginName = default!;
 #endif
         /// <summary>The profile pic URL for the user who accepted the share invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProfilePicUrl { get => _explicitNullValueProfilePicUrl; set { _explicitNullValueProfilePicUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profilePicUrl"); else _explicitNullProperties?.Remove("profilePicUrl"); } }
+        public string? ProfilePicUrl { get => _explicitNullValueProfilePicUrl; set { _explicitNullValueProfilePicUrl = value; AdditionalData?.Remove("profilePicUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profilePicUrl"); else _explicitNullProperties?.Remove("profilePicUrl"); } }
         private string? _explicitNullValueProfilePicUrl = default!;
 #nullable restore
 #else
-        public string ProfilePicUrl { get => _explicitNullValueProfilePicUrl; set { _explicitNullValueProfilePicUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profilePicUrl"); else _explicitNullProperties?.Remove("profilePicUrl"); } }
+        public string ProfilePicUrl { get => _explicitNullValueProfilePicUrl; set { _explicitNullValueProfilePicUrl = value; AdditionalData?.Remove("profilePicUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profilePicUrl"); else _explicitNullProperties?.Remove("profilePicUrl"); } }
         private string _explicitNullValueProfilePicUrl = default!;
 #endif
         /// <summary>

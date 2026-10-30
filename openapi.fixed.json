@@ -6352,9 +6352,6 @@
             "type": "number"
           },
           {
-            "type": "integer"
-          },
-          {
             "type": "boolean"
           },
           {
@@ -6374,9 +6371,6 @@
           },
           {
             "type": "number"
-          },
-          {
-            "type": "integer"
           },
           {
             "type": "boolean"
@@ -6874,7 +6868,7 @@
       "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrs": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsAdditionalProperties"
+          "$ref": "#/components/schemas/DevicePostureAttributesAttributesAdditionalProperties"
         },
         "description": "Specifies the [device posture attributes](https://tailscale.com/docs/reference/syntax/policy-file#proto-1)\nas key-value pairs to use when evaluating posture conditions in access rules.\nYou only need to use this field if the access rules contain \n[device posture conditions](https://tailscale.com/docs/features/device-posture#device-posture-conditions).\n",
         "example": {
@@ -8189,7 +8183,7 @@
       "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsAdditionalProperties"
+          "$ref": "#/components/schemas/DevicePostureAttributesAttributesAdditionalProperties"
         },
         "description": "Specifies the [device posture attributes](https://tailscale.com/docs/reference/syntax/policy-file#proto-1)\nas key-value pairs to use when evaluating posture conditions in access rules.\nYou only need to use this field if the access rules contain \n[device posture conditions](https://tailscale.com/docs/features/device-posture#device-posture-conditions).\n",
         "example": {

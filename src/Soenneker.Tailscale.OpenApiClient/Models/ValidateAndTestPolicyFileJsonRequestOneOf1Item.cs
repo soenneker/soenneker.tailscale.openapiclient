@@ -18,7 +18,31 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("src") is null) { _explicitNullValueSrc = default!; _explicitNullProperties?.Remove("src"); }
+            else if (parseNode.GetChildNode("src") is { } nullNodeSrc && nullNodeSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Src = null;
+            if (parseNode.GetChildNode("srcPostureAttrs") is null) { _explicitNullValueSrcPostureAttrs = default!; _explicitNullProperties?.Remove("srcPostureAttrs"); }
+            else if (parseNode.GetChildNode("srcPostureAttrs") is { } nullNodeSrcPostureAttrs && nullNodeSrcPostureAttrs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SrcPostureAttrs = null;
+            if (parseNode.GetChildNode("proto") is null) { _explicitNullValueProto = default!; _explicitNullProperties?.Remove("proto"); }
+            else if (parseNode.GetChildNode("proto") is { } nullNodeProto && nullNodeProto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Proto = null;
+            if (parseNode.GetChildNode("accept") is null) { _explicitNullValueAccept = default!; _explicitNullProperties?.Remove("accept"); }
+            else if (parseNode.GetChildNode("accept") is { } nullNodeAccept && nullNodeAccept.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accept = null;
+            if (parseNode.GetChildNode("deny") is null) { _explicitNullValueDeny = default!; _explicitNullProperties?.Remove("deny"); }
+            else if (parseNode.GetChildNode("deny") is { } nullNodeDeny && nullNodeDeny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deny = null;
         }
+
+        // Restore fields omitted by the generator's model-depth limit.
+#nullable enable
+        public string? Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; AdditionalData?.Remove("src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        private string? _explicitNullValueSrc = default!;
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? SrcPostureAttrs { get => _explicitNullValueSrcPostureAttrs; set { _explicitNullValueSrcPostureAttrs = value; AdditionalData?.Remove("srcPostureAttrs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("srcPostureAttrs"); else _explicitNullProperties?.Remove("srcPostureAttrs"); } }
+        private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? _explicitNullValueSrcPostureAttrs = default!;
+        public string? Proto { get => _explicitNullValueProto; set { _explicitNullValueProto = value; AdditionalData?.Remove("proto"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proto"); else _explicitNullProperties?.Remove("proto"); } }
+        private string? _explicitNullValueProto = default!;
+        public global::System.Collections.Generic.List<string>? Accept { get => _explicitNullValueAccept; set { _explicitNullValueAccept = value; AdditionalData?.Remove("accept"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept"); else _explicitNullProperties?.Remove("accept"); } }
+        private global::System.Collections.Generic.List<string>? _explicitNullValueAccept = default!;
+        public global::System.Collections.Generic.List<string>? Deny { get => _explicitNullValueDeny; set { _explicitNullValueDeny = value; AdditionalData?.Remove("deny"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deny"); else _explicitNullProperties?.Remove("deny"); } }
+        private global::System.Collections.Generic.List<string>? _explicitNullValueDeny = default!;
+#nullable restore
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -47,6 +71,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "src", n => { Src = n.GetStringValue(); } },
+                { "srcPostureAttrs", n => { SrcPostureAttrs = n.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue); } },
+                { "proto", n => { Proto = n.GetStringValue(); } },
+                { "accept", n => { Accept = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "deny", n => { Deny = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -56,6 +85,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("src", Src);
+            writer.WriteObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("srcPostureAttrs", SrcPostureAttrs);
+            writer.WriteStringValue("proto", Proto);
+            writer.WriteCollectionOfPrimitiveValues<string>("accept", Accept);
+            writer.WriteCollectionOfPrimitiveValues<string>("deny", Deny);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

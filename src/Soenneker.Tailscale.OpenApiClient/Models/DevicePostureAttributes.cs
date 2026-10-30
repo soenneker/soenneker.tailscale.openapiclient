@@ -17,8 +17,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("expiries") is { } nullNodeExpiries && nullNodeExpiries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiries = null;
+            if (parseNode.GetChildNode("attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("attributes"); }
+            else if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("expiries") is null) { _explicitNullValueExpiries = default!; _explicitNullProperties?.Remove("expiries"); }
+            else if (parseNode.GetChildNode("expiries") is { } nullNodeExpiries && nullNodeExpiries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>Contains all the posture attributes assigned to a node.Attribute values can be strings, numbers or booleans.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesAttributesProperty _explicitNullValueAttributes = default!;
 #endif
         /// <summary>Contains the expiry time for each posture attribute, if set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty? Expiries { get => _explicitNullValueExpiries; set { _explicitNullValueExpiries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiries"); else _explicitNullProperties?.Remove("expiries"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty? Expiries { get => _explicitNullValueExpiries; set { _explicitNullValueExpiries = value; AdditionalData?.Remove("expiries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiries"); else _explicitNullProperties?.Remove("expiries"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty? _explicitNullValueExpiries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty Expiries { get => _explicitNullValueExpiries; set { _explicitNullValueExpiries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiries"); else _explicitNullProperties?.Remove("expiries"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty Expiries { get => _explicitNullValueExpiries; set { _explicitNullValueExpiries = value; AdditionalData?.Remove("expiries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiries"); else _explicitNullProperties?.Remove("expiries"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DevicePostureAttributesExpiriesProperty _explicitNullValueExpiries = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("vipServices") is { } nullNodeVipServices && nullNodeVipServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VipServices = null;
+            if (parseNode.GetChildNode("vipServices") is null) { _explicitNullValueVipServices = default!; _explicitNullProperties?.Remove("vipServices"); }
+            else if (parseNode.GetChildNode("vipServices") is { } nullNodeVipServices && nullNodeVipServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VipServices = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The vipServices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.VipServiceInfo>? VipServices { get => _explicitNullValueVipServices; set { _explicitNullValueVipServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vipServices"); else _explicitNullProperties?.Remove("vipServices"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.VipServiceInfo>? VipServices { get => _explicitNullValueVipServices; set { _explicitNullValueVipServices = value; AdditionalData?.Remove("vipServices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vipServices"); else _explicitNullProperties?.Remove("vipServices"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.VipServiceInfo>? _explicitNullValueVipServices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.VipServiceInfo> VipServices { get => _explicitNullValueVipServices; set { _explicitNullValueVipServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vipServices"); else _explicitNullProperties?.Remove("vipServices"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.VipServiceInfo> VipServices { get => _explicitNullValueVipServices; set { _explicitNullValueVipServices = value; AdditionalData?.Remove("vipServices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vipServices"); else _explicitNullProperties?.Remove("vipServices"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.VipServiceInfo> _explicitNullValueVipServices = default!;
 #endif
         /// <summary>

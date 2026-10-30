@@ -17,17 +17,19 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("magicDNS") is { } nullNodeMagicDNS && nullNodeMagicDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicDNS = null;
-            if (parseNode.GetChildNode("overrideLocalDNS") is { } nullNodeOverrideLocalDNS && nullNodeOverrideLocalDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideLocalDNS = null;
+            if (parseNode.GetChildNode("magicDNS") is null) { _explicitNullValueMagicDNS = default!; _explicitNullProperties?.Remove("magicDNS"); }
+            else if (parseNode.GetChildNode("magicDNS") is { } nullNodeMagicDNS && nullNodeMagicDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicDNS = null;
+            if (parseNode.GetChildNode("overrideLocalDNS") is null) { _explicitNullValueOverrideLocalDNS = default!; _explicitNullProperties?.Remove("overrideLocalDNS"); }
+            else if (parseNode.GetChildNode("overrideLocalDNS") is { } nullNodeOverrideLocalDNS && nullNodeOverrideLocalDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideLocalDNS = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether MagicDNS is enabled for this tailnet.</summary>
-        public bool? MagicDNS { get => _explicitNullValueMagicDNS; set { _explicitNullValueMagicDNS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magicDNS"); else _explicitNullProperties?.Remove("magicDNS"); } }
+        public bool? MagicDNS { get => _explicitNullValueMagicDNS; set { _explicitNullValueMagicDNS = value; AdditionalData?.Remove("magicDNS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magicDNS"); else _explicitNullProperties?.Remove("magicDNS"); } }
         private bool? _explicitNullValueMagicDNS = default!;
         /// <summary>If true, resolvers in `nameservers` override the local OS DNS configuration; if false, local resolvers are used.</summary>
-        public bool? OverrideLocalDNS { get => _explicitNullValueOverrideLocalDNS; set { _explicitNullValueOverrideLocalDNS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideLocalDNS"); else _explicitNullProperties?.Remove("overrideLocalDNS"); } }
+        public bool? OverrideLocalDNS { get => _explicitNullValueOverrideLocalDNS; set { _explicitNullValueOverrideLocalDNS = value; AdditionalData?.Remove("overrideLocalDNS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideLocalDNS"); else _explicitNullProperties?.Remove("overrideLocalDNS"); } }
         private bool? _explicitNullValueOverrideLocalDNS = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences"/> and sets the default values.

@@ -17,13 +17,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("magicDNS") is { } nullNodeMagicDNS && nullNodeMagicDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicDNS = null;
+            if (parseNode.GetChildNode("magicDNS") is null) { _explicitNullValueMagicDNS = default!; _explicitNullProperties?.Remove("magicDNS"); }
+            else if (parseNode.GetChildNode("magicDNS") is { } nullNodeMagicDNS && nullNodeMagicDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicDNS = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether MagicDNS is active for this tailnet.</summary>
-        public bool? MagicDNS { get => _explicitNullValueMagicDNS; set { _explicitNullValueMagicDNS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magicDNS"); else _explicitNullProperties?.Remove("magicDNS"); } }
+        public bool? MagicDNS { get => _explicitNullValueMagicDNS; set { _explicitNullValueMagicDNS = value; AdditionalData?.Remove("magicDNS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magicDNS"); else _explicitNullProperties?.Remove("magicDNS"); } }
         private bool? _explicitNullValueMagicDNS = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DnsPreferences"/> and sets the default values.

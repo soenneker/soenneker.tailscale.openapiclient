@@ -17,9 +17,12 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endpointUrl") is { } nullNodeEndpointUrl && nullNodeEndpointUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointUrl = null;
-            if (parseNode.GetChildNode("providerType") is { } nullNodeProviderType && nullNodeProviderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderType = null;
-            if (parseNode.GetChildNode("subscriptions") is { } nullNodeSubscriptions && nullNodeSubscriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscriptions = null;
+            if (parseNode.GetChildNode("endpointUrl") is null) { _explicitNullValueEndpointUrl = default!; _explicitNullProperties?.Remove("endpointUrl"); }
+            else if (parseNode.GetChildNode("endpointUrl") is { } nullNodeEndpointUrl && nullNodeEndpointUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointUrl = null;
+            if (parseNode.GetChildNode("providerType") is null) { _explicitNullValueProviderType = default!; _explicitNullProperties?.Remove("providerType"); }
+            else if (parseNode.GetChildNode("providerType") is { } nullNodeProviderType && nullNodeProviderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderType = null;
+            if (parseNode.GetChildNode("subscriptions") is null) { _explicitNullValueSubscriptions = default!; _explicitNullProperties?.Remove("subscriptions"); }
+            else if (parseNode.GetChildNode("subscriptions") is { } nullNodeSubscriptions && nullNodeSubscriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscriptions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The endpoint that events are sent to from Tailscale via POST requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndpointUrl { get => _explicitNullValueEndpointUrl; set { _explicitNullValueEndpointUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointUrl"); else _explicitNullProperties?.Remove("endpointUrl"); } }
+        public string? EndpointUrl { get => _explicitNullValueEndpointUrl; set { _explicitNullValueEndpointUrl = value; AdditionalData?.Remove("endpointUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointUrl"); else _explicitNullProperties?.Remove("endpointUrl"); } }
         private string? _explicitNullValueEndpointUrl = default!;
 #nullable restore
 #else
-        public string EndpointUrl { get => _explicitNullValueEndpointUrl; set { _explicitNullValueEndpointUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointUrl"); else _explicitNullProperties?.Remove("endpointUrl"); } }
+        public string EndpointUrl { get => _explicitNullValueEndpointUrl; set { _explicitNullValueEndpointUrl = value; AdditionalData?.Remove("endpointUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointUrl"); else _explicitNullProperties?.Remove("endpointUrl"); } }
         private string _explicitNullValueEndpointUrl = default!;
 #endif
         /// <summary>The provider type for the webhook destination, or an empty string if none are applicable.Outgoing webhook events are sent in the format expected by the provider type if non-empty.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType? ProviderType { get => _explicitNullValueProviderType; set { _explicitNullValueProviderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerType"); else _explicitNullProperties?.Remove("providerType"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType? ProviderType { get => _explicitNullValueProviderType; set { _explicitNullValueProviderType = value; AdditionalData?.Remove("providerType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerType"); else _explicitNullProperties?.Remove("providerType"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType? _explicitNullValueProviderType = default!;
         /// <summary>The list of subscribed events that trigger POST requests to the configured endpoint URL.Learn more about [webhook events](/docs/features/webhooks#events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?>? Subscriptions { get => _explicitNullValueSubscriptions; set { _explicitNullValueSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions"); else _explicitNullProperties?.Remove("subscriptions"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?>? Subscriptions { get => _explicitNullValueSubscriptions; set { _explicitNullValueSubscriptions = value; AdditionalData?.Remove("subscriptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions"); else _explicitNullProperties?.Remove("subscriptions"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?>? _explicitNullValueSubscriptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?> Subscriptions { get => _explicitNullValueSubscriptions; set { _explicitNullValueSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions"); else _explicitNullProperties?.Remove("subscriptions"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?> Subscriptions { get => _explicitNullValueSubscriptions; set { _explicitNullValueSubscriptions = value; AdditionalData?.Remove("subscriptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions"); else _explicitNullProperties?.Remove("subscriptions"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem?> _explicitNullValueSubscriptions = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "endpointUrl", n => { EndpointUrl = n.GetStringValue(); } },
-                { "providerType", n => { ProviderType = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType>(); } },
+                { "providerType", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ProviderType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProviderType = default; _explicitNullProperties?.Remove("providerType"); AdditionalData["providerType"] = unknown; } else { ProviderType = parsed; AdditionalData.Remove("providerType"); } } },
                 { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Tailscale.OpenApiClient.Models.CreateWebhookRequestSubscriptionsItem>()?.AsList(); } },
             };
         }

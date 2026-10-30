@@ -17,14 +17,22 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("end") is { } nullNodeEnd && nullNodeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) End = null;
-            if (parseNode.GetChildNode("exitTraffic") is { } nullNodeExitTraffic && nullNodeExitTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExitTraffic = null;
-            if (parseNode.GetChildNode("logged") is { } nullNodeLogged && nullNodeLogged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logged = null;
-            if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
-            if (parseNode.GetChildNode("physicalTraffic") is { } nullNodePhysicalTraffic && nullNodePhysicalTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhysicalTraffic = null;
-            if (parseNode.GetChildNode("start") is { } nullNodeStart && nullNodeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Start = null;
-            if (parseNode.GetChildNode("subnetTraffic") is { } nullNodeSubnetTraffic && nullNodeSubnetTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubnetTraffic = null;
-            if (parseNode.GetChildNode("virtualTraffic") is { } nullNodeVirtualTraffic && nullNodeVirtualTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VirtualTraffic = null;
+            if (parseNode.GetChildNode("end") is null) { _explicitNullValueEnd = default!; _explicitNullProperties?.Remove("end"); }
+            else if (parseNode.GetChildNode("end") is { } nullNodeEnd && nullNodeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) End = null;
+            if (parseNode.GetChildNode("exitTraffic") is null) { _explicitNullValueExitTraffic = default!; _explicitNullProperties?.Remove("exitTraffic"); }
+            else if (parseNode.GetChildNode("exitTraffic") is { } nullNodeExitTraffic && nullNodeExitTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExitTraffic = null;
+            if (parseNode.GetChildNode("logged") is null) { _explicitNullValueLogged = default!; _explicitNullProperties?.Remove("logged"); }
+            else if (parseNode.GetChildNode("logged") is { } nullNodeLogged && nullNodeLogged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logged = null;
+            if (parseNode.GetChildNode("nodeId") is null) { _explicitNullValueNodeId = default!; _explicitNullProperties?.Remove("nodeId"); }
+            else if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
+            if (parseNode.GetChildNode("physicalTraffic") is null) { _explicitNullValuePhysicalTraffic = default!; _explicitNullProperties?.Remove("physicalTraffic"); }
+            else if (parseNode.GetChildNode("physicalTraffic") is { } nullNodePhysicalTraffic && nullNodePhysicalTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhysicalTraffic = null;
+            if (parseNode.GetChildNode("start") is null) { _explicitNullValueStart = default!; _explicitNullProperties?.Remove("start"); }
+            else if (parseNode.GetChildNode("start") is { } nullNodeStart && nullNodeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Start = null;
+            if (parseNode.GetChildNode("subnetTraffic") is null) { _explicitNullValueSubnetTraffic = default!; _explicitNullProperties?.Remove("subnetTraffic"); }
+            else if (parseNode.GetChildNode("subnetTraffic") is { } nullNodeSubnetTraffic && nullNodeSubnetTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubnetTraffic = null;
+            if (parseNode.GetChildNode("virtualTraffic") is null) { _explicitNullValueVirtualTraffic = default!; _explicitNullProperties?.Remove("virtualTraffic"); }
+            else if (parseNode.GetChildNode("virtualTraffic") is { } nullNodeVirtualTraffic && nullNodeVirtualTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VirtualTraffic = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,81 +40,81 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>Time at which flow ended, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
+        public string? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
         private string? _explicitNullValueEnd = default!;
 #nullable restore
 #else
-        public string End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
+        public string End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
         private string _explicitNullValueEnd = default!;
 #endif
         /// <summary>The exitTraffic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? ExitTraffic { get => _explicitNullValueExitTraffic; set { _explicitNullValueExitTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exitTraffic"); else _explicitNullProperties?.Remove("exitTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? ExitTraffic { get => _explicitNullValueExitTraffic; set { _explicitNullValueExitTraffic = value; AdditionalData?.Remove("exitTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exitTraffic"); else _explicitNullProperties?.Remove("exitTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? _explicitNullValueExitTraffic = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> ExitTraffic { get => _explicitNullValueExitTraffic; set { _explicitNullValueExitTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exitTraffic"); else _explicitNullProperties?.Remove("exitTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> ExitTraffic { get => _explicitNullValueExitTraffic; set { _explicitNullValueExitTraffic = value; AdditionalData?.Remove("exitTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exitTraffic"); else _explicitNullProperties?.Remove("exitTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> _explicitNullValueExitTraffic = default!;
 #endif
         /// <summary>Timestamp of the flow log, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Logged { get => _explicitNullValueLogged; set { _explicitNullValueLogged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logged"); else _explicitNullProperties?.Remove("logged"); } }
+        public string? Logged { get => _explicitNullValueLogged; set { _explicitNullValueLogged = value; AdditionalData?.Remove("logged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logged"); else _explicitNullProperties?.Remove("logged"); } }
         private string? _explicitNullValueLogged = default!;
 #nullable restore
 #else
-        public string Logged { get => _explicitNullValueLogged; set { _explicitNullValueLogged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logged"); else _explicitNullProperties?.Remove("logged"); } }
+        public string Logged { get => _explicitNullValueLogged; set { _explicitNullValueLogged = value; AdditionalData?.Remove("logged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logged"); else _explicitNullProperties?.Remove("logged"); } }
         private string _explicitNullValueLogged = default!;
 #endif
         /// <summary>Identifier of the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; AdditionalData?.Remove("nodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
         private string? _explicitNullValueNodeId = default!;
 #nullable restore
 #else
-        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; AdditionalData?.Remove("nodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
         private string _explicitNullValueNodeId = default!;
 #endif
         /// <summary>The physicalTraffic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? PhysicalTraffic { get => _explicitNullValuePhysicalTraffic; set { _explicitNullValuePhysicalTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("physicalTraffic"); else _explicitNullProperties?.Remove("physicalTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? PhysicalTraffic { get => _explicitNullValuePhysicalTraffic; set { _explicitNullValuePhysicalTraffic = value; AdditionalData?.Remove("physicalTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("physicalTraffic"); else _explicitNullProperties?.Remove("physicalTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? _explicitNullValuePhysicalTraffic = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> PhysicalTraffic { get => _explicitNullValuePhysicalTraffic; set { _explicitNullValuePhysicalTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("physicalTraffic"); else _explicitNullProperties?.Remove("physicalTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> PhysicalTraffic { get => _explicitNullValuePhysicalTraffic; set { _explicitNullValuePhysicalTraffic = value; AdditionalData?.Remove("physicalTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("physicalTraffic"); else _explicitNullProperties?.Remove("physicalTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> _explicitNullValuePhysicalTraffic = default!;
 #endif
         /// <summary>Time at which flow started, in RFC 3339 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        public string? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
         private string? _explicitNullValueStart = default!;
 #nullable restore
 #else
-        public string Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        public string Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
         private string _explicitNullValueStart = default!;
 #endif
         /// <summary>The subnetTraffic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? SubnetTraffic { get => _explicitNullValueSubnetTraffic; set { _explicitNullValueSubnetTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subnetTraffic"); else _explicitNullProperties?.Remove("subnetTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? SubnetTraffic { get => _explicitNullValueSubnetTraffic; set { _explicitNullValueSubnetTraffic = value; AdditionalData?.Remove("subnetTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subnetTraffic"); else _explicitNullProperties?.Remove("subnetTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? _explicitNullValueSubnetTraffic = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> SubnetTraffic { get => _explicitNullValueSubnetTraffic; set { _explicitNullValueSubnetTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subnetTraffic"); else _explicitNullProperties?.Remove("subnetTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> SubnetTraffic { get => _explicitNullValueSubnetTraffic; set { _explicitNullValueSubnetTraffic = value; AdditionalData?.Remove("subnetTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subnetTraffic"); else _explicitNullProperties?.Remove("subnetTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> _explicitNullValueSubnetTraffic = default!;
 #endif
         /// <summary>The virtualTraffic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? VirtualTraffic { get => _explicitNullValueVirtualTraffic; set { _explicitNullValueVirtualTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("virtualTraffic"); else _explicitNullProperties?.Remove("virtualTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? VirtualTraffic { get => _explicitNullValueVirtualTraffic; set { _explicitNullValueVirtualTraffic = value; AdditionalData?.Remove("virtualTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("virtualTraffic"); else _explicitNullProperties?.Remove("virtualTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts>? _explicitNullValueVirtualTraffic = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> VirtualTraffic { get => _explicitNullValueVirtualTraffic; set { _explicitNullValueVirtualTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("virtualTraffic"); else _explicitNullProperties?.Remove("virtualTraffic"); } }
+        public List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> VirtualTraffic { get => _explicitNullValueVirtualTraffic; set { _explicitNullValueVirtualTraffic = value; AdditionalData?.Remove("virtualTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("virtualTraffic"); else _explicitNullProperties?.Remove("virtualTraffic"); } }
         private List<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts> _explicitNullValueVirtualTraffic = default!;
 #endif
         /// <summary>

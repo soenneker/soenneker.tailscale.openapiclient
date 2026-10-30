@@ -17,13 +17,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("keyExpiryDisabled") is { } nullNodeKeyExpiryDisabled && nullNodeKeyExpiryDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyExpiryDisabled = null;
+            if (parseNode.GetChildNode("keyExpiryDisabled") is null) { _explicitNullValueKeyExpiryDisabled = default!; _explicitNullProperties?.Remove("keyExpiryDisabled"); }
+            else if (parseNode.GetChildNode("keyExpiryDisabled") is { } nullNodeKeyExpiryDisabled && nullNodeKeyExpiryDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyExpiryDisabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>- If `true`, disable the device&apos;s key expiry. The original key expiry time is still maintained. Upon re-enabling, the key will expire at that original time.- If `false`, enable the device&apos;s key expiry. Sets the key to expire at the original expiry time prior to disabling. The key may already have expired. In that case, the device must be re-authenticated.</summary>
-        public bool? KeyExpiryDisabled { get => _explicitNullValueKeyExpiryDisabled; set { _explicitNullValueKeyExpiryDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyExpiryDisabled"); else _explicitNullProperties?.Remove("keyExpiryDisabled"); } }
+        public bool? KeyExpiryDisabled { get => _explicitNullValueKeyExpiryDisabled; set { _explicitNullValueKeyExpiryDisabled = value; AdditionalData?.Remove("keyExpiryDisabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyExpiryDisabled"); else _explicitNullProperties?.Remove("keyExpiryDisabled"); } }
         private bool? _explicitNullValueKeyExpiryDisabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.UpdateDeviceKeyRequest"/> and sets the default values.

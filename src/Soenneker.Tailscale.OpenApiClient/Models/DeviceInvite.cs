@@ -18,85 +18,97 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accepted") is { } nullNodeAccepted && nullNodeAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accepted = null;
-            if (parseNode.GetChildNode("acceptedBy") is { } nullNodeAcceptedBy && nullNodeAcceptedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedBy = null;
-            if (parseNode.GetChildNode("allowExitNode") is { } nullNodeAllowExitNode && nullNodeAllowExitNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExitNode = null;
-            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
-            if (parseNode.GetChildNode("deviceId") is { } nullNodeDeviceId && nullNodeDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceId = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("inviteUrl") is { } nullNodeInviteUrl && nullNodeInviteUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteUrl = null;
-            if (parseNode.GetChildNode("lastEmailSentAt") is { } nullNodeLastEmailSentAt && nullNodeLastEmailSentAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastEmailSentAt = null;
-            if (parseNode.GetChildNode("multiUse") is { } nullNodeMultiUse && nullNodeMultiUse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiUse = null;
-            if (parseNode.GetChildNode("sharerId") is { } nullNodeSharerId && nullNodeSharerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharerId = null;
-            if (parseNode.GetChildNode("tailnetId") is { } nullNodeTailnetId && nullNodeTailnetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TailnetId = null;
+            if (parseNode.GetChildNode("accepted") is null) { _explicitNullValueAccepted = default!; _explicitNullProperties?.Remove("accepted"); }
+            else if (parseNode.GetChildNode("accepted") is { } nullNodeAccepted && nullNodeAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accepted = null;
+            if (parseNode.GetChildNode("acceptedBy") is null) { _explicitNullValueAcceptedBy = default!; _explicitNullProperties?.Remove("acceptedBy"); }
+            else if (parseNode.GetChildNode("acceptedBy") is { } nullNodeAcceptedBy && nullNodeAcceptedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedBy = null;
+            if (parseNode.GetChildNode("allowExitNode") is null) { _explicitNullValueAllowExitNode = default!; _explicitNullProperties?.Remove("allowExitNode"); }
+            else if (parseNode.GetChildNode("allowExitNode") is { } nullNodeAllowExitNode && nullNodeAllowExitNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExitNode = null;
+            if (parseNode.GetChildNode("created") is null) { _explicitNullValueCreated = default!; _explicitNullProperties?.Remove("created"); }
+            else if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("deviceId") is null) { _explicitNullValueDeviceId = default!; _explicitNullProperties?.Remove("deviceId"); }
+            else if (parseNode.GetChildNode("deviceId") is { } nullNodeDeviceId && nullNodeDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceId = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inviteUrl") is null) { _explicitNullValueInviteUrl = default!; _explicitNullProperties?.Remove("inviteUrl"); }
+            else if (parseNode.GetChildNode("inviteUrl") is { } nullNodeInviteUrl && nullNodeInviteUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteUrl = null;
+            if (parseNode.GetChildNode("lastEmailSentAt") is null) { _explicitNullValueLastEmailSentAt = default!; _explicitNullProperties?.Remove("lastEmailSentAt"); }
+            else if (parseNode.GetChildNode("lastEmailSentAt") is { } nullNodeLastEmailSentAt && nullNodeLastEmailSentAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastEmailSentAt = null;
+            if (parseNode.GetChildNode("multiUse") is null) { _explicitNullValueMultiUse = default!; _explicitNullProperties?.Remove("multiUse"); }
+            else if (parseNode.GetChildNode("multiUse") is { } nullNodeMultiUse && nullNodeMultiUse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiUse = null;
+            if (parseNode.GetChildNode("sharerId") is null) { _explicitNullValueSharerId = default!; _explicitNullProperties?.Remove("sharerId"); }
+            else if (parseNode.GetChildNode("sharerId") is { } nullNodeSharerId && nullNodeSharerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharerId = null;
+            if (parseNode.GetChildNode("tailnetId") is null) { _explicitNullValueTailnetId = default!; _explicitNullProperties?.Remove("tailnetId"); }
+            else if (parseNode.GetChildNode("tailnetId") is { } nullNodeTailnetId && nullNodeTailnetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TailnetId = null;
         }
 
         /// <summary>`true` when the share invite has been accepted.</summary>
-        public bool? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
+        public bool? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; AdditionalData?.Remove("accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
         private bool? _explicitNullValueAccepted = default!;
         /// <summary>Set when the invite has been accepted.It holds information about the user who accepted the share invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInviteAcceptedBy? AcceptedBy { get => _explicitNullValueAcceptedBy; set { _explicitNullValueAcceptedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedBy"); else _explicitNullProperties?.Remove("acceptedBy"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInviteAcceptedBy? AcceptedBy { get => _explicitNullValueAcceptedBy; set { _explicitNullValueAcceptedBy = value; AdditionalData?.Remove("acceptedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedBy"); else _explicitNullProperties?.Remove("acceptedBy"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInviteAcceptedBy? _explicitNullValueAcceptedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInviteAcceptedBy AcceptedBy { get => _explicitNullValueAcceptedBy; set { _explicitNullValueAcceptedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedBy"); else _explicitNullProperties?.Remove("acceptedBy"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInviteAcceptedBy AcceptedBy { get => _explicitNullValueAcceptedBy; set { _explicitNullValueAcceptedBy = value; AdditionalData?.Remove("acceptedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedBy"); else _explicitNullProperties?.Remove("acceptedBy"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInviteAcceptedBy _explicitNullValueAcceptedBy = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies whether the invited user is able to use thedevice as an exit node when the device is advertising as one.</summary>
-        public bool? AllowExitNode { get => _explicitNullValueAllowExitNode; set { _explicitNullValueAllowExitNode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExitNode"); else _explicitNullProperties?.Remove("allowExitNode"); } }
+        public bool? AllowExitNode { get => _explicitNullValueAllowExitNode; set { _explicitNullValueAllowExitNode = value; AdditionalData?.Remove("allowExitNode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExitNode"); else _explicitNullProperties?.Remove("allowExitNode"); } }
         private bool? _explicitNullValueAllowExitNode = default!;
         /// <summary>The creation time of the invite.</summary>
-        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
         private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>The ID of the device being shared.</summary>
-        public long? DeviceId { get => _explicitNullValueDeviceId; set { _explicitNullValueDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceId"); else _explicitNullProperties?.Remove("deviceId"); } }
+        public long? DeviceId { get => _explicitNullValueDeviceId; set { _explicitNullValueDeviceId = value; AdditionalData?.Remove("deviceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceId"); else _explicitNullProperties?.Remove("deviceId"); } }
         private long? _explicitNullValueDeviceId = default!;
         /// <summary>The email to which the invite was sent.If empty, the invite was not emailed to anyone,but the inviteUrl can be shared manually.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The unique identifier for the invite.Supply this value wherever {deviceInviteId} is indicated in the endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The link to accept the invite.Anyone with this link can accept the invite.It is not restricted to the person to which the invite was emailed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InviteUrl { get => _explicitNullValueInviteUrl; set { _explicitNullValueInviteUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviteUrl"); else _explicitNullProperties?.Remove("inviteUrl"); } }
+        public string? InviteUrl { get => _explicitNullValueInviteUrl; set { _explicitNullValueInviteUrl = value; AdditionalData?.Remove("inviteUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviteUrl"); else _explicitNullProperties?.Remove("inviteUrl"); } }
         private string? _explicitNullValueInviteUrl = default!;
 #nullable restore
 #else
-        public string InviteUrl { get => _explicitNullValueInviteUrl; set { _explicitNullValueInviteUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviteUrl"); else _explicitNullProperties?.Remove("inviteUrl"); } }
+        public string InviteUrl { get => _explicitNullValueInviteUrl; set { _explicitNullValueInviteUrl = value; AdditionalData?.Remove("inviteUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviteUrl"); else _explicitNullProperties?.Remove("inviteUrl"); } }
         private string _explicitNullValueInviteUrl = default!;
 #endif
         /// <summary>The last time the invite was attempted to be sent to Email.Only ever set if `email` is not empty.</summary>
-        public DateTimeOffset? LastEmailSentAt { get => _explicitNullValueLastEmailSentAt; set { _explicitNullValueLastEmailSentAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastEmailSentAt"); else _explicitNullProperties?.Remove("lastEmailSentAt"); } }
+        public DateTimeOffset? LastEmailSentAt { get => _explicitNullValueLastEmailSentAt; set { _explicitNullValueLastEmailSentAt = value; AdditionalData?.Remove("lastEmailSentAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastEmailSentAt"); else _explicitNullProperties?.Remove("lastEmailSentAt"); } }
         private DateTimeOffset? _explicitNullValueLastEmailSentAt = default!;
         /// <summary>Specifies whether this device invite can be acceptedmore than once.</summary>
-        public bool? MultiUse { get => _explicitNullValueMultiUse; set { _explicitNullValueMultiUse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiUse"); else _explicitNullProperties?.Remove("multiUse"); } }
+        public bool? MultiUse { get => _explicitNullValueMultiUse; set { _explicitNullValueMultiUse = value; AdditionalData?.Remove("multiUse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiUse"); else _explicitNullProperties?.Remove("multiUse"); } }
         private bool? _explicitNullValueMultiUse = default!;
         /// <summary>The ID of the user who created the share invite.</summary>
-        public long? SharerId { get => _explicitNullValueSharerId; set { _explicitNullValueSharerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharerId"); else _explicitNullProperties?.Remove("sharerId"); } }
+        public long? SharerId { get => _explicitNullValueSharerId; set { _explicitNullValueSharerId = value; AdditionalData?.Remove("sharerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharerId"); else _explicitNullProperties?.Remove("sharerId"); } }
         private long? _explicitNullValueSharerId = default!;
         /// <summary>The ID of the tailnet to which the shared device belongs.</summary>
-        public long? TailnetId { get => _explicitNullValueTailnetId; set { _explicitNullValueTailnetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailnetId"); else _explicitNullProperties?.Remove("tailnetId"); } }
+        public long? TailnetId { get => _explicitNullValueTailnetId; set { _explicitNullValueTailnetId = value; AdditionalData?.Remove("tailnetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailnetId"); else _explicitNullProperties?.Remove("tailnetId"); } }
         private long? _explicitNullValueTailnetId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DeviceInvite"/> and sets the default values.

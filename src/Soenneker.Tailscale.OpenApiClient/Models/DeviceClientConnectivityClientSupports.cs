@@ -18,33 +18,39 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hairPinning") is { } nullNodeHairPinning && nullNodeHairPinning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HairPinning = null;
-            if (parseNode.GetChildNode("ipv6") is { } nullNodeIpv6 && nullNodeIpv6.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ipv6 = null;
-            if (parseNode.GetChildNode("pcp") is { } nullNodePcp && nullNodePcp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pcp = null;
-            if (parseNode.GetChildNode("pmp") is { } nullNodePmp && nullNodePmp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pmp = null;
-            if (parseNode.GetChildNode("udp") is { } nullNodeUdp && nullNodeUdp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Udp = null;
-            if (parseNode.GetChildNode("upnp") is { } nullNodeUpnp && nullNodeUpnp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Upnp = null;
+            if (parseNode.GetChildNode("hairPinning") is null) { _explicitNullValueHairPinning = default!; _explicitNullProperties?.Remove("hairPinning"); }
+            else if (parseNode.GetChildNode("hairPinning") is { } nullNodeHairPinning && nullNodeHairPinning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HairPinning = null;
+            if (parseNode.GetChildNode("ipv6") is null) { _explicitNullValueIpv6 = default!; _explicitNullProperties?.Remove("ipv6"); }
+            else if (parseNode.GetChildNode("ipv6") is { } nullNodeIpv6 && nullNodeIpv6.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ipv6 = null;
+            if (parseNode.GetChildNode("pcp") is null) { _explicitNullValuePcp = default!; _explicitNullProperties?.Remove("pcp"); }
+            else if (parseNode.GetChildNode("pcp") is { } nullNodePcp && nullNodePcp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pcp = null;
+            if (parseNode.GetChildNode("pmp") is null) { _explicitNullValuePmp = default!; _explicitNullProperties?.Remove("pmp"); }
+            else if (parseNode.GetChildNode("pmp") is { } nullNodePmp && nullNodePmp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pmp = null;
+            if (parseNode.GetChildNode("udp") is null) { _explicitNullValueUdp = default!; _explicitNullProperties?.Remove("udp"); }
+            else if (parseNode.GetChildNode("udp") is { } nullNodeUdp && nullNodeUdp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Udp = null;
+            if (parseNode.GetChildNode("upnp") is null) { _explicitNullValueUpnp = default!; _explicitNullProperties?.Remove("upnp"); }
+            else if (parseNode.GetChildNode("upnp") is { } nullNodeUpnp && nullNodeUpnp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Upnp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This information is no longer tracked and will always be null.</summary>
-        public bool? HairPinning { get => _explicitNullValueHairPinning; set { _explicitNullValueHairPinning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hairPinning"); else _explicitNullProperties?.Remove("hairPinning"); } }
+        public bool? HairPinning { get => _explicitNullValueHairPinning; set { _explicitNullValueHairPinning = value; AdditionalData?.Remove("hairPinning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hairPinning"); else _explicitNullProperties?.Remove("hairPinning"); } }
         private bool? _explicitNullValueHairPinning = default!;
         /// <summary>&apos;true&apos; if the device OS supports IPv6,regardless of whether IPv6 internet connectivity is available.</summary>
-        public bool? Ipv6 { get => _explicitNullValueIpv6; set { _explicitNullValueIpv6 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipv6"); else _explicitNullProperties?.Remove("ipv6"); } }
+        public bool? Ipv6 { get => _explicitNullValueIpv6; set { _explicitNullValueIpv6 = value; AdditionalData?.Remove("ipv6"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipv6"); else _explicitNullProperties?.Remove("ipv6"); } }
         private bool? _explicitNullValueIpv6 = default!;
         /// <summary>&apos;true&apos; if PCP port-mapping service exists on your router.</summary>
-        public bool? Pcp { get => _explicitNullValuePcp; set { _explicitNullValuePcp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcp"); else _explicitNullProperties?.Remove("pcp"); } }
+        public bool? Pcp { get => _explicitNullValuePcp; set { _explicitNullValuePcp = value; AdditionalData?.Remove("pcp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcp"); else _explicitNullProperties?.Remove("pcp"); } }
         private bool? _explicitNullValuePcp = default!;
         /// <summary>&apos;true&apos; if NAT-PMP port-mapping service exists on your router.</summary>
-        public bool? Pmp { get => _explicitNullValuePmp; set { _explicitNullValuePmp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pmp"); else _explicitNullProperties?.Remove("pmp"); } }
+        public bool? Pmp { get => _explicitNullValuePmp; set { _explicitNullValuePmp = value; AdditionalData?.Remove("pmp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pmp"); else _explicitNullProperties?.Remove("pmp"); } }
         private bool? _explicitNullValuePmp = default!;
         /// <summary>&apos;true&apos; if UDP traffic is enabled on the current network;if &apos;false&apos;, Tailscale may be unable to make direct connections, and will rely on our DERP servers.</summary>
-        public bool? Udp { get => _explicitNullValueUdp; set { _explicitNullValueUdp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("udp"); else _explicitNullProperties?.Remove("udp"); } }
+        public bool? Udp { get => _explicitNullValueUdp; set { _explicitNullValueUdp = value; AdditionalData?.Remove("udp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("udp"); else _explicitNullProperties?.Remove("udp"); } }
         private bool? _explicitNullValueUdp = default!;
         /// <summary>&apos;true&apos; if UPnP port-mapping service exists on your router.</summary>
-        public bool? Upnp { get => _explicitNullValueUpnp; set { _explicitNullValueUpnp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upnp"); else _explicitNullProperties?.Remove("upnp"); } }
+        public bool? Upnp { get => _explicitNullValueUpnp; set { _explicitNullValueUpnp = value; AdditionalData?.Remove("upnp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upnp"); else _explicitNullProperties?.Remove("upnp"); } }
         private bool? _explicitNullValueUpnp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports"/> and sets the default values.

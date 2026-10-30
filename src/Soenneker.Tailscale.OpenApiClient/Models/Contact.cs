@@ -18,9 +18,12 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("fallbackEmail") is { } nullNodeFallbackEmail && nullNodeFallbackEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackEmail = null;
-            if (parseNode.GetChildNode("needsVerification") is { } nullNodeNeedsVerification && nullNodeNeedsVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NeedsVerification = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("fallbackEmail") is null) { _explicitNullValueFallbackEmail = default!; _explicitNullProperties?.Remove("fallbackEmail"); }
+            else if (parseNode.GetChildNode("fallbackEmail") is { } nullNodeFallbackEmail && nullNodeFallbackEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackEmail = null;
+            if (parseNode.GetChildNode("needsVerification") is null) { _explicitNullValueNeedsVerification = default!; _explicitNullProperties?.Remove("needsVerification"); }
+            else if (parseNode.GetChildNode("needsVerification") is { } nullNodeNeedsVerification && nullNodeNeedsVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NeedsVerification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The contact&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The email address used when contact&apos;s email address has not been verified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FallbackEmail { get => _explicitNullValueFallbackEmail; set { _explicitNullValueFallbackEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackEmail"); else _explicitNullProperties?.Remove("fallbackEmail"); } }
+        public string? FallbackEmail { get => _explicitNullValueFallbackEmail; set { _explicitNullValueFallbackEmail = value; AdditionalData?.Remove("fallbackEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackEmail"); else _explicitNullProperties?.Remove("fallbackEmail"); } }
         private string? _explicitNullValueFallbackEmail = default!;
 #nullable restore
 #else
-        public string FallbackEmail { get => _explicitNullValueFallbackEmail; set { _explicitNullValueFallbackEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackEmail"); else _explicitNullProperties?.Remove("fallbackEmail"); } }
+        public string FallbackEmail { get => _explicitNullValueFallbackEmail; set { _explicitNullValueFallbackEmail = value; AdditionalData?.Remove("fallbackEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackEmail"); else _explicitNullProperties?.Remove("fallbackEmail"); } }
         private string _explicitNullValueFallbackEmail = default!;
 #endif
         /// <summary>Indicates whether the contact&apos;s email address still needs to be verified.</summary>
-        public bool? NeedsVerification { get => _explicitNullValueNeedsVerification; set { _explicitNullValueNeedsVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needsVerification"); else _explicitNullProperties?.Remove("needsVerification"); } }
+        public bool? NeedsVerification { get => _explicitNullValueNeedsVerification; set { _explicitNullValueNeedsVerification = value; AdditionalData?.Remove("needsVerification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needsVerification"); else _explicitNullProperties?.Remove("needsVerification"); } }
         private bool? _explicitNullValueNeedsVerification = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.Contact"/> and sets the default values.

@@ -18,8 +18,10 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("externalId") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
-            if (parseNode.GetChildNode("tailscaleAwsAccountId") is { } nullNodeTailscaleAwsAccountId && nullNodeTailscaleAwsAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TailscaleAwsAccountId = null;
+            if (parseNode.GetChildNode("externalId") is null) { _explicitNullValueExternalId = default!; _explicitNullProperties?.Remove("externalId"); }
+            else if (parseNode.GetChildNode("externalId") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("tailscaleAwsAccountId") is null) { _explicitNullValueTailscaleAwsAccountId = default!; _explicitNullProperties?.Remove("tailscaleAwsAccountId"); }
+            else if (parseNode.GetChildNode("tailscaleAwsAccountId") is { } nullNodeTailscaleAwsAccountId && nullNodeTailscaleAwsAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TailscaleAwsAccountId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The external id that Tailscale will supply to AWS when authenticating using role-based authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
         private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
         private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>The AWS account id that Tailscale will supply to AWS when authenticating using role-based authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TailscaleAwsAccountId { get => _explicitNullValueTailscaleAwsAccountId; set { _explicitNullValueTailscaleAwsAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailscaleAwsAccountId"); else _explicitNullProperties?.Remove("tailscaleAwsAccountId"); } }
+        public string? TailscaleAwsAccountId { get => _explicitNullValueTailscaleAwsAccountId; set { _explicitNullValueTailscaleAwsAccountId = value; AdditionalData?.Remove("tailscaleAwsAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailscaleAwsAccountId"); else _explicitNullProperties?.Remove("tailscaleAwsAccountId"); } }
         private string? _explicitNullValueTailscaleAwsAccountId = default!;
 #nullable restore
 #else
-        public string TailscaleAwsAccountId { get => _explicitNullValueTailscaleAwsAccountId; set { _explicitNullValueTailscaleAwsAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailscaleAwsAccountId"); else _explicitNullProperties?.Remove("tailscaleAwsAccountId"); } }
+        public string TailscaleAwsAccountId { get => _explicitNullValueTailscaleAwsAccountId; set { _explicitNullValueTailscaleAwsAccountId = value; AdditionalData?.Remove("tailscaleAwsAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tailscaleAwsAccountId"); else _explicitNullProperties?.Remove("tailscaleAwsAccountId"); } }
         private string _explicitNullValueTailscaleAwsAccountId = default!;
 #endif
         /// <summary>

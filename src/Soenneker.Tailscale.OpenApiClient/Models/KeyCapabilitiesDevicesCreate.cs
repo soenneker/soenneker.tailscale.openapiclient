@@ -18,31 +18,35 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ephemeral") is { } nullNodeEphemeral && nullNodeEphemeral.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ephemeral = null;
-            if (parseNode.GetChildNode("preauthorized") is { } nullNodePreauthorized && nullNodePreauthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preauthorized = null;
-            if (parseNode.GetChildNode("reusable") is { } nullNodeReusable && nullNodeReusable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reusable = null;
-            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("ephemeral") is null) { _explicitNullValueEphemeral = default!; _explicitNullProperties?.Remove("ephemeral"); }
+            else if (parseNode.GetChildNode("ephemeral") is { } nullNodeEphemeral && nullNodeEphemeral.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ephemeral = null;
+            if (parseNode.GetChildNode("preauthorized") is null) { _explicitNullValuePreauthorized = default!; _explicitNullProperties?.Remove("preauthorized"); }
+            else if (parseNode.GetChildNode("preauthorized") is { } nullNodePreauthorized && nullNodePreauthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preauthorized = null;
+            if (parseNode.GetChildNode("reusable") is null) { _explicitNullValueReusable = default!; _explicitNullProperties?.Remove("reusable"); }
+            else if (parseNode.GetChildNode("reusable") is { } nullNodeReusable && nullNodeReusable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reusable = null;
+            if (parseNode.GetChildNode("tags") is null) { _explicitNullValueTags = default!; _explicitNullProperties?.Remove("tags"); }
+            else if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ephemeral for auth keys only; ephemeral keys are used to connect and then clean up short-lived devices.Learn about ephemeral nodes at https://tailscale.com/docs/features/ephemeral-nodes.</summary>
-        public bool? Ephemeral { get => _explicitNullValueEphemeral; set { _explicitNullValueEphemeral = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ephemeral"); else _explicitNullProperties?.Remove("ephemeral"); } }
+        public bool? Ephemeral { get => _explicitNullValueEphemeral; set { _explicitNullValueEphemeral = value; AdditionalData?.Remove("ephemeral"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ephemeral"); else _explicitNullProperties?.Remove("ephemeral"); } }
         private bool? _explicitNullValueEphemeral = default!;
         /// <summary>preauthorized for auth keys only; these are also referred to as &quot;pre-approved&quot; keys. &apos;true&apos; means that devicesregistered with this key won&apos;t require additional approval from a tailnet admin.Learn about device approval at https://tailscale.com/docs/features/access-control/device-management/device-approval.</summary>
-        public bool? Preauthorized { get => _explicitNullValuePreauthorized; set { _explicitNullValuePreauthorized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preauthorized"); else _explicitNullProperties?.Remove("preauthorized"); } }
+        public bool? Preauthorized { get => _explicitNullValuePreauthorized; set { _explicitNullValuePreauthorized = value; AdditionalData?.Remove("preauthorized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preauthorized"); else _explicitNullProperties?.Remove("preauthorized"); } }
         private bool? _explicitNullValuePreauthorized = default!;
         /// <summary>reusable for auth keys only; reusable auth keys can be used multiple times to register different devices.Learn more about reusable auth keys at https://tailscale.com/docs/features/access-control/auth-keys#types-of-auth-keys.</summary>
-        public bool? Reusable { get => _explicitNullValueReusable; set { _explicitNullValueReusable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reusable"); else _explicitNullProperties?.Remove("reusable"); } }
+        public bool? Reusable { get => _explicitNullValueReusable; set { _explicitNullValueReusable = value; AdditionalData?.Remove("reusable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reusable"); else _explicitNullProperties?.Remove("reusable"); } }
         private bool? _explicitNullValueReusable = default!;
         /// <summary>tags are the tags that will be set on devices registered with this key.Learn about tags at https://tailscale.com/docs/features/tags.Whether tags are required or optional depends on the owner of the auth key:- When creating an auth key owned by the tailnet (using OAuth), it must have tags. The auth tags specified for that new auth key must exactly match the tags that are on the OAuth client used to create that auth key (or they must be tags that are owned by the tags that are on the OAuth client used to create the auth key).- When creating an auth key owned by a user (using a user&apos;s access token), tags are optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
         private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
         private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>

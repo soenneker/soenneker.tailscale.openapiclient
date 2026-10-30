@@ -17,13 +17,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("reusable") is { } nullNodeReusable && nullNodeReusable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reusable = null;
+            if (parseNode.GetChildNode("reusable") is null) { _explicitNullValueReusable = default!; _explicitNullProperties?.Remove("reusable"); }
+            else if (parseNode.GetChildNode("reusable") is { } nullNodeReusable && nullNodeReusable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reusable = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If set to true, this same AWS external id will be returned on future calls to this endpoint, if and only if those calls also mark `reusable` as true, and the ID has not yet been linked with an AWS account.</summary>
-        public bool? Reusable { get => _explicitNullValueReusable; set { _explicitNullValueReusable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reusable"); else _explicitNullProperties?.Remove("reusable"); } }
+        public bool? Reusable { get => _explicitNullValueReusable; set { _explicitNullValueReusable = value; AdditionalData?.Remove("reusable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reusable"); else _explicitNullProperties?.Remove("reusable"); } }
         private bool? _explicitNullValueReusable = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.GetAwsExternalIdRequest"/> and sets the default values.

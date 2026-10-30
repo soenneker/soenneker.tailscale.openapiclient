@@ -18,10 +18,14 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("clientSupports") is { } nullNodeClientSupports && nullNodeClientSupports.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSupports = null;
-            if (parseNode.GetChildNode("endpoints") is { } nullNodeEndpoints && nullNodeEndpoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoints = null;
-            if (parseNode.GetChildNode("latency") is { } nullNodeLatency && nullNodeLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latency = null;
-            if (parseNode.GetChildNode("mappingVariesByDestIP") is { } nullNodeMappingVariesByDestIP && nullNodeMappingVariesByDestIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappingVariesByDestIP = null;
+            if (parseNode.GetChildNode("clientSupports") is null) { _explicitNullValueClientSupports = default!; _explicitNullProperties?.Remove("clientSupports"); }
+            else if (parseNode.GetChildNode("clientSupports") is { } nullNodeClientSupports && nullNodeClientSupports.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSupports = null;
+            if (parseNode.GetChildNode("endpoints") is null) { _explicitNullValueEndpoints = default!; _explicitNullProperties?.Remove("endpoints"); }
+            else if (parseNode.GetChildNode("endpoints") is { } nullNodeEndpoints && nullNodeEndpoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoints = null;
+            if (parseNode.GetChildNode("latency") is null) { _explicitNullValueLatency = default!; _explicitNullProperties?.Remove("latency"); }
+            else if (parseNode.GetChildNode("latency") is { } nullNodeLatency && nullNodeLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latency = null;
+            if (parseNode.GetChildNode("mappingVariesByDestIP") is null) { _explicitNullValueMappingVariesByDestIP = default!; _explicitNullProperties?.Remove("mappingVariesByDestIP"); }
+            else if (parseNode.GetChildNode("mappingVariesByDestIP") is { } nullNodeMappingVariesByDestIP && nullNodeMappingVariesByDestIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappingVariesByDestIP = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,35 +33,35 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>Identifies features supported by the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports? ClientSupports { get => _explicitNullValueClientSupports; set { _explicitNullValueClientSupports = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientSupports"); else _explicitNullProperties?.Remove("clientSupports"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports? ClientSupports { get => _explicitNullValueClientSupports; set { _explicitNullValueClientSupports = value; AdditionalData?.Remove("clientSupports"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientSupports"); else _explicitNullProperties?.Remove("clientSupports"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports? _explicitNullValueClientSupports = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports ClientSupports { get => _explicitNullValueClientSupports; set { _explicitNullValueClientSupports = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientSupports"); else _explicitNullProperties?.Remove("clientSupports"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports ClientSupports { get => _explicitNullValueClientSupports; set { _explicitNullValueClientSupports = value; AdditionalData?.Remove("clientSupports"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientSupports"); else _explicitNullProperties?.Remove("clientSupports"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityClientSupports _explicitNullValueClientSupports = default!;
 #endif
         /// <summary>Client&apos;s magicsock UDP IP:port endpoints (IPv4 or IPv6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
+        public List<string>? Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; AdditionalData?.Remove("endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
         private List<string>? _explicitNullValueEndpoints = default!;
 #nullable restore
 #else
-        public List<string> Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
+        public List<string> Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; AdditionalData?.Remove("endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
         private List<string> _explicitNullValueEndpoints = default!;
 #endif
         /// <summary>Map of DERP server locations and their current latency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityLatencyProperty? Latency { get => _explicitNullValueLatency; set { _explicitNullValueLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latency"); else _explicitNullProperties?.Remove("latency"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityLatencyProperty? Latency { get => _explicitNullValueLatency; set { _explicitNullValueLatency = value; AdditionalData?.Remove("latency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latency"); else _explicitNullProperties?.Remove("latency"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityLatencyProperty? _explicitNullValueLatency = default!;
 #nullable restore
 #else
-        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityLatencyProperty Latency { get => _explicitNullValueLatency; set { _explicitNullValueLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latency"); else _explicitNullProperties?.Remove("latency"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityLatencyProperty Latency { get => _explicitNullValueLatency; set { _explicitNullValueLatency = value; AdditionalData?.Remove("latency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latency"); else _explicitNullProperties?.Remove("latency"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivityLatencyProperty _explicitNullValueLatency = default!;
 #endif
         /// <summary>&apos;true&apos; if the host&apos;s NAT mappings vary based on the destination IP.</summary>
-        public bool? MappingVariesByDestIP { get => _explicitNullValueMappingVariesByDestIP; set { _explicitNullValueMappingVariesByDestIP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingVariesByDestIP"); else _explicitNullProperties?.Remove("mappingVariesByDestIP"); } }
+        public bool? MappingVariesByDestIP { get => _explicitNullValueMappingVariesByDestIP; set { _explicitNullValueMappingVariesByDestIP = value; AdditionalData?.Remove("mappingVariesByDestIP"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingVariesByDestIP"); else _explicitNullProperties?.Remove("mappingVariesByDestIP"); } }
         private bool? _explicitNullValueMappingVariesByDestIP = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.DeviceClientConnectivity"/> and sets the default values.

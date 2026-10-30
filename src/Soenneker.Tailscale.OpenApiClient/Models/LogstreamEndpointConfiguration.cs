@@ -18,71 +18,88 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("compressionFormat") is { } nullNodeCompressionFormat && nullNodeCompressionFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompressionFormat = null;
-            if (parseNode.GetChildNode("destinationType") is { } nullNodeDestinationType && nullNodeDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationType = null;
-            if (parseNode.GetChildNode("gcsBucket") is { } nullNodeGcsBucket && nullNodeGcsBucket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsBucket = null;
-            if (parseNode.GetChildNode("gcsCredentials") is { } nullNodeGcsCredentials && nullNodeGcsCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsCredentials = null;
-            if (parseNode.GetChildNode("gcsKeyPrefix") is { } nullNodeGcsKeyPrefix && nullNodeGcsKeyPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsKeyPrefix = null;
-            if (parseNode.GetChildNode("gcsScopes") is { } nullNodeGcsScopes && nullNodeGcsScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsScopes = null;
-            if (parseNode.GetChildNode("s3AccessKeyId") is { } nullNodeS3AccessKeyId && nullNodeS3AccessKeyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3AccessKeyId = null;
-            if (parseNode.GetChildNode("s3AuthenticationType") is { } nullNodeS3AuthenticationType && nullNodeS3AuthenticationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3AuthenticationType = null;
-            if (parseNode.GetChildNode("s3Bucket") is { } nullNodeS3Bucket && nullNodeS3Bucket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3Bucket = null;
-            if (parseNode.GetChildNode("s3KeyPrefix") is { } nullNodeS3KeyPrefix && nullNodeS3KeyPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3KeyPrefix = null;
-            if (parseNode.GetChildNode("s3Region") is { } nullNodeS3Region && nullNodeS3Region.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3Region = null;
-            if (parseNode.GetChildNode("s3RoleArn") is { } nullNodeS3RoleArn && nullNodeS3RoleArn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3RoleArn = null;
-            if (parseNode.GetChildNode("s3SecretAccessKey") is { } nullNodeS3SecretAccessKey && nullNodeS3SecretAccessKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3SecretAccessKey = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
-            if (parseNode.GetChildNode("uploadPeriodMinutes") is { } nullNodeUploadPeriodMinutes && nullNodeUploadPeriodMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadPeriodMinutes = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("compressionFormat") is null) { _explicitNullValueCompressionFormat = default!; _explicitNullProperties?.Remove("compressionFormat"); }
+            else if (parseNode.GetChildNode("compressionFormat") is { } nullNodeCompressionFormat && nullNodeCompressionFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompressionFormat = null;
+            if (parseNode.GetChildNode("destinationType") is null) { _explicitNullValueDestinationType = default!; _explicitNullProperties?.Remove("destinationType"); }
+            else if (parseNode.GetChildNode("destinationType") is { } nullNodeDestinationType && nullNodeDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationType = null;
+            if (parseNode.GetChildNode("gcsBucket") is null) { _explicitNullValueGcsBucket = default!; _explicitNullProperties?.Remove("gcsBucket"); }
+            else if (parseNode.GetChildNode("gcsBucket") is { } nullNodeGcsBucket && nullNodeGcsBucket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsBucket = null;
+            if (parseNode.GetChildNode("gcsCredentials") is null) { _explicitNullValueGcsCredentials = default!; _explicitNullProperties?.Remove("gcsCredentials"); }
+            else if (parseNode.GetChildNode("gcsCredentials") is { } nullNodeGcsCredentials && nullNodeGcsCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsCredentials = null;
+            if (parseNode.GetChildNode("gcsKeyPrefix") is null) { _explicitNullValueGcsKeyPrefix = default!; _explicitNullProperties?.Remove("gcsKeyPrefix"); }
+            else if (parseNode.GetChildNode("gcsKeyPrefix") is { } nullNodeGcsKeyPrefix && nullNodeGcsKeyPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsKeyPrefix = null;
+            if (parseNode.GetChildNode("gcsScopes") is null) { _explicitNullValueGcsScopes = default!; _explicitNullProperties?.Remove("gcsScopes"); }
+            else if (parseNode.GetChildNode("gcsScopes") is { } nullNodeGcsScopes && nullNodeGcsScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcsScopes = null;
+            if (parseNode.GetChildNode("s3AccessKeyId") is null) { _explicitNullValueS3AccessKeyId = default!; _explicitNullProperties?.Remove("s3AccessKeyId"); }
+            else if (parseNode.GetChildNode("s3AccessKeyId") is { } nullNodeS3AccessKeyId && nullNodeS3AccessKeyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3AccessKeyId = null;
+            if (parseNode.GetChildNode("s3AuthenticationType") is null) { _explicitNullValueS3AuthenticationType = default!; _explicitNullProperties?.Remove("s3AuthenticationType"); }
+            else if (parseNode.GetChildNode("s3AuthenticationType") is { } nullNodeS3AuthenticationType && nullNodeS3AuthenticationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3AuthenticationType = null;
+            if (parseNode.GetChildNode("s3Bucket") is null) { _explicitNullValueS3Bucket = default!; _explicitNullProperties?.Remove("s3Bucket"); }
+            else if (parseNode.GetChildNode("s3Bucket") is { } nullNodeS3Bucket && nullNodeS3Bucket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3Bucket = null;
+            if (parseNode.GetChildNode("s3KeyPrefix") is null) { _explicitNullValueS3KeyPrefix = default!; _explicitNullProperties?.Remove("s3KeyPrefix"); }
+            else if (parseNode.GetChildNode("s3KeyPrefix") is { } nullNodeS3KeyPrefix && nullNodeS3KeyPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3KeyPrefix = null;
+            if (parseNode.GetChildNode("s3Region") is null) { _explicitNullValueS3Region = default!; _explicitNullProperties?.Remove("s3Region"); }
+            else if (parseNode.GetChildNode("s3Region") is { } nullNodeS3Region && nullNodeS3Region.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3Region = null;
+            if (parseNode.GetChildNode("s3RoleArn") is null) { _explicitNullValueS3RoleArn = default!; _explicitNullProperties?.Remove("s3RoleArn"); }
+            else if (parseNode.GetChildNode("s3RoleArn") is { } nullNodeS3RoleArn && nullNodeS3RoleArn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3RoleArn = null;
+            if (parseNode.GetChildNode("s3SecretAccessKey") is null) { _explicitNullValueS3SecretAccessKey = default!; _explicitNullProperties?.Remove("s3SecretAccessKey"); }
+            else if (parseNode.GetChildNode("s3SecretAccessKey") is { } nullNodeS3SecretAccessKey && nullNodeS3SecretAccessKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3SecretAccessKey = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("uploadPeriodMinutes") is null) { _explicitNullValueUploadPeriodMinutes = default!; _explicitNullProperties?.Remove("uploadPeriodMinutes"); }
+            else if (parseNode.GetChildNode("uploadPeriodMinutes") is { } nullNodeUploadPeriodMinutes && nullNodeUploadPeriodMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadPeriodMinutes = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
+            else if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The compression algorithm with which to compress logs. `none` disables compression. Defaults to `none`.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationCompressionFormat? CompressionFormat { get => _explicitNullValueCompressionFormat; set { _explicitNullValueCompressionFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressionFormat"); else _explicitNullProperties?.Remove("compressionFormat"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationCompressionFormat? CompressionFormat { get => _explicitNullValueCompressionFormat; set { _explicitNullValueCompressionFormat = value; AdditionalData?.Remove("compressionFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressionFormat"); else _explicitNullProperties?.Remove("compressionFormat"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationCompressionFormat? _explicitNullValueCompressionFormat = default!;
         /// <summary>The type of system to which logs are being streamed.</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationDestinationType? DestinationType { get => _explicitNullValueDestinationType; set { _explicitNullValueDestinationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationType"); else _explicitNullProperties?.Remove("destinationType"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationDestinationType? DestinationType { get => _explicitNullValueDestinationType; set { _explicitNullValueDestinationType = value; AdditionalData?.Remove("destinationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationType"); else _explicitNullProperties?.Remove("destinationType"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationDestinationType? _explicitNullValueDestinationType = default!;
         /// <summary>The GCS bucket name. Required if the destinationType is `gcs`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GcsBucket { get => _explicitNullValueGcsBucket; set { _explicitNullValueGcsBucket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsBucket"); else _explicitNullProperties?.Remove("gcsBucket"); } }
+        public string? GcsBucket { get => _explicitNullValueGcsBucket; set { _explicitNullValueGcsBucket = value; AdditionalData?.Remove("gcsBucket"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsBucket"); else _explicitNullProperties?.Remove("gcsBucket"); } }
         private string? _explicitNullValueGcsBucket = default!;
 #nullable restore
 #else
-        public string GcsBucket { get => _explicitNullValueGcsBucket; set { _explicitNullValueGcsBucket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsBucket"); else _explicitNullProperties?.Remove("gcsBucket"); } }
+        public string GcsBucket { get => _explicitNullValueGcsBucket; set { _explicitNullValueGcsBucket = value; AdditionalData?.Remove("gcsBucket"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsBucket"); else _explicitNullProperties?.Remove("gcsBucket"); } }
         private string _explicitNullValueGcsBucket = default!;
 #endif
         /// <summary>The JSON workload identity credentials from GCS needed for accessing the GCS account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GcsCredentials { get => _explicitNullValueGcsCredentials; set { _explicitNullValueGcsCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsCredentials"); else _explicitNullProperties?.Remove("gcsCredentials"); } }
+        public string? GcsCredentials { get => _explicitNullValueGcsCredentials; set { _explicitNullValueGcsCredentials = value; AdditionalData?.Remove("gcsCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsCredentials"); else _explicitNullProperties?.Remove("gcsCredentials"); } }
         private string? _explicitNullValueGcsCredentials = default!;
 #nullable restore
 #else
-        public string GcsCredentials { get => _explicitNullValueGcsCredentials; set { _explicitNullValueGcsCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsCredentials"); else _explicitNullProperties?.Remove("gcsCredentials"); } }
+        public string GcsCredentials { get => _explicitNullValueGcsCredentials; set { _explicitNullValueGcsCredentials = value; AdditionalData?.Remove("gcsCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsCredentials"); else _explicitNullProperties?.Remove("gcsCredentials"); } }
         private string _explicitNullValueGcsCredentials = default!;
 #endif
         /// <summary>An optional GCS key prefix to append to the GCS bucket name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GcsKeyPrefix { get => _explicitNullValueGcsKeyPrefix; set { _explicitNullValueGcsKeyPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsKeyPrefix"); else _explicitNullProperties?.Remove("gcsKeyPrefix"); } }
+        public string? GcsKeyPrefix { get => _explicitNullValueGcsKeyPrefix; set { _explicitNullValueGcsKeyPrefix = value; AdditionalData?.Remove("gcsKeyPrefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsKeyPrefix"); else _explicitNullProperties?.Remove("gcsKeyPrefix"); } }
         private string? _explicitNullValueGcsKeyPrefix = default!;
 #nullable restore
 #else
-        public string GcsKeyPrefix { get => _explicitNullValueGcsKeyPrefix; set { _explicitNullValueGcsKeyPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsKeyPrefix"); else _explicitNullProperties?.Remove("gcsKeyPrefix"); } }
+        public string GcsKeyPrefix { get => _explicitNullValueGcsKeyPrefix; set { _explicitNullValueGcsKeyPrefix = value; AdditionalData?.Remove("gcsKeyPrefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsKeyPrefix"); else _explicitNullProperties?.Remove("gcsKeyPrefix"); } }
         private string _explicitNullValueGcsKeyPrefix = default!;
 #endif
         /// <summary>The GCS scopes needed to be able to write to the GCS bucket.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? GcsScopes { get => _explicitNullValueGcsScopes; set { _explicitNullValueGcsScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsScopes"); else _explicitNullProperties?.Remove("gcsScopes"); } }
+        public List<string>? GcsScopes { get => _explicitNullValueGcsScopes; set { _explicitNullValueGcsScopes = value; AdditionalData?.Remove("gcsScopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsScopes"); else _explicitNullProperties?.Remove("gcsScopes"); } }
         private List<string>? _explicitNullValueGcsScopes = default!;
 #nullable restore
 #else
-        public List<string> GcsScopes { get => _explicitNullValueGcsScopes; set { _explicitNullValueGcsScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsScopes"); else _explicitNullProperties?.Remove("gcsScopes"); } }
+        public List<string> GcsScopes { get => _explicitNullValueGcsScopes; set { _explicitNullValueGcsScopes = value; AdditionalData?.Remove("gcsScopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcsScopes"); else _explicitNullProperties?.Remove("gcsScopes"); } }
         private List<string> _explicitNullValueGcsScopes = default!;
 #endif
         /// <summary>The type of log that is streamed to this endpoint.</summary>
@@ -90,24 +107,24 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>The S3 access key ID. Required if the destinationType is `s3` and `authenticationType` is `accesskey`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3AccessKeyId { get => _explicitNullValueS3AccessKeyId; set { _explicitNullValueS3AccessKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AccessKeyId"); else _explicitNullProperties?.Remove("s3AccessKeyId"); } }
+        public string? S3AccessKeyId { get => _explicitNullValueS3AccessKeyId; set { _explicitNullValueS3AccessKeyId = value; AdditionalData?.Remove("s3AccessKeyId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AccessKeyId"); else _explicitNullProperties?.Remove("s3AccessKeyId"); } }
         private string? _explicitNullValueS3AccessKeyId = default!;
 #nullable restore
 #else
-        public string S3AccessKeyId { get => _explicitNullValueS3AccessKeyId; set { _explicitNullValueS3AccessKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AccessKeyId"); else _explicitNullProperties?.Remove("s3AccessKeyId"); } }
+        public string S3AccessKeyId { get => _explicitNullValueS3AccessKeyId; set { _explicitNullValueS3AccessKeyId = value; AdditionalData?.Remove("s3AccessKeyId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AccessKeyId"); else _explicitNullProperties?.Remove("s3AccessKeyId"); } }
         private string _explicitNullValueS3AccessKeyId = default!;
 #endif
         /// <summary>What type of authentication to use for S3. Required if the destinationType is `s3`. Tailscale recommends using `rolearn`. See [Amazon documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html).</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationS3AuthenticationType? S3AuthenticationType { get => _explicitNullValueS3AuthenticationType; set { _explicitNullValueS3AuthenticationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AuthenticationType"); else _explicitNullProperties?.Remove("s3AuthenticationType"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationS3AuthenticationType? S3AuthenticationType { get => _explicitNullValueS3AuthenticationType; set { _explicitNullValueS3AuthenticationType = value; AdditionalData?.Remove("s3AuthenticationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AuthenticationType"); else _explicitNullProperties?.Remove("s3AuthenticationType"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationS3AuthenticationType? _explicitNullValueS3AuthenticationType = default!;
         /// <summary>The S3 bucket name. Required if the destinationType is `s3`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3Bucket { get => _explicitNullValueS3Bucket; set { _explicitNullValueS3Bucket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Bucket"); else _explicitNullProperties?.Remove("s3Bucket"); } }
+        public string? S3Bucket { get => _explicitNullValueS3Bucket; set { _explicitNullValueS3Bucket = value; AdditionalData?.Remove("s3Bucket"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Bucket"); else _explicitNullProperties?.Remove("s3Bucket"); } }
         private string? _explicitNullValueS3Bucket = default!;
 #nullable restore
 #else
-        public string S3Bucket { get => _explicitNullValueS3Bucket; set { _explicitNullValueS3Bucket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Bucket"); else _explicitNullProperties?.Remove("s3Bucket"); } }
+        public string S3Bucket { get => _explicitNullValueS3Bucket; set { _explicitNullValueS3Bucket = value; AdditionalData?.Remove("s3Bucket"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Bucket"); else _explicitNullProperties?.Remove("s3Bucket"); } }
         private string _explicitNullValueS3Bucket = default!;
 #endif
         /// <summary>The AWS external id that Tailscale supplies when authenticating using role-based authentication. Populated if the destinationType is `s3` and `authenticationType` is `rolearn`. This corresponds to the `externalId` field obtained from [tailnet/{tailnet}/aws-external-id](#tag/logging/POST/tailnet/{tailnet}/aws-external-id).</summary>
@@ -121,74 +138,74 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>An optional S3 key prefix to prepend to the auto-generated S3 key name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3KeyPrefix { get => _explicitNullValueS3KeyPrefix; set { _explicitNullValueS3KeyPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3KeyPrefix"); else _explicitNullProperties?.Remove("s3KeyPrefix"); } }
+        public string? S3KeyPrefix { get => _explicitNullValueS3KeyPrefix; set { _explicitNullValueS3KeyPrefix = value; AdditionalData?.Remove("s3KeyPrefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3KeyPrefix"); else _explicitNullProperties?.Remove("s3KeyPrefix"); } }
         private string? _explicitNullValueS3KeyPrefix = default!;
 #nullable restore
 #else
-        public string S3KeyPrefix { get => _explicitNullValueS3KeyPrefix; set { _explicitNullValueS3KeyPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3KeyPrefix"); else _explicitNullProperties?.Remove("s3KeyPrefix"); } }
+        public string S3KeyPrefix { get => _explicitNullValueS3KeyPrefix; set { _explicitNullValueS3KeyPrefix = value; AdditionalData?.Remove("s3KeyPrefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3KeyPrefix"); else _explicitNullProperties?.Remove("s3KeyPrefix"); } }
         private string _explicitNullValueS3KeyPrefix = default!;
 #endif
         /// <summary>The region in which the S3 bucket is located. Required if the destinationType is `s3`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3Region { get => _explicitNullValueS3Region; set { _explicitNullValueS3Region = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Region"); else _explicitNullProperties?.Remove("s3Region"); } }
+        public string? S3Region { get => _explicitNullValueS3Region; set { _explicitNullValueS3Region = value; AdditionalData?.Remove("s3Region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Region"); else _explicitNullProperties?.Remove("s3Region"); } }
         private string? _explicitNullValueS3Region = default!;
 #nullable restore
 #else
-        public string S3Region { get => _explicitNullValueS3Region; set { _explicitNullValueS3Region = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Region"); else _explicitNullProperties?.Remove("s3Region"); } }
+        public string S3Region { get => _explicitNullValueS3Region; set { _explicitNullValueS3Region = value; AdditionalData?.Remove("s3Region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3Region"); else _explicitNullProperties?.Remove("s3Region"); } }
         private string _explicitNullValueS3Region = default!;
 #endif
         /// <summary>The Role ARN that Tailscale should supply to AWS when authenticating using role-based authentication. Required if the destinationType is `s3` and `authenticationType` is `rolearn`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3RoleArn { get => _explicitNullValueS3RoleArn; set { _explicitNullValueS3RoleArn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3RoleArn"); else _explicitNullProperties?.Remove("s3RoleArn"); } }
+        public string? S3RoleArn { get => _explicitNullValueS3RoleArn; set { _explicitNullValueS3RoleArn = value; AdditionalData?.Remove("s3RoleArn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3RoleArn"); else _explicitNullProperties?.Remove("s3RoleArn"); } }
         private string? _explicitNullValueS3RoleArn = default!;
 #nullable restore
 #else
-        public string S3RoleArn { get => _explicitNullValueS3RoleArn; set { _explicitNullValueS3RoleArn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3RoleArn"); else _explicitNullProperties?.Remove("s3RoleArn"); } }
+        public string S3RoleArn { get => _explicitNullValueS3RoleArn; set { _explicitNullValueS3RoleArn = value; AdditionalData?.Remove("s3RoleArn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3RoleArn"); else _explicitNullProperties?.Remove("s3RoleArn"); } }
         private string _explicitNullValueS3RoleArn = default!;
 #endif
         /// <summary>The S3 secret access key. Required if the destinationType is `s3` and `authenticationType` is `accesskey`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3SecretAccessKey { get => _explicitNullValueS3SecretAccessKey; set { _explicitNullValueS3SecretAccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3SecretAccessKey"); else _explicitNullProperties?.Remove("s3SecretAccessKey"); } }
+        public string? S3SecretAccessKey { get => _explicitNullValueS3SecretAccessKey; set { _explicitNullValueS3SecretAccessKey = value; AdditionalData?.Remove("s3SecretAccessKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3SecretAccessKey"); else _explicitNullProperties?.Remove("s3SecretAccessKey"); } }
         private string? _explicitNullValueS3SecretAccessKey = default!;
 #nullable restore
 #else
-        public string S3SecretAccessKey { get => _explicitNullValueS3SecretAccessKey; set { _explicitNullValueS3SecretAccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3SecretAccessKey"); else _explicitNullProperties?.Remove("s3SecretAccessKey"); } }
+        public string S3SecretAccessKey { get => _explicitNullValueS3SecretAccessKey; set { _explicitNullValueS3SecretAccessKey = value; AdditionalData?.Remove("s3SecretAccessKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3SecretAccessKey"); else _explicitNullProperties?.Remove("s3SecretAccessKey"); } }
         private string _explicitNullValueS3SecretAccessKey = default!;
 #endif
         /// <summary>The token/password with which log streams to this endpoint should be authenticated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>An optional number of minutes to wait in between uploading new logs. If the quantity of logs does not fit within a single upload, multiple uploads will be made.</summary>
-        public int? UploadPeriodMinutes { get => _explicitNullValueUploadPeriodMinutes; set { _explicitNullValueUploadPeriodMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadPeriodMinutes"); else _explicitNullProperties?.Remove("uploadPeriodMinutes"); } }
+        public int? UploadPeriodMinutes { get => _explicitNullValueUploadPeriodMinutes; set { _explicitNullValueUploadPeriodMinutes = value; AdditionalData?.Remove("uploadPeriodMinutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadPeriodMinutes"); else _explicitNullProperties?.Remove("uploadPeriodMinutes"); } }
         private int? _explicitNullValueUploadPeriodMinutes = default!;
         /// <summary>The URL to which log streams are being posted. If the DestinationType is `s3`, the URL may be (and often is) empty to use the official Amazon S3 endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The username with which log streams to this endpoint are authenticated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public string? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private string? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public string User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public string User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private string _explicitNullValueUser = default!;
 #endif
         /// <summary>
@@ -216,15 +233,15 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "compressionFormat", n => { CompressionFormat = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationCompressionFormat>(); } },
-                { "destinationType", n => { DestinationType = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationDestinationType>(); } },
+                { "compressionFormat", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationCompressionFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCompressionFormat = default; _explicitNullProperties?.Remove("compressionFormat"); AdditionalData["compressionFormat"] = unknown; } else { CompressionFormat = parsed; AdditionalData.Remove("compressionFormat"); } } },
+                { "destinationType", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationDestinationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDestinationType = default; _explicitNullProperties?.Remove("destinationType"); AdditionalData["destinationType"] = unknown; } else { DestinationType = parsed; AdditionalData.Remove("destinationType"); } } },
                 { "gcsBucket", n => { GcsBucket = n.GetStringValue(); } },
                 { "gcsCredentials", n => { GcsCredentials = n.GetStringValue(); } },
                 { "gcsKeyPrefix", n => { GcsKeyPrefix = n.GetStringValue(); } },
                 { "gcsScopes", n => { GcsScopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "logType", n => { LogType = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogType>(); } },
                 { "s3AccessKeyId", n => { S3AccessKeyId = n.GetStringValue(); } },
-                { "s3AuthenticationType", n => { S3AuthenticationType = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationS3AuthenticationType>(); } },
+                { "s3AuthenticationType", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationS3AuthenticationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueS3AuthenticationType = default; _explicitNullProperties?.Remove("s3AuthenticationType"); AdditionalData["s3AuthenticationType"] = unknown; } else { S3AuthenticationType = parsed; AdditionalData.Remove("s3AuthenticationType"); } } },
                 { "s3Bucket", n => { S3Bucket = n.GetStringValue(); } },
                 { "s3ExternalId", n => { S3ExternalId = n.GetStringValue(); } },
                 { "s3KeyPrefix", n => { S3KeyPrefix = n.GetStringValue(); } },

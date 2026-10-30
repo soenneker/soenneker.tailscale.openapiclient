@@ -17,13 +17,20 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dst") is { } nullNodeDst && nullNodeDst.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dst = null;
-            if (parseNode.GetChildNode("proto") is { } nullNodeProto && nullNodeProto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Proto = null;
-            if (parseNode.GetChildNode("rxBytes") is { } nullNodeRxBytes && nullNodeRxBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RxBytes = null;
-            if (parseNode.GetChildNode("rxPkts") is { } nullNodeRxPkts && nullNodeRxPkts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RxPkts = null;
-            if (parseNode.GetChildNode("src") is { } nullNodeSrc && nullNodeSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Src = null;
-            if (parseNode.GetChildNode("txBytes") is { } nullNodeTxBytes && nullNodeTxBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TxBytes = null;
-            if (parseNode.GetChildNode("txPkts") is { } nullNodeTxPkts && nullNodeTxPkts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TxPkts = null;
+            if (parseNode.GetChildNode("dst") is null) { _explicitNullValueDst = default!; _explicitNullProperties?.Remove("dst"); }
+            else if (parseNode.GetChildNode("dst") is { } nullNodeDst && nullNodeDst.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dst = null;
+            if (parseNode.GetChildNode("proto") is null) { _explicitNullValueProto = default!; _explicitNullProperties?.Remove("proto"); }
+            else if (parseNode.GetChildNode("proto") is { } nullNodeProto && nullNodeProto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Proto = null;
+            if (parseNode.GetChildNode("rxBytes") is null) { _explicitNullValueRxBytes = default!; _explicitNullProperties?.Remove("rxBytes"); }
+            else if (parseNode.GetChildNode("rxBytes") is { } nullNodeRxBytes && nullNodeRxBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RxBytes = null;
+            if (parseNode.GetChildNode("rxPkts") is null) { _explicitNullValueRxPkts = default!; _explicitNullProperties?.Remove("rxPkts"); }
+            else if (parseNode.GetChildNode("rxPkts") is { } nullNodeRxPkts && nullNodeRxPkts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RxPkts = null;
+            if (parseNode.GetChildNode("src") is null) { _explicitNullValueSrc = default!; _explicitNullProperties?.Remove("src"); }
+            else if (parseNode.GetChildNode("src") is { } nullNodeSrc && nullNodeSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Src = null;
+            if (parseNode.GetChildNode("txBytes") is null) { _explicitNullValueTxBytes = default!; _explicitNullProperties?.Remove("txBytes"); }
+            else if (parseNode.GetChildNode("txBytes") is { } nullNodeTxBytes && nullNodeTxBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TxBytes = null;
+            if (parseNode.GetChildNode("txPkts") is null) { _explicitNullValueTxPkts = default!; _explicitNullProperties?.Remove("txPkts"); }
+            else if (parseNode.GetChildNode("txPkts") is { } nullNodeTxPkts && nullNodeTxPkts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TxPkts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,37 +38,37 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>Destination addr:port.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dst { get => _explicitNullValueDst; set { _explicitNullValueDst = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dst"); else _explicitNullProperties?.Remove("dst"); } }
+        public string? Dst { get => _explicitNullValueDst; set { _explicitNullValueDst = value; AdditionalData?.Remove("dst"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dst"); else _explicitNullProperties?.Remove("dst"); } }
         private string? _explicitNullValueDst = default!;
 #nullable restore
 #else
-        public string Dst { get => _explicitNullValueDst; set { _explicitNullValueDst = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dst"); else _explicitNullProperties?.Remove("dst"); } }
+        public string Dst { get => _explicitNullValueDst; set { _explicitNullValueDst = value; AdditionalData?.Remove("dst"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dst"); else _explicitNullProperties?.Remove("dst"); } }
         private string _explicitNullValueDst = default!;
 #endif
         /// <summary>IP protocol name (or number if no name used).</summary>
-        public global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto? Proto { get => _explicitNullValueProto; set { _explicitNullValueProto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proto"); else _explicitNullProperties?.Remove("proto"); } }
+        public global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto? Proto { get => _explicitNullValueProto; set { _explicitNullValueProto = value; AdditionalData?.Remove("proto"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proto"); else _explicitNullProperties?.Remove("proto"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto? _explicitNullValueProto = default!;
         /// <summary>Number of bytes received.</summary>
-        public int? RxBytes { get => _explicitNullValueRxBytes; set { _explicitNullValueRxBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rxBytes"); else _explicitNullProperties?.Remove("rxBytes"); } }
+        public int? RxBytes { get => _explicitNullValueRxBytes; set { _explicitNullValueRxBytes = value; AdditionalData?.Remove("rxBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rxBytes"); else _explicitNullProperties?.Remove("rxBytes"); } }
         private int? _explicitNullValueRxBytes = default!;
         /// <summary>Number of packets received.</summary>
-        public int? RxPkts { get => _explicitNullValueRxPkts; set { _explicitNullValueRxPkts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rxPkts"); else _explicitNullProperties?.Remove("rxPkts"); } }
+        public int? RxPkts { get => _explicitNullValueRxPkts; set { _explicitNullValueRxPkts = value; AdditionalData?.Remove("rxPkts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rxPkts"); else _explicitNullProperties?.Remove("rxPkts"); } }
         private int? _explicitNullValueRxPkts = default!;
         /// <summary>Source addr:port.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        public string? Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; AdditionalData?.Remove("src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
         private string? _explicitNullValueSrc = default!;
 #nullable restore
 #else
-        public string Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        public string Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; AdditionalData?.Remove("src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
         private string _explicitNullValueSrc = default!;
 #endif
         /// <summary>Number of bytes sent.</summary>
-        public int? TxBytes { get => _explicitNullValueTxBytes; set { _explicitNullValueTxBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("txBytes"); else _explicitNullProperties?.Remove("txBytes"); } }
+        public int? TxBytes { get => _explicitNullValueTxBytes; set { _explicitNullValueTxBytes = value; AdditionalData?.Remove("txBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("txBytes"); else _explicitNullProperties?.Remove("txBytes"); } }
         private int? _explicitNullValueTxBytes = default!;
         /// <summary>Number of packets sent.</summary>
-        public int? TxPkts { get => _explicitNullValueTxPkts; set { _explicitNullValueTxPkts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("txPkts"); else _explicitNullProperties?.Remove("txPkts"); } }
+        public int? TxPkts { get => _explicitNullValueTxPkts; set { _explicitNullValueTxPkts = value; AdditionalData?.Remove("txPkts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("txPkts"); else _explicitNullProperties?.Remove("txPkts"); } }
         private int? _explicitNullValueTxPkts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCounts"/> and sets the default values.
@@ -89,7 +96,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dst", n => { Dst = n.GetStringValue(); } },
-                { "proto", n => { Proto = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto>(); } },
+                { "proto", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProto = default; _explicitNullProperties?.Remove("proto"); AdditionalData["proto"] = unknown; } else { Proto = parsed; AdditionalData.Remove("proto"); } } },
                 { "rxBytes", n => { RxBytes = n.GetIntValue(); } },
                 { "rxPkts", n => { RxPkts = n.GetIntValue(); } },
                 { "src", n => { Src = n.GetStringValue(); } },
