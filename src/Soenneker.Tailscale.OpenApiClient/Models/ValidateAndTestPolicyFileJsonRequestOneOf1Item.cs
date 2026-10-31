@@ -76,6 +76,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
                 { "proto", n => { Proto = n.GetStringValue(); } },
                 { "accept", n => { Accept = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "deny", n => { Deny = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+
             };
         }
         /// <summary>
