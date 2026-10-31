@@ -78,7 +78,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Logging.Network
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Logging.Network.NetworkRequestBuilder.NetworkRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.tailscale.com/api/v2", "/tailnet/{tailnet}/logging/network", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
