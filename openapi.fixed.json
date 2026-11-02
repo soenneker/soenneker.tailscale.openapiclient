@@ -5378,29 +5378,6 @@
           }
         }
       },
-      "SplitDns": {
-        "type": "object",
-        "additionalProperties": {
-          "type": [
-            "null",
-            "array"
-          ],
-          "items": {
-            "type": "string"
-          },
-          "x-additionalPropertiesName": "Domain names to DNS"
-        },
-        "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
-        "example": {
-          "example.com": [
-            "1.1.1.1",
-            "1.2.3.4"
-          ],
-          "other.com": [
-            "2.2.2.2"
-          ]
-        }
-      },
       "DnsConfigurationResolver": {
         "type": "object",
         "properties": {
@@ -5566,8 +5543,8 @@
           "issuer": {
             "type": "string",
             "description": "The issuer of the OIDC identity token used in the token exchange. Must be a valid and publicly reachable https:// URL.\n\nOnly applies to federated identities.\n",
-            "format": "uri",
-            "example": "https://example.com"
+            "example": "https://example.com",
+            "x-client-original-format": "uri"
           },
           "subject": {
             "type": "string",
@@ -5775,8 +5752,8 @@
           "secret": {
             "type": "string",
             "description": "The webhook secret associated with the endpoint.\nOnly populated on creation or when the secret is rotated.\n\nThis secret is used for generating the \u0060Tailscale-Webhook-Signature\u0060 header in requests sent to the endpoint URL.\nLearn more about [verifying webhook event signatures](/docs/features/webhooks#verifying-an-event-signature).\n",
-            "format": "password",
-            "example": "xxxxx"
+            "example": "xxxxx",
+            "x-client-original-format": "password"
           }
         }
       },
@@ -5813,17 +5790,6 @@
           ]
         }
       },
-      "Subscriptions": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SubscriptionsItem"
-        },
-        "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n",
-        "example": [
-          "nodeCreated",
-          "userDeleted"
-        ]
-      },
       "TailnetSettings": {
         "type": "object",
         "properties": {
@@ -5838,8 +5804,8 @@
           "aclsExternalLink": {
             "type": "string",
             "description": "Link to the external tailnet policy definition or management solution for this tailnet.\n",
-            "format": "uri",
-            "example": "https://github.com/example/tailnet-policy"
+            "example": "https://github.com/example/tailnet-policy",
+            "x-client-original-format": "uri"
           },
           "adminConsoleSessionTimeoutMinutes": {
             "maximum": 43200,
@@ -6108,8 +6074,8 @@
           "clientSecret": {
             "type": "string",
             "description": "The client secret for the OAuth app.\nOnly populated when the app is created and cannot be retrieved afterwards.\n",
-            "format": "password",
-            "example": "xxxxx"
+            "example": "xxxxx",
+            "x-client-original-format": "password"
           },
           "created": {
             "type": "string",
@@ -6124,50 +6090,6 @@
             "example": "2022-12-01T05:23:30Z"
           }
         }
-      },
-      "Name": {
-        "maxLength": 50,
-        "minLength": 3,
-        "pattern": "^[a-zA-Z0-9._-]\u002B$",
-        "type": "string",
-        "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n",
-        "example": "my-oauth-app"
-      },
-      "Description": {
-        "maxLength": 300,
-        "type": "string",
-        "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n",
-        "example": "An OAuth app used to provision devices."
-      },
-      "RedirectUrIs": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n",
-        "example": [
-          "https://example.com/oauth/callback"
-        ]
-      },
-      "Scopes": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n",
-        "example": [
-          "auth_keys:create"
-        ]
-      },
-      "AllowedNodeAttributes": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "description": "The list of custom device attributes that the OAuth app is allowed to set.\n",
-        "example": [
-          "custom:myattribute"
-        ]
       },
       "OrganizationTailnet": {
         "type": "object",
@@ -6286,18 +6208,6 @@
           }
         }
       },
-      "SetPolicyFileJsonRequest": {
-        "type": "object"
-      },
-      "SetPolicyFileHujsonRequest": {
-        "type": "string"
-      },
-      "PreviewRuleMatchesJsonRequest": {
-        "type": "object"
-      },
-      "PreviewRuleMatchesHujsonRequest": {
-        "type": "string"
-      },
       "ValidateAndTestPolicyFileJsonRequest": {
         "oneOf": [
           {
@@ -6312,10 +6222,6 @@
             "description": "The JSON representation of the policy file.\n"
           }
         ]
-      },
-      "ValidateAndTestPolicyFileHujsonRequest": {
-        "type": "string",
-        "description": "The HuJSON representation of the policy file.\n"
       },
       "DevicePostureAttributesAttributesAdditionalProperties": {
         "anyOf": [
@@ -6372,43 +6278,6 @@
           }
         ],
         "description": "The value of \u0060target.property\u0060 after the event."
-      },
-      "VipServiceInfoPutAllOf1": {
-        "type": "object",
-        "properties": {
-          "addrs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The IP addresses assigned to the Service.\n\n- For new Services: either unset or a single IPv4 to assign the Service.\n- For existing Services: an IPv4 and an IPv6. The IPv4 can be updated, but not the IPv6.\n",
-            "example": [
-              "100.93.49.180",
-              "fd7a:115c:a1e0::3456:3cb4"
-            ]
-          }
-        }
-      },
-      "ValidateAndTestPolicyFileJsonRequestOneOf1": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ValidateAndTestPolicyFileJsonRequestOneOf1Item"
-        },
-        "description": "Array of ACL tests.\n"
-      },
-      "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsAdditionalProperties": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "number"
-          },
-          {
-            "type": "boolean"
-          }
-        ],
-        "x-additionalPropertiesName": "Posture attributes"
       },
       "DeviceClientConnectivity": {
         "type": "object",
@@ -6532,23 +6401,6 @@
           "codeName": "Plucky Puffin"
         }
       },
-      "DevicePostureAttributesAttributes": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/DevicePostureAttributesAttributesAdditionalProperties"
-        },
-        "description": "Contains all the posture attributes assigned to a node.\nAttribute values can be strings, numbers or booleans.\n"
-      },
-      "DevicePostureAttributesExpiries": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "Expiry time for a given posture attribute.",
-          "format": "date-time",
-          "example": "2022-12-01T05:23:30Z"
-        },
-        "description": "Contains the expiry time for each posture attribute, if set.\n"
-      },
       "DeviceInviteAcceptedBy": {
         "type": "object",
         "properties": {
@@ -6632,38 +6484,6 @@
         },
         "description": "The object of this event\u0027s action."
       },
-      "DnsConfigurationSplitDns": {
-        "type": "object",
-        "additionalProperties": {
-          "type": [
-            "null",
-            "array"
-          ],
-          "items": {
-            "$ref": "#/components/schemas/DnsConfigurationResolver"
-          },
-          "x-additionalPropertiesName": "Domain names to DNS resolvers"
-        },
-        "description": "Map of DNS name suffixes (domains) to lists of resolvers for Split DNS and advanced routing overlays.\n",
-        "example": {
-          "corp.example.com": [
-            {
-              "address": "10.0.0.53",
-              "useWithExitNode": true
-            },
-            {
-              "address": "10.0.1.53",
-              "useWithExitNode": true
-            }
-          ],
-          "other.internal": [
-            {
-              "address": "10.0.2.53",
-              "useWithExitNode": false
-            }
-          ]
-        }
-      },
       "KeyCapabilitiesDevices": {
         "type": "object",
         "properties": {
@@ -6672,18 +6492,6 @@
           }
         },
         "description": "\u0060devices\u0060 specifies the key\u0027s permissions over devices.\nThis field is only populated for auth keys.\n"
-      },
-      "KeyCustomClaimRules": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "x-additionalPropertiesName": "Custom claim rule"
-        },
-        "description": "A map of claim names to pattern strings used to match against arbitrary claims in the OIDC identity token.\nPatterns can include \u0060*\u0060 characters to match against any character.\n\nOnly applies to federated identities.\n",
-        "example": {
-          "exampleAdditionalClaim": "valueToMatch",
-          "otherAdditionalClaim": "valueWithWildcard*"
-        }
       },
       "PostureIntegrationStatus": {
         "type": "object",
@@ -6749,22 +6557,6 @@
               "type": "string"
             },
             "description": "Specifies destinations to deny. Each destination in the list is of the form \u0060host:port\u0060\nwhere \u0060port\u0060 is a single numeric port and \u0060host\u0060 is in the format described in the\n[acl syntax](https://tailscale.com/docs/reference/syntax/policy-file#accept-and-deny-destinations) documentation.\n\nSources in \u0060src\u0060 and \u0060destinations\u0060 must refer to specific entities and do not support \u0060*\u0060 wildcards.\nFor example, a \u0060deny\u0060 destination cannot be \u0060tags:*\u0060.\n"
-          }
-        }
-      },
-      "DeviceClientConnectivityLatency": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/DeviceClientConnectivityLatencyAdditionalProperties"
-        },
-        "description": "Map of DERP server locations and their current latency.",
-        "example": {
-          "Dallas": {
-            "latencyMs": 60.463043
-          },
-          "New York City": {
-            "preferred": true,
-            "latencyMs": 31.32381
           }
         }
       },
@@ -6852,16 +6644,6 @@
           }
         },
         "description": "\u0060create\u0060 specifies the key\u0027s permissions when creating devices.\n"
-      },
-      "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrs": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/DevicePostureAttributesAttributesAdditionalProperties"
-        },
-        "description": "Specifies the [device posture attributes](https://tailscale.com/docs/reference/syntax/policy-file#proto-1)\nas key-value pairs to use when evaluating posture conditions in access rules.\nYou only need to use this field if the access rules contain \n[device posture conditions](https://tailscale.com/docs/features/device-posture#device-posture-conditions).\n",
-        "example": {
-          "node:os": "windows"
-        }
       },
       "DeviceClientConnectivityLatencyAdditionalProperties": {
         "type": "object",
@@ -7011,124 +6793,6 @@
             "description": "An optional comment indicating a reason why an attribute is set,\nwhich will be added to the audit log.\n"
           }
         }
-      },
-      "ListDeviceInvites200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeviceInvite"
-        },
-        "example": [
-          {
-            "id": "12345",
-            "created": "2024-05-08T20:19:51.777861756Z",
-            "tailnetId": 59954,
-            "deviceId": 11055,
-            "sharerId": 22011,
-            "allowExitNode": true,
-            "email": "user@example.com",
-            "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
-            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
-            "accepted": false
-          },
-          {
-            "id": "12346",
-            "created": "2024-04-03T21:38:49.333829261Z",
-            "tailnetId": 59954,
-            "deviceId": 11055,
-            "sharerId": 22012,
-            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
-            "accepted": true,
-            "acceptedBy": {
-              "id": 33223,
-              "loginName": "someone@example.com",
-              "profilePicUrl": ""
-            }
-          }
-        ]
-      },
-      "CreateDeviceInvitesRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CreateDeviceInvitesRequestItem"
-        }
-      },
-      "CreateDeviceInvites200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeviceInvite"
-        },
-        "example": [
-          {
-            "id": "12345",
-            "created": "2024-05-08T20:19:51.777861756Z",
-            "tailnetId": 59954,
-            "deviceId": 11055,
-            "sharerId": 22011,
-            "allowExitNode": true,
-            "email": "user@example.com",
-            "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
-            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
-            "accepted": false
-          },
-          {
-            "id": "12346",
-            "created": "2024-04-03T21:38:49.333829261Z",
-            "tailnetId": 59954,
-            "deviceId": 11055,
-            "sharerId": 22012,
-            "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
-            "accepted": false
-          }
-        ]
-      },
-      "ListUserInvites200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UserInvite"
-        },
-        "example": [
-          {
-            "id": "29214",
-            "role": "admin",
-            "tailnetId": 12345,
-            "inviterId": 34567,
-            "email": "user@example.com",
-            "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
-            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
-          },
-          {
-            "id": "29215",
-            "role": "admin",
-            "tailnetId": 12345,
-            "inviterId": 34567,
-            "email": "someoneelse@example.com",
-            "lastEmailSentAt": "2024-05-09T17:23:30.91778771Z",
-            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
-          }
-        ]
-      },
-      "CreateUserInvitesRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CreateUserInvitesRequestItem"
-        }
-      },
-      "CreateUserInvites200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UserInvite"
-        },
-        "example": [
-          {
-            "id": "29214",
-            "role": "admin",
-            "tailnetId": 12345,
-            "inviterId": 34567,
-            "email": "user@example.com",
-            "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
-            "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
-          }
-        ]
       },
       "AcceptDeviceInviteRequest": {
         "required": [
@@ -7284,8 +6948,8 @@
           "issuer": {
             "type": "string",
             "description": "The issuer of the OIDC identity token used in the token exchange. Must be a valid and publicly reachable https:// URL.\n\nOnly applies to federated identities.\n",
-            "format": "uri",
-            "example": "https://example.com"
+            "example": "https://example.com",
+            "x-client-original-format": "uri"
           },
           "subject": {
             "type": "string",
@@ -7336,8 +7000,8 @@
           "issuer": {
             "type": "string",
             "description": "The issuer of the OIDC identity token used in the token exchange. Must be a valid https:// URL.\n\nOnly applies to federated identities.\n",
-            "format": "uri",
-            "example": "https://example.com"
+            "example": "https://example.com",
+            "x-client-original-format": "uri"
           },
           "subject": {
             "type": "string",
@@ -7353,18 +7017,6 @@
             "$ref": "#/components/schemas/SetKeyRequestCustomClaimRules"
           }
         }
-      },
-      "GetPolicyFile200Response": {
-        "type": "object"
-      },
-      "GetPolicyFile200HujsonResponse": {
-        "type": "string"
-      },
-      "SetPolicyFile200Response": {
-        "type": "object"
-      },
-      "SetPolicyFile200HujsonResponse": {
-        "type": "string"
       },
       "PreviewRuleMatches200Response": {
         "required": [
@@ -7614,10 +7266,6 @@
             ]
           }
         }
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
       },
       "ListTailnetDevices200Response": {
         "type": "object",
@@ -7959,9 +7607,6 @@
       "GetPolicyFile200ResponseSchema": {
         "type": "object"
       },
-      "GetPolicyFile200HujsonResponseSchema": {
-        "type": "string"
-      },
       "SetPolicyFileRequest": {
         "type": "object"
       },
@@ -7970,9 +7615,6 @@
       },
       "SetPolicyFile200ResponseSchema": {
         "type": "object"
-      },
-      "SetPolicyFile200HujsonResponseSchema": {
-        "type": "string"
       },
       "PreviewRuleMatchesRequest": {
         "type": "object"
@@ -8184,39 +7826,6 @@
           "$ref": "#/components/schemas/BatchUpdateCustomDevicePostureAttributesRequestNodesAdditionalProperties"
         },
         "description": "A mapping of deviceId \u2192 posture attributes.\n"
-      },
-      "CreateDeviceInvitesRequestItem": {
-        "type": "object",
-        "properties": {
-          "multiUse": {
-            "type": "boolean",
-            "description": "Whether the invite can be accepted more than once.\nWhen set to \u0060true\u0060, it results in an invite that can be accepted up to 1,000 times.\n",
-            "example": false
-          },
-          "allowExitNode": {
-            "type": "boolean",
-            "description": "Whether the invited user can use the device as an exit node when it advertises as one.\n",
-            "example": false
-          },
-          "email": {
-            "type": "string",
-            "description": "The email to send the created invite to.\nIf not set, the endpoint generates and returns an invite URL (but doesn\u0027t send it out).\n",
-            "example": "user@example.com"
-          }
-        }
-      },
-      "CreateUserInvitesRequestItem": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "$ref": "#/components/schemas/CreateUserInvitesRequestItemRole"
-          },
-          "email": {
-            "type": "string",
-            "description": "Optionally specifies the email to send the created invite.\nIf not set, the endpoint generates and returns an invite URL, but does not email it out.\n",
-            "example": "user@example.com"
-          }
-        }
       },
       "AcceptDeviceInvite200ResponseDevice": {
         "type": "object",
@@ -9114,107 +8723,6 @@
         "type": "string",
         "x-ms-enum": {
           "name": "WebhookSubscriptionsItem",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "nodeCreated",
-              "name": "NodeCreated"
-            },
-            {
-              "value": "nodeNeedsApproval",
-              "name": "NodeNeedsApproval"
-            },
-            {
-              "value": "nodeApproved",
-              "name": "NodeApproved"
-            },
-            {
-              "value": "nodeKeyExpiringInOneDay",
-              "name": "NodeKeyExpiringInOneDay"
-            },
-            {
-              "value": "nodeKeyExpired",
-              "name": "NodeKeyExpired"
-            },
-            {
-              "value": "nodeDeleted",
-              "name": "NodeDeleted"
-            },
-            {
-              "value": "nodeSigned",
-              "name": "NodeSigned"
-            },
-            {
-              "value": "nodeNeedsSignature",
-              "name": "NodeNeedsSignature"
-            },
-            {
-              "value": "policyUpdate",
-              "name": "PolicyUpdate"
-            },
-            {
-              "value": "userCreated",
-              "name": "UserCreated"
-            },
-            {
-              "value": "userNeedsApproval",
-              "name": "UserNeedsApproval"
-            },
-            {
-              "value": "userSuspended",
-              "name": "UserSuspended"
-            },
-            {
-              "value": "userRestored",
-              "name": "UserRestored"
-            },
-            {
-              "value": "userDeleted",
-              "name": "UserDeleted"
-            },
-            {
-              "value": "userApproved",
-              "name": "UserApproved"
-            },
-            {
-              "value": "userRoleUpdated",
-              "name": "UserRoleUpdated"
-            },
-            {
-              "value": "subnetIPForwardingNotEnabled",
-              "name": "SubnetIpForwardingNotEnabled"
-            },
-            {
-              "value": "exitNodeIPForwardingNotEnabled",
-              "name": "ExitNodeIpForwardingNotEnabled"
-            }
-          ]
-        }
-      },
-      "SubscriptionsItem": {
-        "enum": [
-          "nodeCreated",
-          "nodeNeedsApproval",
-          "nodeApproved",
-          "nodeKeyExpiringInOneDay",
-          "nodeKeyExpired",
-          "nodeDeleted",
-          "nodeSigned",
-          "nodeNeedsSignature",
-          "policyUpdate",
-          "userCreated",
-          "userNeedsApproval",
-          "userSuspended",
-          "userRestored",
-          "userDeleted",
-          "userApproved",
-          "userRoleUpdated",
-          "subnetIPForwardingNotEnabled",
-          "exitNodeIPForwardingNotEnabled"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "SubscriptionsItem",
           "modelAsString": false,
           "values": [
             {
@@ -11491,5 +10999,499 @@
       "name": "Organizations",
       "description": "Manage organization-level resources.\n"
     }
-  ]
+  ],
+  "x-client-unused-schemas": {
+    "SplitDns": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "null",
+          "array"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "x-additionalPropertiesName": "Domain names to DNS"
+      },
+      "description": "Map of domain names to lists of nameservers or to \u0060null\u0060.\n",
+      "example": {
+        "example.com": [
+          "1.1.1.1",
+          "1.2.3.4"
+        ],
+        "other.com": [
+          "2.2.2.2"
+        ]
+      }
+    },
+    "Subscriptions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SubscriptionsItem"
+      },
+      "description": "The list of subscribed events that trigger POST requests to the configured endpoint URL.\nLearn more about [webhook events](/docs/features/webhooks#events).\n",
+      "example": [
+        "nodeCreated",
+        "userDeleted"
+      ]
+    },
+    "Name": {
+      "maxLength": 50,
+      "minLength": 3,
+      "pattern": "^[a-zA-Z0-9._-]\u002B$",
+      "type": "string",
+      "description": "The name of the OAuth app.\nMust be between 3 and 50 characters and contain only alphanumeric characters, dashes, periods, and underscores.\n",
+      "example": "my-oauth-app"
+    },
+    "Description": {
+      "maxLength": 300,
+      "type": "string",
+      "description": "A human-readable description of the OAuth app.\nMust be at most 300 characters.\n",
+      "example": "An OAuth app used to provision devices."
+    },
+    "RedirectUrIs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The list of permitted redirect URIs for the OAuth authorization code flow.\nAt least one redirect URI is required.\n\nEach URI must use the \u0060https\u0060 scheme, except for \u0060localhost\u0060, \u0060127.0.0.1\u0060, and \u0060::1\u0060,\nwhich may use any scheme. Raw IP address hosts are not permitted.\n",
+      "example": [
+        "https://example.com/oauth/callback"
+      ]
+    },
+    "Scopes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The list of OAuth scopes granted to the app.\nMust be non-empty.\nLearn more about [OAuth clients and scopes](/docs/features/oauth-clients).\n",
+      "example": [
+        "auth_keys:create"
+      ]
+    },
+    "AllowedNodeAttributes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The list of custom device attributes that the OAuth app is allowed to set.\n",
+      "example": [
+        "custom:myattribute"
+      ]
+    },
+    "SetPolicyFileJsonRequest": {
+      "type": "object"
+    },
+    "SetPolicyFileHujsonRequest": {
+      "type": "string"
+    },
+    "PreviewRuleMatchesJsonRequest": {
+      "type": "object"
+    },
+    "PreviewRuleMatchesHujsonRequest": {
+      "type": "string"
+    },
+    "ValidateAndTestPolicyFileHujsonRequest": {
+      "type": "string",
+      "description": "The HuJSON representation of the policy file.\n"
+    },
+    "VipServiceInfoPutAllOf1": {
+      "type": "object",
+      "properties": {
+        "addrs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The IP addresses assigned to the Service.\n\n- For new Services: either unset or a single IPv4 to assign the Service.\n- For existing Services: an IPv4 and an IPv6. The IPv4 can be updated, but not the IPv6.\n",
+          "example": [
+            "100.93.49.180",
+            "fd7a:115c:a1e0::3456:3cb4"
+          ]
+        }
+      }
+    },
+    "ValidateAndTestPolicyFileJsonRequestOneOf1": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ValidateAndTestPolicyFileJsonRequestOneOf1Item"
+      },
+      "description": "Array of ACL tests.\n"
+    },
+    "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrsAdditionalProperties": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ],
+      "x-additionalPropertiesName": "Posture attributes"
+    },
+    "DevicePostureAttributesAttributes": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/DevicePostureAttributesAttributesAdditionalProperties"
+      },
+      "description": "Contains all the posture attributes assigned to a node.\nAttribute values can be strings, numbers or booleans.\n"
+    },
+    "DevicePostureAttributesExpiries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "description": "Expiry time for a given posture attribute.",
+        "format": "date-time",
+        "example": "2022-12-01T05:23:30Z"
+      },
+      "description": "Contains the expiry time for each posture attribute, if set.\n"
+    },
+    "DnsConfigurationSplitDns": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "null",
+          "array"
+        ],
+        "items": {
+          "$ref": "#/components/schemas/DnsConfigurationResolver"
+        },
+        "x-additionalPropertiesName": "Domain names to DNS resolvers"
+      },
+      "description": "Map of DNS name suffixes (domains) to lists of resolvers for Split DNS and advanced routing overlays.\n",
+      "example": {
+        "corp.example.com": [
+          {
+            "address": "10.0.0.53",
+            "useWithExitNode": true
+          },
+          {
+            "address": "10.0.1.53",
+            "useWithExitNode": true
+          }
+        ],
+        "other.internal": [
+          {
+            "address": "10.0.2.53",
+            "useWithExitNode": false
+          }
+        ]
+      }
+    },
+    "KeyCustomClaimRules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "x-additionalPropertiesName": "Custom claim rule"
+      },
+      "description": "A map of claim names to pattern strings used to match against arbitrary claims in the OIDC identity token.\nPatterns can include \u0060*\u0060 characters to match against any character.\n\nOnly applies to federated identities.\n",
+      "example": {
+        "exampleAdditionalClaim": "valueToMatch",
+        "otherAdditionalClaim": "valueWithWildcard*"
+      }
+    },
+    "DeviceClientConnectivityLatency": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/DeviceClientConnectivityLatencyAdditionalProperties"
+      },
+      "description": "Map of DERP server locations and their current latency.",
+      "example": {
+        "Dallas": {
+          "latencyMs": 60.463043
+        },
+        "New York City": {
+          "preferred": true,
+          "latencyMs": 31.32381
+        }
+      }
+    },
+    "ValidateAndTestPolicyFileJsonRequestOneOf1ItemSrcPostureAttrs": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/DevicePostureAttributesAttributesAdditionalProperties"
+      },
+      "description": "Specifies the [device posture attributes](https://tailscale.com/docs/reference/syntax/policy-file#proto-1)\nas key-value pairs to use when evaluating posture conditions in access rules.\nYou only need to use this field if the access rules contain \n[device posture conditions](https://tailscale.com/docs/features/device-posture#device-posture-conditions).\n",
+      "example": {
+        "node:os": "windows"
+      }
+    },
+    "ListDeviceInvites200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeviceInvite"
+      },
+      "example": [
+        {
+          "id": "12345",
+          "created": "2024-05-08T20:19:51.777861756Z",
+          "tailnetId": 59954,
+          "deviceId": 11055,
+          "sharerId": 22011,
+          "allowExitNode": true,
+          "email": "user@example.com",
+          "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
+          "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+          "accepted": false
+        },
+        {
+          "id": "12346",
+          "created": "2024-04-03T21:38:49.333829261Z",
+          "tailnetId": 59954,
+          "deviceId": 11055,
+          "sharerId": 22012,
+          "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+          "accepted": true,
+          "acceptedBy": {
+            "id": 33223,
+            "loginName": "someone@example.com",
+            "profilePicUrl": ""
+          }
+        }
+      ]
+    },
+    "CreateDeviceInvitesRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CreateDeviceInvitesRequestItem"
+      }
+    },
+    "CreateDeviceInvites200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeviceInvite"
+      },
+      "example": [
+        {
+          "id": "12345",
+          "created": "2024-05-08T20:19:51.777861756Z",
+          "tailnetId": 59954,
+          "deviceId": 11055,
+          "sharerId": 22011,
+          "allowExitNode": true,
+          "email": "user@example.com",
+          "lastEmailSentAt": "2024-05-08T20:19:51.777861756Z",
+          "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+          "accepted": false
+        },
+        {
+          "id": "12346",
+          "created": "2024-04-03T21:38:49.333829261Z",
+          "tailnetId": 59954,
+          "deviceId": 11055,
+          "sharerId": 22012,
+          "inviteUrl": "https://login.tailscale.com/admin/invite/\u003Ccode\u003E",
+          "accepted": false
+        }
+      ]
+    },
+    "ListUserInvites200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UserInvite"
+      },
+      "example": [
+        {
+          "id": "29214",
+          "role": "admin",
+          "tailnetId": 12345,
+          "inviterId": 34567,
+          "email": "user@example.com",
+          "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
+          "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+        },
+        {
+          "id": "29215",
+          "role": "admin",
+          "tailnetId": 12345,
+          "inviterId": 34567,
+          "email": "someoneelse@example.com",
+          "lastEmailSentAt": "2024-05-09T17:23:30.91778771Z",
+          "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+        }
+      ]
+    },
+    "CreateUserInvitesRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CreateUserInvitesRequestItem"
+      }
+    },
+    "CreateUserInvites200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UserInvite"
+      },
+      "example": [
+        {
+          "id": "29214",
+          "role": "admin",
+          "tailnetId": 12345,
+          "inviterId": 34567,
+          "email": "user@example.com",
+          "lastEmailSentAt": "2024-05-09T16:23:26.91778771Z",
+          "inviteUrl": "https://login.tailscale.com/uinv/\u003Ccode\u003E"
+        }
+      ]
+    },
+    "GetPolicyFile200Response": {
+      "type": "object"
+    },
+    "GetPolicyFile200HujsonResponse": {
+      "type": "string"
+    },
+    "SetPolicyFile200Response": {
+      "type": "object"
+    },
+    "SetPolicyFile200HujsonResponse": {
+      "type": "string"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "GetPolicyFile200HujsonResponseSchema": {
+      "type": "string"
+    },
+    "SetPolicyFile200HujsonResponseSchema": {
+      "type": "string"
+    },
+    "CreateDeviceInvitesRequestItem": {
+      "type": "object",
+      "properties": {
+        "multiUse": {
+          "type": "boolean",
+          "description": "Whether the invite can be accepted more than once.\nWhen set to \u0060true\u0060, it results in an invite that can be accepted up to 1,000 times.\n",
+          "example": false
+        },
+        "allowExitNode": {
+          "type": "boolean",
+          "description": "Whether the invited user can use the device as an exit node when it advertises as one.\n",
+          "example": false
+        },
+        "email": {
+          "type": "string",
+          "description": "The email to send the created invite to.\nIf not set, the endpoint generates and returns an invite URL (but doesn\u0027t send it out).\n",
+          "example": "user@example.com"
+        }
+      }
+    },
+    "CreateUserInvitesRequestItem": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "$ref": "#/components/schemas/CreateUserInvitesRequestItemRole"
+        },
+        "email": {
+          "type": "string",
+          "description": "Optionally specifies the email to send the created invite.\nIf not set, the endpoint generates and returns an invite URL, but does not email it out.\n",
+          "example": "user@example.com"
+        }
+      }
+    },
+    "SubscriptionsItem": {
+      "enum": [
+        "nodeCreated",
+        "nodeNeedsApproval",
+        "nodeApproved",
+        "nodeKeyExpiringInOneDay",
+        "nodeKeyExpired",
+        "nodeDeleted",
+        "nodeSigned",
+        "nodeNeedsSignature",
+        "policyUpdate",
+        "userCreated",
+        "userNeedsApproval",
+        "userSuspended",
+        "userRestored",
+        "userDeleted",
+        "userApproved",
+        "userRoleUpdated",
+        "subnetIPForwardingNotEnabled",
+        "exitNodeIPForwardingNotEnabled"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "SubscriptionsItem",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "nodeCreated",
+            "name": "NodeCreated"
+          },
+          {
+            "value": "nodeNeedsApproval",
+            "name": "NodeNeedsApproval"
+          },
+          {
+            "value": "nodeApproved",
+            "name": "NodeApproved"
+          },
+          {
+            "value": "nodeKeyExpiringInOneDay",
+            "name": "NodeKeyExpiringInOneDay"
+          },
+          {
+            "value": "nodeKeyExpired",
+            "name": "NodeKeyExpired"
+          },
+          {
+            "value": "nodeDeleted",
+            "name": "NodeDeleted"
+          },
+          {
+            "value": "nodeSigned",
+            "name": "NodeSigned"
+          },
+          {
+            "value": "nodeNeedsSignature",
+            "name": "NodeNeedsSignature"
+          },
+          {
+            "value": "policyUpdate",
+            "name": "PolicyUpdate"
+          },
+          {
+            "value": "userCreated",
+            "name": "UserCreated"
+          },
+          {
+            "value": "userNeedsApproval",
+            "name": "UserNeedsApproval"
+          },
+          {
+            "value": "userSuspended",
+            "name": "UserSuspended"
+          },
+          {
+            "value": "userRestored",
+            "name": "UserRestored"
+          },
+          {
+            "value": "userDeleted",
+            "name": "UserDeleted"
+          },
+          {
+            "value": "userApproved",
+            "name": "UserApproved"
+          },
+          {
+            "value": "userRoleUpdated",
+            "name": "UserRoleUpdated"
+          },
+          {
+            "value": "subnetIPForwardingNotEnabled",
+            "name": "SubnetIpForwardingNotEnabled"
+          },
+          {
+            "value": "exitNodeIPForwardingNotEnabled",
+            "name": "ExitNodeIpForwardingNotEnabled"
+          }
+        ]
+      }
+    }
+  }
 }
