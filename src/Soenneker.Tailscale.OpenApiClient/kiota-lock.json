@@ -2,7 +2,7 @@
   "descriptionHash": "7A30A4CA9B357C91D4BAC376C94798218887CAF52D926EC829782071C34BB55A711FC01E60668C92DE7AC72D64DFEB678D7524AB164C3442917C91CBB5AEB257",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "TailscaleOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Tailscale.OpenApiClient",
