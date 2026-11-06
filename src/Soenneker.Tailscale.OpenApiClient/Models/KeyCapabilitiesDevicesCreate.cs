@@ -20,6 +20,8 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("ephemeral") is null) { _explicitNullValueEphemeral = default!; _explicitNullProperties?.Remove("ephemeral"); }
             else if (parseNode.GetChildNode("ephemeral") is { } nullNodeEphemeral && nullNodeEphemeral.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ephemeral = null;
+            if (parseNode.GetChildNode("nodeAttributes") is null) { _explicitNullValueNodeAttributes = default!; _explicitNullProperties?.Remove("nodeAttributes"); }
+            else if (parseNode.GetChildNode("nodeAttributes") is { } nullNodeNodeAttributes && nullNodeNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeAttributes = null;
             if (parseNode.GetChildNode("preauthorized") is null) { _explicitNullValuePreauthorized = default!; _explicitNullProperties?.Remove("preauthorized"); }
             else if (parseNode.GetChildNode("preauthorized") is { } nullNodePreauthorized && nullNodePreauthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preauthorized = null;
             if (parseNode.GetChildNode("reusable") is null) { _explicitNullValueReusable = default!; _explicitNullProperties?.Remove("reusable"); }
@@ -33,6 +35,16 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <summary>ephemeral for auth keys only; ephemeral keys are used to connect and then clean up short-lived devices.Learn about ephemeral nodes at https://tailscale.com/docs/features/ephemeral-nodes.</summary>
         public bool? Ephemeral { get => _explicitNullValueEphemeral; set { _explicitNullValueEphemeral = value; AdditionalData?.Remove("ephemeral"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ephemeral"); else _explicitNullProperties?.Remove("ephemeral"); } }
         private bool? _explicitNullValueEphemeral = default!;
+        /// <summary>nodeAttributes are custom device posture attributes that will be set on devices registered with this key.Attribute keys must be in the `custom:` namespace, and values must be strings, integers, or booleans.At most 100 attributes may be set.Learn about device posture attributes at https://tailscale.com/docs/features/device-posture.Creating an auth key with node attributes requires permission to write device posture attributes.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty? NodeAttributes { get => _explicitNullValueNodeAttributes; set { _explicitNullValueNodeAttributes = value; AdditionalData?.Remove("nodeAttributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeAttributes"); else _explicitNullProperties?.Remove("nodeAttributes"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty? _explicitNullValueNodeAttributes = default!;
+#nullable restore
+#else
+        public global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty NodeAttributes { get => _explicitNullValueNodeAttributes; set { _explicitNullValueNodeAttributes = value; AdditionalData?.Remove("nodeAttributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeAttributes"); else _explicitNullProperties?.Remove("nodeAttributes"); } }
+        private global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty _explicitNullValueNodeAttributes = default!;
+#endif
         /// <summary>preauthorized for auth keys only; these are also referred to as &quot;pre-approved&quot; keys. &apos;true&apos; means that devicesregistered with this key won&apos;t require additional approval from a tailnet admin.Learn about device approval at https://tailscale.com/docs/features/access-control/device-management/device-approval.</summary>
         public bool? Preauthorized { get => _explicitNullValuePreauthorized; set { _explicitNullValuePreauthorized = value; AdditionalData?.Remove("preauthorized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preauthorized"); else _explicitNullProperties?.Remove("preauthorized"); } }
         private bool? _explicitNullValuePreauthorized = default!;
@@ -75,6 +87,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ephemeral", n => { Ephemeral = n.GetBoolValue(); } },
+                { "nodeAttributes", n => { NodeAttributes = n.GetObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty>(global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty.CreateFromDiscriminatorValue); } },
                 { "preauthorized", n => { Preauthorized = n.GetBoolValue(); } },
                 { "reusable", n => { Reusable = n.GetBoolValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -88,6 +101,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("ephemeral", Ephemeral);
+            writer.WriteObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.KeyCapabilitiesDevicesCreateNodeAttributesProperty>("nodeAttributes", NodeAttributes);
             writer.WriteBoolValue("preauthorized", Preauthorized);
             writer.WriteBoolValue("reusable", Reusable);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
