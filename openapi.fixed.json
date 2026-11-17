@@ -3706,7 +3706,7 @@
           "TailnetSettings"
         ],
         "summary": "Get tailnet settings",
-        "description": "Retrieve the settings for a specific tailnet.\n\nOAuth Scope: \u0060feature_settings:read\u0060 - required to view all settings except those governed by the below scopes.\n\nOAuth Scope: \u0060logs:network:read\u0060 - required to view the \u0060networkFlowLoggingOn\u0060 setting.\n\nOAuth Scope: \u0060networking_settings:read\u0060 - required to view the \u0060httpsCertificates\u0060 setting.\n\nOAuth Scope: \u0060policy_file:read\u0060 - required to view the \u0060aclsExternallyManagedOn\u0060 \u0026 \u0060aclsExternalLink\u0060 settings.\n",
+        "description": "Retrieve the settings for a specific tailnet.\n\nOAuth Scope: \u0060feature_settings:read\u0060 - required to view all settings except those governed by the below scopes.\n\nOAuth Scope: \u0060logs:network:read\u0060 - required to view the \u0060networkFlowLoggingOn\u0060 setting.\n\nOAuth Scope: \u0060networking_settings:read\u0060 - required to view the \u0060httpsEnabled\u0060 setting.\n\nOAuth Scope: \u0060policy_file:read\u0060 - required to view the \u0060aclsExternallyManagedOn\u0060 \u0026 \u0060aclsExternalLink\u0060 settings.\n",
         "operationId": "GetTailnetSettings",
         "responses": {
           "200": {
@@ -3738,7 +3738,7 @@
           "TailnetSettings"
         ],
         "summary": "Update tailnet settings",
-        "description": "Update the settings for a specific tailnet.\n\nOAuth Scope: \u0060feature_settings\u0060 - required to update all settings except those governed by the below scopes.\n\nOAuth Scope: \u0060logs:network\u0060 - required to update the \u0060networkFlowLoggingOn\u0060 setting.\n\nOAuth Scope: \u0060networking_settings\u0060 - required to update the \u0060httpsCertificates\u0060 setting.\n\nOAuth Scope: \u0060policy_file\u0060 - required to update the \u0060aclsExternallyManagedOn\u0060 \u0026 \u0060aclsExternalLink\u0060 settings.\n",
+        "description": "Update the settings for a specific tailnet.\n\nOAuth Scope: \u0060feature_settings\u0060 - required to update all settings except those governed by the below scopes.\n\nOAuth Scope: \u0060logs:network\u0060 - required to update the \u0060networkFlowLoggingOn\u0060 setting.\n\nOAuth Scope: \u0060networking_settings\u0060 - required to update the \u0060httpsEnabled\u0060 setting.\n\nOAuth Scope: \u0060policy_file\u0060 - required to update the \u0060aclsExternallyManagedOn\u0060 \u0026 \u0060aclsExternalLink\u0060 settings.\n",
         "operationId": "UpdateTailnetSettings",
         "requestBody": {
           "content": {

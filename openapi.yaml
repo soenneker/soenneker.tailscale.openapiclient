@@ -3479,7 +3479,7 @@ paths:
 
         OAuth Scope: `logs:network:read` - required to view the `networkFlowLoggingOn` setting.
 
-        OAuth Scope: `networking_settings:read` - required to view the `httpsCertificates` setting.
+        OAuth Scope: `networking_settings:read` - required to view the `httpsEnabled` setting.
 
         OAuth Scope: `policy_file:read` - required to view the `aclsExternallyManagedOn` & `aclsExternalLink` settings.
       operationId: getTailnetSettings
@@ -3508,7 +3508,7 @@ paths:
 
         OAuth Scope: `logs:network` - required to update the `networkFlowLoggingOn` setting.
 
-        OAuth Scope: `networking_settings` - required to update the `httpsCertificates` setting.
+        OAuth Scope: `networking_settings` - required to update the `httpsEnabled` setting.
 
         OAuth Scope: `policy_file` - required to update the `aclsExternallyManagedOn` & `aclsExternalLink` settings.
       operationId: updateTailnetSettings

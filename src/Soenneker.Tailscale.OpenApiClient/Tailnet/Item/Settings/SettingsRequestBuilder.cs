@@ -34,7 +34,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Settings
         {
         }
         /// <summary>
-        /// Retrieve the settings for a specific tailnet.OAuth Scope: `feature_settings:read` - required to view all settings except those governed by the below scopes.OAuth Scope: `logs:network:read` - required to view the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings:read` - required to view the `httpsCertificates` setting.OAuth Scope: `policy_file:read` - required to view the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
+        /// Retrieve the settings for a specific tailnet.OAuth Scope: `feature_settings:read` - required to view all settings except those governed by the below scopes.OAuth Scope: `logs:network:read` - required to view the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings:read` - required to view the `httpsEnabled` setting.OAuth Scope: `policy_file:read` - required to view the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Settings
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update the settings for a specific tailnet.OAuth Scope: `feature_settings` - required to update all settings except those governed by the below scopes.OAuth Scope: `logs:network` - required to update the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings` - required to update the `httpsCertificates` setting.OAuth Scope: `policy_file` - required to update the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
+        /// Update the settings for a specific tailnet.OAuth Scope: `feature_settings` - required to update all settings except those governed by the below scopes.OAuth Scope: `logs:network` - required to update the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings` - required to update the `httpsEnabled` setting.OAuth Scope: `policy_file` - required to update the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings"/></returns>
         /// <param name="body">Settings for a tailnet.</param>
@@ -94,7 +94,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Settings
             return await RequestAdapter.SendAsync<global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings>(requestInfo, global::Soenneker.Tailscale.OpenApiClient.Models.TailnetSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the settings for a specific tailnet.OAuth Scope: `feature_settings:read` - required to view all settings except those governed by the below scopes.OAuth Scope: `logs:network:read` - required to view the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings:read` - required to view the `httpsCertificates` setting.OAuth Scope: `policy_file:read` - required to view the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
+        /// Retrieve the settings for a specific tailnet.OAuth Scope: `feature_settings:read` - required to view all settings except those governed by the below scopes.OAuth Scope: `logs:network:read` - required to view the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings:read` - required to view the `httpsEnabled` setting.OAuth Scope: `policy_file:read` - required to view the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -113,7 +113,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Tailnet.Item.Settings
             return requestInfo;
         }
         /// <summary>
-        /// Update the settings for a specific tailnet.OAuth Scope: `feature_settings` - required to update all settings except those governed by the below scopes.OAuth Scope: `logs:network` - required to update the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings` - required to update the `httpsCertificates` setting.OAuth Scope: `policy_file` - required to update the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
+        /// Update the settings for a specific tailnet.OAuth Scope: `feature_settings` - required to update all settings except those governed by the below scopes.OAuth Scope: `logs:network` - required to update the `networkFlowLoggingOn` setting.OAuth Scope: `networking_settings` - required to update the `httpsEnabled` setting.OAuth Scope: `policy_file` - required to update the `aclsExternallyManagedOn` &amp; `aclsExternalLink` settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Settings for a tailnet.</param>
