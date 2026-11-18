@@ -93,7 +93,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "dst", n => { Dst = n.GetStringValue(); } },
                 { "proto", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.ConnectionCountsProto>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProto = default; _explicitNullProperties?.Remove("proto"); AdditionalData["proto"] = unknown; } else { Proto = parsed; AdditionalData.Remove("proto"); } } },

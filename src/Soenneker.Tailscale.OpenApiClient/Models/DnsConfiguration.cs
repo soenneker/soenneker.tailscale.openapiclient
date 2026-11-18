@@ -92,7 +92,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "nameservers", n => { Nameservers = n.GetCollectionOfObjectValues<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver>(global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationResolver.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "preferences", n => { Preferences = n.GetObjectValue<global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences>(global::Soenneker.Tailscale.OpenApiClient.Models.DnsConfigurationPreferences.CreateFromDiscriminatorValue); } },

@@ -231,7 +231,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(19)
             {
                 { "compressionFormat", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationCompressionFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCompressionFormat = default; _explicitNullProperties?.Remove("compressionFormat"); AdditionalData["compressionFormat"] = unknown; } else { CompressionFormat = parsed; AdditionalData.Remove("compressionFormat"); } } },
                 { "destinationType", n => { var parsed = n.GetEnumValue<global::Soenneker.Tailscale.OpenApiClient.Models.LogstreamEndpointConfigurationDestinationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDestinationType = default; _explicitNullProperties?.Remove("destinationType"); AdditionalData["destinationType"] = unknown; } else { DestinationType = parsed; AdditionalData.Remove("destinationType"); } } },
