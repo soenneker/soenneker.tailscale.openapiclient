@@ -23,7 +23,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The role of the user. Learn more about [user roles](/docs/reference/user-roles).</summary>
+        /// <summary>The role of the user. Learn more about [user roles](/docs/reference/user-roles).A pending user cannot be made the owner until they are approved.</summary>
         public global::Soenneker.Tailscale.OpenApiClient.Models.UpdateUserRoleRequestRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.Tailscale.OpenApiClient.Models.UpdateUserRoleRequestRole? _explicitNullValueRole = default!;
         /// <summary>

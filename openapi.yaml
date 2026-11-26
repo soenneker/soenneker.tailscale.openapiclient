@@ -3021,11 +3021,15 @@ paths:
                   example: member
                   description: |
                     The role of the user. Learn more about [user roles](/docs/reference/user-roles).
+                    A pending user cannot be made the owner until they are approved.
       responses:
         '200':
           description: Successful operation.
         '400':
           $ref: '#/components/responses/400'
+        '402':
+          description: The tailnet's trial has ended and the user is pending, so they cannot be made the owner.
+          $ref: '#/components/responses/402'
         '403':
           $ref: '#/components/responses/403'
         '404':

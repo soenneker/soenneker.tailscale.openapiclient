@@ -3024,6 +3024,10 @@
             "description": "Bad request.",
             "$ref": "#/components/responses/400"
           },
+          "402": {
+            "description": "The tailnet\u0027s trial has ended and the user is pending, so they cannot be made the owner.",
+            "$ref": "#/components/responses/402"
+          },
           "403": {
             "description": "Forbidden.",
             "$ref": "#/components/responses/403"
@@ -9354,7 +9358,7 @@
           "auditor"
         ],
         "type": "string",
-        "description": "The role of the user. Learn more about [user roles](/docs/reference/user-roles).\n",
+        "description": "The role of the user. Learn more about [user roles](/docs/reference/user-roles).\nA pending user cannot be made the owner until they are approved.\n",
         "example": "member",
         "x-ms-enum": {
           "name": "UpdateUserRoleRequestRole",

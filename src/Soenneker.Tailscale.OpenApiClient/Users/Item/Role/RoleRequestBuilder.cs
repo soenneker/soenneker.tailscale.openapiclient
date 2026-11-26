@@ -41,6 +41,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Role
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Tailscale.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
@@ -58,6 +59,7 @@ namespace Soenneker.Tailscale.OpenApiClient.Users.Item.Role
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Tailscale.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Tailscale.OpenApiClient.Models
 {
-    /// <summary>The role of the user. Learn more about [user roles](/docs/reference/user-roles).</summary>
+    /// <summary>The role of the user. Learn more about [user roles](/docs/reference/user-roles).A pending user cannot be made the owner until they are approved.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum UpdateUserRoleRequestRole
     {
